@@ -96,14 +96,15 @@ Shader "Custom Shaders/DefaultShader"
 
             fixed4 frag (v2f i) : SV_Target
             {
-				UNITY_LIGHT_ATTENUATION(atten, i, 0);
-				fixed4 shadow = abs(atten);
 				_LightDirection = _WorldSpaceLightPos0;
 				float3 finalNormal = abs(i.worldNormal + (UnpackNormal(tex2D(_NormalMap, i.uv) * _NormalStrength) * 0.5f + 0.5f));
-				fixed4 shading = tex2D(_ColourRamp, dot(finalNormal * _Brightest + _Darkest * round(shadow), _LightDirection)) * _LightColor0;
-				fixed4 col = tex2D(_MainTex, i.uv) * _Colour * shading;
-				//clip(col.a - _Cutoff);
-				col.rgb += _Emission * shading;
+				fixed4 shading = tex2D(_ColourRamp, dot(finalNormal * _Brightest + _Darkest, _LightDirection)) * _LightColor0;
+				fixed4 col = tex2D(_MainTex, i.uv) * _Colour;
+				#if SHADOWS_SCREEN
+					col.rgb *= shading;
+				#endif
+				col.rgb += _Emission;
+				clip(col.a - _Cutoff);
                 return col;
             }
             ENDCG
