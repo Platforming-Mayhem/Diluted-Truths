@@ -16,6 +16,7 @@ public class MoveCameraScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.Lerp(transform.position, player.position, Time.deltaTime * speed);
+        Vector3 offsetPlayerPosition = Vector3.Scale(player.position, transform.right) + Vector3.Scale(transform.position, transform.up + transform.forward);
+        transform.position = Vector3.Lerp(transform.position, offsetPlayerPosition, Time.deltaTime * speed);
     }
 }
