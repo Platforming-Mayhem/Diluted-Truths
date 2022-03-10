@@ -42,6 +42,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -268,6 +269,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      BaldskiPrevisSprites_1: -5233970715057017832
+      BaldskiPrevisSprites_5: 1197525408275804482
+      BaldskiPrevisSprites_2: 4168523783021471658
+      BaldskiPrevisSprites_0: 9022610449700966453
+      BaldskiPrevisSprites_4: 2552073912217396143
+      BaldskiPrevisSprites_3: -1756506398701602712
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

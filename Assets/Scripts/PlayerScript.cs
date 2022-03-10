@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerScript : MonoBehaviour
 {
     [SerializeField] private float movementSpeed;
+    [SerializeField] CanvasManagement canvas;
+    
 
     private Rigidbody rb;
 
@@ -18,5 +20,15 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
         rb.velocity = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical")) * movementSpeed;
+        NPCTalk();
+    }
+
+    void NPCTalk()
+    {
+        if(Input.GetKeyDown(KeyCode.F))
+        {
+            Debug.Log("Test");
+            canvas.DialogueAppear(100.0f);
+        }
     }
 }
