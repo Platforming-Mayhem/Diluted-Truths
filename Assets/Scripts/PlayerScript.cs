@@ -25,10 +25,15 @@ public class PlayerScript : MonoBehaviour
 
     void NPCTalk()
     {
-        if(Input.GetKeyDown(KeyCode.F))
+        if(Input.GetKeyDown(KeyCode.F) && !canvas.DialogueOut)
         {
             Debug.Log("Test");
-            canvas.DialogueAppear(100.0f);
+            canvas.DialogueAppear(1.5f);
+        }
+        if (Input.GetKeyDown(KeyCode.X) && canvas.DialogueOut)
+        {
+            Debug.Log("Test2");
+            canvas.DialogueDisappear(1.5f);
         }
     }
 }
