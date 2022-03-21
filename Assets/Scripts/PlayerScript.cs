@@ -19,10 +19,17 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical")) * movementSpeed;
-        NPCTalk();
+        if (!DialogueManager.GetInstance().dialogueIsPlaying)
+        {
+            Move();
+        }
     }
 
+    private void Move()
+    {
+        rb.velocity = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical")) * movementSpeed;
+    }
+    /*
     void NPCTalk()
     {
         if(Input.GetKeyDown(KeyCode.F) && !canvas.DialogueOut)
@@ -36,4 +43,5 @@ public class PlayerScript : MonoBehaviour
             canvas.DialogueDisappear(1.5f);
         }
     }
+    */
 }
