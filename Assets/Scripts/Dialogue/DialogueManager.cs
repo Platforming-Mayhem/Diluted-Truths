@@ -7,12 +7,14 @@ using Ink.Runtime;
 
 public class DialogueManager : MonoBehaviour
 {
-    private static DialogueManager instance;
+    protected static DialogueManager instance;
 
     [Header("Dialogue UI")]
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] Story currentStory;
+
+
     public bool dialogueIsPlaying;
     
 

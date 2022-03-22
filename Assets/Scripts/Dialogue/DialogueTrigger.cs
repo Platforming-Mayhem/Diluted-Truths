@@ -5,6 +5,7 @@ using UnityEngine;
 public class DialogueTrigger : MonoBehaviour
 {
     [SerializeField] bool playerInRange;
+    [SerializeField] DialogueManager diag;
 
     [Header("Ink JSON")]
     [SerializeField] private TextAsset ink;
@@ -24,7 +25,7 @@ public class DialogueTrigger : MonoBehaviour
 
     private void Update()
     {
-        if(playerInRange && !DialogueManager.GetInstance().dialogueIsPlaying)
+        if(playerInRange && diag.dialogueIsPlaying)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {

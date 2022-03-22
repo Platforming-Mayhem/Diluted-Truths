@@ -6,6 +6,7 @@ public class PlayerScript : MonoBehaviour
 {
     [SerializeField] private float movementSpeed;
     [SerializeField] CanvasManagement canvas;
+    [SerializeField] DialogueManager diag;
     
 
     private Rigidbody rb;
@@ -19,7 +20,7 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!DialogueManager.GetInstance().dialogueIsPlaying)
+        if (!diag.dialogueIsPlaying)
         {
             Move();
         }
