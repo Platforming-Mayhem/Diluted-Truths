@@ -4,20 +4,25 @@ using UnityEngine;
 
 public class Bar
 {
-    private float amount;
+    public uint amount = 0;
 
-    public void SetAmount(float input)
+    public void SetAmount(uint input)
     {
         amount = input;
     }
 
-    public void AddToAmount(float input)
+    public void AddToAmount(uint input)
     {
         amount += input;
     }
 
-    public void RemoveFromAmount(float input)
+    public void RemoveFromAmount(uint input)
     {
         amount -= input;
+    }
+
+    public uint ReadAmount()
+    {
+        return amount;
     }
 }
