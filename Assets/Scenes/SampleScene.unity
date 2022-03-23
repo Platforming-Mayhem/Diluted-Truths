@@ -377,8 +377,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -588.5, y: -366.9}
-  m_SizeDelta: {x: 26, y: 171.3}
+  m_AnchoredPosition: {x: -588.5, y: -285.4}
+  m_SizeDelta: {x: 26, y: 89.8}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &421026958
 MonoBehaviour:
@@ -930,8 +930,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -703.9, y: -366.9}
-  m_SizeDelta: {x: 26, y: 171.3}
+  m_AnchoredPosition: {x: -703.9, y: -285.4}
+  m_SizeDelta: {x: 26, y: 89.8}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &987448085
 MonoBehaviour:
@@ -1105,9 +1105,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barsGUI:
-  - {fileID: 1620262638}
-  - {fileID: 421026958}
   - {fileID: 987448085}
+  - {fileID: 421026958}
+  - {fileID: 1620262638}
 --- !u!1 &1078993483
 GameObject:
   m_ObjectHideFlags: 0
@@ -1445,8 +1445,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -471.7, y: -366.9}
-  m_SizeDelta: {x: 26, y: 171.3}
+  m_AnchoredPosition: {x: -471.7, y: -285.4}
+  m_SizeDelta: {x: 26, y: 89.8}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1620262638
 MonoBehaviour:

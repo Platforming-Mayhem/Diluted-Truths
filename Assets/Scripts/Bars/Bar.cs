@@ -4,24 +4,24 @@ using UnityEngine;
 
 public class Bar
 {
-    public uint amount = 0;
+    public int amount = 0;
 
-    public void SetAmount(uint input)
+    public void SetAmount(int input)
     {
         amount = input;
     }
 
-    public void AddToAmount(uint input)
+    public void AddToAmount(int input)
     {
         amount += input;
     }
 
-    public void RemoveFromAmount(uint input)
+    public void RemoveFromAmount(int input)
     {
         amount -= input;
     }
 
-    public uint ReadAmount()
+    public int ReadAmount()
     {
         return amount;
     }
