@@ -21,7 +21,14 @@ public class BarManager : MonoBehaviour
 
     void Update()
     {
-        
+        if (Input.GetMouseButtonDown(0))
+        {
+            AddAmountToBar(0, 10);
+        }
+        else if (Input.GetMouseButtonDown(1))
+        {
+            RemoveAmountFromBar(0, 10);
+        }
     }
 
     public void AddAmountToBar(int index, int amount)
