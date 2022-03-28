@@ -14,8 +14,11 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private TextMeshProUGUI displayNameText;
-    [SerializeField] Story currentStory;
+    [SerializeField] private Animator portraitAnimator;
+    private Animator layoutAnimator;
 
+    [SerializeField] Story currentStory;
+    [SerializeField] CanvasManagement canvas;
 
     [Header("Choices UI")]
     [SerializeField] GameObject[] choices;
@@ -25,6 +28,7 @@ public class DialogueManager : MonoBehaviour
 
     private const string SPEAKER_TAG = "speaker";
     private const string PORTRAIT_TAG = "portrait";
+    private const string LAYOUT_TAG = "layout";
     
 
 
@@ -46,6 +50,7 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueIsPlaying = false;
 
+        layoutAnimator = dialoguePanel.GetComponent<Animator>();
         choicesText = new TextMeshProUGUI[choices.Length];
         int index = 0;
         foreach (GameObject choice in choices)
@@ -73,15 +78,24 @@ public class DialogueManager : MonoBehaviour
     {
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
+        canvas.DialogueAppear(1.0f);
         // bring up dialogue box and wait
 
+        displayNameText.text = "???";
+        portraitAnimator.Play("default");
+        layoutAnimator.Play("right");
+
+
+
         ContinueStory();
+
     }
 
     private IEnumerator ExitDialogueMode()
     {
         yield return new WaitForSeconds(0.2f);
         dialogueIsPlaying = false;
+        canvas.DialogueDisappear(1.0f);
         //remove dialogue ui
         dialogueText.text = "'";
 
@@ -96,8 +110,12 @@ public class DialogueManager : MonoBehaviour
             DisplayChoices();
             HandleTags(currentStory.currentTags);
         }
+        else if {
+            
+        }
         else
         {
+            canvas.DialogueDisappear(1.0f);
             ExitDialogueMode();
         }
     }
@@ -121,7 +139,10 @@ public class DialogueManager : MonoBehaviour
                 displayNameText.text = tagValue;
                 break;
             case PORTRAIT_TAG:
-                Debug.Log("portrait=" +tagValue);
+                portraitAnimator.Play(tagValue);
+                break;
+            case LAYOUT_TAG:
+                layoutAnimator.Play(tagValue);
                 break;
             default:
                 Debug.LogWarning("Tag came in but is not currently being handled: " + tag);
@@ -166,5 +187,6 @@ public class DialogueManager : MonoBehaviour
     public void MakeChoice(int choiceIndex)
     {
         currentStory.ChooseChoiceIndex(choiceIndex);
+        ContinueStory();
     }
 }

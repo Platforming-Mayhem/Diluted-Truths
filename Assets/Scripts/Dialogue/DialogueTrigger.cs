@@ -25,11 +25,11 @@ public class DialogueTrigger : MonoBehaviour
 
     private void Update()
     {
-        if(playerInRange && diag.dialogueIsPlaying)
+        if(playerInRange && !diag.dialogueIsPlaying)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                Debug.Log(ink.text);
+                diag.EnterDialogueMode(ink);
             }
         }
     }

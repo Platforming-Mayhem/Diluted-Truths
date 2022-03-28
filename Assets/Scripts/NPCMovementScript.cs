@@ -28,7 +28,7 @@ public class NPCMovementScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(agent.remainingDistance);
+        // Debug.Log(agent.remainingDistance);
         if (agent.remainingDistance == 0.0f || agent.remainingDistance == Mathf.Infinity)
             IncrementPointIndex();
     }
