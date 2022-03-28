@@ -97,7 +97,7 @@ Shader "Custom Shaders/DefaultShader"
             fixed4 frag (v2f i) : SV_Target
             {
 				_LightDirection = _WorldSpaceLightPos0;
-			UNITY_LIGHT_ATTENUATION(atten, i, i.pos);
+				UNITY_LIGHT_ATTENUATION(atten, i, i.pos);
 				float3 finalNormal = abs(i.worldNormal + (UnpackNormal(tex2D(_NormalMap, i.uv) * _NormalStrength) * 0.5f + 0.5f));
 				fixed4 shading = tex2D(_ColourRamp, dot(finalNormal * _Brightest + _Darkest * atten, _LightDirection)) * _LightColor0;
 				fixed4 col = tex2D(_MainTex, i.uv) * _Colour;
