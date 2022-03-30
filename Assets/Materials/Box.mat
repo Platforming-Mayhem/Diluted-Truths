@@ -24,7 +24,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ColourRamp:
-        m_Texture: {fileID: 2800000, guid: 0fd000a9059073046a1633a71f4118fe, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9194fb8f783628c45b31266a05f83460, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -63,7 +63,6 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    m_Ints: []
     m_Floats:
     - _Brightest: 0.31
     - _BumpScale: 1
