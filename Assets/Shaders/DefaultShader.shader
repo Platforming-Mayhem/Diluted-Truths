@@ -106,13 +106,13 @@ Shader "Custom Shaders/DefaultShader"
 				UNITY_LIGHT_ATTENUATION(atten, i, i.pos);
 				float3 finalNormal = abs(i.worldNormal + (UnpackNormal(tex2D(_NormalMap, i.uv) * _NormalStrength) * 0.5f + 0.5f));
 				float3 spotLightIntensity = 1 / distance(float3(unity_4LightPosX0.x, unity_4LightPosY0.x, unity_4LightPosZ0.x), i.worldPos.xyz + finalNormal) * (1 / unity_4LightAtten0.x);
-				fixed4 shading = tex2D(_ColourRamp, dot(finalNormal * _Brightest + _Darkest * atten, _LightDirection)) * _LightColor0;
+				fixed4 shading = dot(finalNormal * _Brightest + _Darkest * atten, _LightDirection) * _LightColor0;
 				fixed4 col = tex2D(_MainTex, i.uv) * _Colour;
 				#if SHADOWS_SCREEN
 					col.rgb *= shading;
 				#endif
 				col.rgb += _Emission;
-				col.rgb += unity_LightColor[0].rgb * tex2D(_ColourRamp, abs(spotLightIntensity));
+				col.rgb += unity_LightColor[0].rgb * abs(spotLightIntensity);
 				clip(col.a - _Cutoff);
                 return col;
             }
