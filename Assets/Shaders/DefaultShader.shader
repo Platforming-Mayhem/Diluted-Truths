@@ -1,3 +1,7 @@
+// Upgrade NOTE: replaced '_LightMatrix0' with 'unity_WorldToLight'
+
+// Upgrade NOTE: replaced '_LightMatrix0' with 'unity_WorldToLight'
+
 // Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
 
 // Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
@@ -65,6 +69,7 @@ Shader "Custom Shaders/DefaultShader"
 				float2 uv : TEXCOORD0;
 				float3 worldNormal : TEXCOORD1;
 				SHADOW_COORDS(2)
+				half4 worldPos : TEXCOORD3;
             };
 
             sampler2D _MainTex;
@@ -90,6 +95,7 @@ Shader "Custom Shaders/DefaultShader"
 				o.pos = UnityObjectToClipPos(v.vertex);
 				o.uv = TRANSFORM_TEX(v.uv, _MainTex);
 				o.worldNormal = UnityObjectToWorldNormal(v.normal);
+				o.worldPos = mul(unity_ObjectToWorld, v.vertex);
 				TRANSFER_SHADOW(o);
                 return o;
             }
@@ -99,12 +105,14 @@ Shader "Custom Shaders/DefaultShader"
 				_LightDirection = _WorldSpaceLightPos0;
 				UNITY_LIGHT_ATTENUATION(atten, i, i.pos);
 				float3 finalNormal = abs(i.worldNormal + (UnpackNormal(tex2D(_NormalMap, i.uv) * _NormalStrength) * 0.5f + 0.5f));
-				fixed4 shading = tex2D(_ColourRamp, dot(finalNormal * _Brightest + _Darkest * atten, _LightDirection)) * _LightColor0;
+				float3 spotLightIntensity = 1 / distance(float3(unity_4LightPosX0.x, unity_4LightPosY0.x, unity_4LightPosZ0.x), i.worldPos.xyz + finalNormal) * (1 / unity_4LightAtten0.x);
+				fixed4 shading = dot(finalNormal * _Brightest + _Darkest * atten, _LightDirection) * _LightColor0;
 				fixed4 col = tex2D(_MainTex, i.uv) * _Colour;
 				#if SHADOWS_SCREEN
 					col.rgb *= shading;
 				#endif
 				col.rgb += _Emission;
+				col.rgb += unity_LightColor[0].rgb * abs(spotLightIntensity);
 				clip(col.a - _Cutoff);
                 return col;
             }

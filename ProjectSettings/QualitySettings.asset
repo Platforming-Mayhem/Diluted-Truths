@@ -44,15 +44,15 @@ QualitySettings:
     excludedTargetPlatforms: []
   - serializedVersion: 2
     name: Shadows
-    pixelLightCount: 4
+    pixelLightCount: 8
     shadows: 1
     shadowResolution: 3
     shadowProjection: 0
     shadowCascades: 1
-    shadowDistance: 75
+    shadowDistance: 250
     shadowNearPlaneOffset: 3
     shadowCascade2Split: 0.9289012
-    shadowCascade4Split: {x: 0.18151262, y: 0.18319327, z: 0.18375352}
+    shadowCascade4Split: {x: 0.18151262, y: 0.18319327, z: 0.24689597}
     shadowmaskMode: 1
     skinWeights: 4
     textureQuality: 0
@@ -65,7 +65,7 @@ QualitySettings:
     vSyncCount: 1
     lodBias: 2
     maximumLODLevel: 0
-    streamingMipmapsActive: 1
+    streamingMipmapsActive: 0
     streamingMipmapsAddAllCameras: 1
     streamingMipmapsMemoryBudget: 512
     streamingMipmapsRenderersPerFrame: 512
