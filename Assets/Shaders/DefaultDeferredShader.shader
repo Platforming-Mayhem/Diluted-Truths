@@ -30,15 +30,18 @@ Shader "Custom Shaders/DefaultDeferredShader"
 		_Glossiness("Smoothness", Range(0,1)) = 0.5
 		_Metallic("Metallic", Range(0,1)) = 0.0
 		_NormalMap("Normal Map", 2D) = "white"{}
+		_NormalStrength("Normal Strength", Range(-1,1)) = 1.0
 		[ToggleOff] _SpecularHighlights("Specular Highlights", Float) = 1.0
+		[ToggleOff] _GlossyReflections("Reflections", Float) = 1.0
 	}
     SubShader
     {
-		Tags { "RenderType" = "Opaque" "Queue" = "Geometry+2" "DisableBatching" = "True" "LightMode" = "Deferred" }
+		Tags { "RenderType" = "Cutout" "DisableBatching" = "True" "LightMode" = "Deferred" }
 		CGPROGRAM
 		#pragma surface surf Standard addshadow
 		#pragma target 3.0
 		#pragma shader_feature_local _SPECULARHIGHLIGHTS_OFF
+		#pragma shader_feature_local _GLOSSYREFLECTIONS_OFF
 
 		sampler2D _MainTex;
 		sampler2D _NormalMap;
@@ -50,6 +53,7 @@ Shader "Custom Shaders/DefaultDeferredShader"
 
 		half _Glossiness;
 		half _Metallic;
+		float _NormalStrength;
 		fixed4 _Color;
 		void surf(Input IN, inout SurfaceOutputStandard o)
 		{
@@ -57,8 +61,9 @@ Shader "Custom Shaders/DefaultDeferredShader"
 			o.Albedo = c.rgb;
 			o.Metallic = _Metallic;
 			o.Smoothness = _Glossiness;
-			o.Normal = tex2D(_NormalMap, IN.uv_MainTex);
-			o.Alpha = c.a;
+			o.Normal = tex2D(_NormalMap, IN.uv_MainTex) * 0.5f + 0.5f * _NormalStrength;
+			o.Alpha = c.a - 0.5;
+			clip(o.Alpha);
 		}
 		ENDCG
 		/*Pass
