@@ -4,19 +4,18 @@
 
 
 === TestingKnot
-HEALING: He tried that. #portrait:healing #speaker:healing #layout:right
-LIEDSON: I bang out fifa daily. #portrait:liedson #speaker:liedson #layout:right
-* Agree with Liedson
+This is the first line of dialogue #portrait:healing #speaker:Tester1 #layout:right
+This is the second! #portrait:liedson #speaker:Tester2 #layout:right
+* Agree with Curtis
     -> TestingKnot3
-* Agree with healing
+* Agree with Gregor
     -> TestingKnot2
-* [Try it this example!]
-    Mazza. #portrait:taj #speaker:taj #layout:left
--> END
+* [Agree with Brittany]
+    One option #portrait:taj #speaker:Tester3 #layout:left
+    -> DONE
 === TestingKnot2
-aaaaaa #speaker:liedson #speaker:liedson #layout:left
--> END
+Another one! #speaker:Tester2 #speaker:liedson #layout:left
+->DONE
 === TestingKnot3
-Vegeta is hench #speaker:healing #portrait:healing #layout:right
-
--> END
+Que ota #speaker:Tester1 #portrait:healing #layout:right
+-> DONE
