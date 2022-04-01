@@ -81,7 +81,6 @@ public class DialogueManager : MonoBehaviour
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         canvas.DialogueAppear(1.0f);
-
         // reset portrait, layout, and speaker
         displayNameText.text = "???";
         portraitAnimator.Play("default");
@@ -92,10 +91,11 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator ExitDialogueMode() 
     {
-        yield return new WaitForSeconds(0.2f);
         canvas.DialogueDisappear(1.0f);
+        yield return new WaitForSeconds(0.2f);
         dialogueIsPlaying = false;
         dialogueText.text = "";
+        Debug.Log("Finished");
     }
 
     private void ContinueStory() 
