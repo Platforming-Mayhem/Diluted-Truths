@@ -376,6 +376,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: b4bfba7fbd4ff0d48b1af482a4e75a51, type: 2}
+    - target: {fileID: -6390553425048673252, guid: 90547b4e37c73884abae2259a417ff92, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -5568371526223589888, guid: 90547b4e37c73884abae2259a417ff92, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
@@ -479,6 +483,10 @@ PrefabInstance:
     - target: {fileID: -1853094968961178454, guid: 90547b4e37c73884abae2259a417ff92, type: 3}
       propertyPath: m_projectionMatrixMode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1461304994638716399, guid: 90547b4e37c73884abae2259a417ff92, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -1063203228461421988, guid: 90547b4e37c73884abae2259a417ff92, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -684,7 +692,7 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
-  m_ShadowAngle: 45
+  m_ShadowAngle: 90
 --- !u!4 &209829316
 Transform:
   m_ObjectHideFlags: 0
