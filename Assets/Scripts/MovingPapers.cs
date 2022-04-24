@@ -5,33 +5,43 @@ using UnityEngine;
 public class MovingPapers : MonoBehaviour
 {
     Rigidbody rb;
+    Collider col;
+
+    bool active;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        col = GetComponent<Collider>();
+        active = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(rb.velocity.magnitude == 0.0f && active)
+        {
+            col.isTrigger = true;
+            rb.useGravity = false;
+            active = false;
+        }
     }
 
-    private void OnCollisionExit(Collision collision)
+    IEnumerator Wait()
     {
-        if (collision.collider.CompareTag("Player"))
-        {
-            rb.AddForce(Vector3.Scale(transform.position - collision.transform.position, Vector3.one - Vector3.up) * 3.0f, ForceMode.Impulse);
-            Debug.Log("FLY YOU FOOLS");
-        }
+        yield return new WaitForSeconds(0.1f);
+        active = true;
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            rb.AddForce(Vector3.Scale(transform.position - other.transform.position, Vector3.one - Vector3.up) * 3.0f, ForceMode.Impulse);
-            Debug.Log("FLY YOU FOOLS");
+            rb.AddForce(Vector3.Scale(transform.position - other.transform.position, Vector3.one - Vector3.up) * 5.0f, ForceMode.Impulse);
+            col.isTrigger = false;
+            rb.useGravity = true;
+            StartCoroutine("Wait");
         }
     }
 }
