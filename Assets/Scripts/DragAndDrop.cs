@@ -5,7 +5,12 @@ using UnityEngine;
 public class DragAndDrop : MonoBehaviour
 {
     [SerializeField]
+
     private GameObject[] expandedObjects;
+
+    [SerializeField]
+
+    private GameObject[] slots;
 
     // Start is called before the first frame update
     void Start()
@@ -42,7 +47,14 @@ public class DragAndDrop : MonoBehaviour
                 }
                 else
                 {
-
+                    foreach(GameObject b in slots)
+                    {
+                        float distance = ((Vector2)(a.transform.position - b.transform.position)).magnitude;
+                        if (distance <= 1.0f)
+                        {
+                            a.transform.position = b.transform.position;
+                        }
+                    }
                 }
             }
         }
