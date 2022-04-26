@@ -16,12 +16,18 @@ public class Dropable : MonoBehaviour
 
     private Image image;
 
+    private Transform originalParent;
+
+    private int originalChildCount;
+
     // Start is called before the first frame update
     void Start()
     {
         origin = transform.position;
         dropManager = FindObjectOfType<DragAndDropManager>();
         image = GetComponent<Image>();
+        originalParent = transform.parent;
+        originalChildCount = originalParent.childCount;
     }
 
     bool isInBox(Image src)
@@ -59,30 +65,40 @@ public class Dropable : MonoBehaviour
         else
         {
             transform.position = (Vector3)mousePosition;
-            transform.SetParent(dropManager.transform);
+            transform.SetParent(originalParent);
         }
-        if(isInBox(image) && Input.GetMouseButtonDown(0) && !dropManager.isSelected)
+        if (gameObject.activeInHierarchy)
         {
-            dropManager.isSelected = true;
-            selected = true;
-        }
-        else if (Input.GetMouseButtonUp(0))
-        {
-            if (selected)
+            if (isInBox(image) && Input.GetMouseButtonDown(0) && !dropManager.isSelected)
             {
-                for (int i = 0; i < dropManager.slots.Length; i++)
+                dropManager.isSelected = true;
+                selected = true;
+            }
+            else if (Input.GetMouseButtonUp(0))
+            {
+                if (selected)
                 {
-                    if (isInBox(dropManager.slots[i].GetComponent<Image>()) && dropManager.slots[i].transform.childCount == 0)
+                    for (int i = 0; i < dropManager.slots.Length; i++)
                     {
-                        index = i;
-                        break;
-                    }
-                    else if (!isInBox(dropManager.slots[i].GetComponent<Image>()))
-                    {
-                        index = -1;
+                        Image temp = dropManager.slots[i].GetComponent<Image>();
+                        if (isInBox(temp) && dropManager.slots[i].transform.childCount == 0)
+                        {
+                            index = i;
+                            break;
+                        }
+                        else if (!isInBox(temp))
+                        {
+                            index = -1;
+                        }
                     }
                 }
+                selected = false;
+                dropManager.isSelected = false;
             }
+        }
+        else
+        {
+            index = -1;
             selected = false;
             dropManager.isSelected = false;
         }
