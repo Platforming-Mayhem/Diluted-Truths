@@ -7,7 +7,9 @@ public class Dropable : MonoBehaviour
 {
     private DragAndDropManager dropManager;
 
+    [SerializeField]
     private int index = -1;
+
     private bool selected;
 
     private Vector3 origin;
@@ -22,10 +24,10 @@ public class Dropable : MonoBehaviour
         image = GetComponent<Image>();
     }
 
-    bool isInBox()
+    bool isInBox(Image src)
     {
         Vector3[] corners = new Vector3[4];
-        image.rectTransform.GetWorldCorners(corners);
+        src.rectTransform.GetWorldCorners(corners);
         if (mousePosition.x >= corners[0].x && mousePosition.x <= corners[2].x && mousePosition.y >= corners[0].y && mousePosition.y <= corners[2].y)
         {
             return true;
@@ -51,29 +53,38 @@ public class Dropable : MonoBehaviour
             else
             {
                 transform.position = dropManager.slots[index].transform.position;
+                transform.SetParent(dropManager.slots[index].transform);
             }
         }
         else
         {
             transform.position = (Vector3)mousePosition;
+            transform.SetParent(dropManager.transform);
         }
-        if(isInBox() && Input.GetMouseButtonDown(0) && !dropManager.isSelected)
+        if(isInBox(image) && Input.GetMouseButtonDown(0) && !dropManager.isSelected)
         {
             dropManager.isSelected = true;
             selected = true;
         }
         else if (Input.GetMouseButtonUp(0))
         {
-            for (int i = 0; i < dropManager.slots.Length; i++)
+            if (selected)
             {
-                if((mousePosition - (Vector2)dropManager.slots[i].transform.position).magnitude <= 1.0f)
+                for (int i = 0; i < dropManager.slots.Length; i++)
                 {
-                    index = i;
+                    if (isInBox(dropManager.slots[i].GetComponent<Image>()) && dropManager.slots[i].transform.childCount == 0)
+                    {
+                        index = i;
+                        break;
+                    }
+                    else if (!isInBox(dropManager.slots[i].GetComponent<Image>()))
+                    {
+                        index = -1;
+                    }
                 }
             }
             selected = false;
             dropManager.isSelected = false;
         }
-        
     }
 }
