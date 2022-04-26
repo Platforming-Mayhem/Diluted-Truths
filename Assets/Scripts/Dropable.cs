@@ -7,8 +7,7 @@ public class Dropable : MonoBehaviour
 {
     private DragAndDropManager dropManager;
 
-    [SerializeField]
-    private int index = -1;
+    public int index = -1;
 
     private bool selected;
 
@@ -16,9 +15,9 @@ public class Dropable : MonoBehaviour
 
     private Image image;
 
-    private Transform originalParent;
+    public Transform originalParent;
 
-    private int originalChildCount;
+    public int originalChildCount;
 
     // Start is called before the first frame update
     void Start()
@@ -54,20 +53,31 @@ public class Dropable : MonoBehaviour
         {
             if(index == -1)
             {
-                transform.position = origin;
+                transform.position = Vector3.Lerp(transform.position, origin, Time.deltaTime * 5.0f);
+                dropManager.previouslyDropped = null;
+                if((transform.position - origin).magnitude <= 1.0f)
+                {
+                    transform.SetParent(originalParent);
+                    transform.position = origin;
+                }
             }
             else
             {
                 transform.position = dropManager.slots[index].transform.position;
                 transform.SetParent(dropManager.slots[index].transform);
+                if (originalParent.childCount < originalChildCount - 1)
+                {
+                    dropManager.previouslyDropped = gameObject;
+                    dropManager.Rearrange();
+                }
             }
         }
         else
         {
             transform.position = (Vector3)mousePosition;
-            transform.SetParent(originalParent);
+            transform.SetParent(originalParent.parent);
         }
-        if (gameObject.activeInHierarchy)
+        if (dropManager.previouslyDropped == null)
         {
             if (isInBox(image) && Input.GetMouseButtonDown(0) && !dropManager.isSelected)
             {
