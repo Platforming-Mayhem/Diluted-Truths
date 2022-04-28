@@ -174,18 +174,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7918335002988649766, guid: 6f42ca04b2950bf49a6296196d0ed13c, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 86400224a525f8f468a615802ade0176, type: 2}
-    - target: {fileID: -6093592463355912122, guid: 6f42ca04b2950bf49a6296196d0ed13c, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 86400224a525f8f468a615802ade0176, type: 2}
-    - target: {fileID: -4683669308469848369, guid: 6f42ca04b2950bf49a6296196d0ed13c, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 86400224a525f8f468a615802ade0176, type: 2}
     - target: {fileID: -1853094968961178454, guid: 6f42ca04b2950bf49a6296196d0ed13c, type: 3}
       propertyPath: orthographic
       value: 1
@@ -210,22 +198,6 @@ PrefabInstance:
       propertyPath: m_projectionMatrixMode
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: -1806680513116206669, guid: 6f42ca04b2950bf49a6296196d0ed13c, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 86400224a525f8f468a615802ade0176, type: 2}
-    - target: {fileID: -1461304994638716399, guid: 6f42ca04b2950bf49a6296196d0ed13c, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 86400224a525f8f468a615802ade0176, type: 2}
-    - target: {fileID: -804731622281664130, guid: 6f42ca04b2950bf49a6296196d0ed13c, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 86400224a525f8f468a615802ade0176, type: 2}
-    - target: {fileID: -678588488315902003, guid: 6f42ca04b2950bf49a6296196d0ed13c, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 86400224a525f8f468a615802ade0176, type: 2}
     - target: {fileID: 919132149155446097, guid: 6f42ca04b2950bf49a6296196d0ed13c, type: 3}
       propertyPath: m_Name
       value: TechShop
