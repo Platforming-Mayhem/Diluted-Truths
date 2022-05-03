@@ -1,16 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class DragAndDropManager : MonoBehaviour
 {
     [SerializeField]
-
     private GameObject[] expandedObjects;
 
     public GameObject[] slots;
+
+    public NewsReportInfo info;
 
     // Start is called before the first frame update
     void Start()
@@ -53,17 +55,6 @@ public class DragAndDropManager : MonoBehaviour
             if (drop.choices.transform.childCount >= 3)
             {
                 Debug.Log("Can submit!");
-                string sequence = "";
-                foreach(Dropable a in drop.choices.GetComponentsInChildren<Dropable>())
-                {
-                    sequence += a.name;
-                }
-                string[] b = sequence.Split();
-                List<string> c = b.ToList();
-                c.Sort();
-                Debug.Log(c[0]);
-                Debug.Log(c[1]);
-                Debug.Log(c[2]);
                 return true;
             }
             else
@@ -84,6 +75,13 @@ public class DragAndDropManager : MonoBehaviour
         bool canSubmit = CheckScript();
         if (canSubmit)
         {
+            
+            GameObject choices = FindObjectOfType<Dropable>().choices;
+            foreach(Transform child in choices.transform)
+            {
+                TMP_Text text = child.GetComponentInChildren<TMP_Text>();
+                info.information.Add(text.text);
+            }
             SceneManager.LoadScene(sceneName);
         }
     }
