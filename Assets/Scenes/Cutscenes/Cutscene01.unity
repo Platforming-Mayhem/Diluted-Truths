@@ -175,7 +175,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
+  orthographic: 1
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
@@ -218,6 +218,7 @@ GameObject:
   - component: {fileID: 506240555}
   - component: {fileID: 506240554}
   - component: {fileID: 506240553}
+  - component: {fileID: 506240557}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -274,8 +275,8 @@ Canvas:
   m_GameObject: {fileID: 506240552}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 454338905}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -306,6 +307,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &506240557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 506240552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b19e626c96d11264aa64d4f751ae3c7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 587186431}
+  news: {fileID: 11400000, guid: 36e63a7de09da734b82f442e6e5a531c, type: 2}
 --- !u!1 &587186429
 GameObject:
   m_ObjectHideFlags: 0

@@ -17,6 +17,7 @@ public class DragAndDropManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        info.information = new List<string>();
         isSelected = false;
         foreach (GameObject a in expandedObjects)
         {
