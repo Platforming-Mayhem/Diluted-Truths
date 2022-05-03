@@ -7,6 +7,8 @@ public class Dropable : MonoBehaviour
 {
     private DragAndDropManager dropManager;
 
+    public GameObject choices;
+
     public int index = -1;
 
     private bool selected;
@@ -64,7 +66,7 @@ public class Dropable : MonoBehaviour
             else
             {
                 transform.position = dropManager.slots[index].transform.position;
-                transform.SetParent(dropManager.slots[index].transform);
+                transform.SetParent(choices.transform);
                 if (originalParent.childCount < originalChildCount - 1)
                 {
                     dropManager.previouslyDropped = gameObject;
