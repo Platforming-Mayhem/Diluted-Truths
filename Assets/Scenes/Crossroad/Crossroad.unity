@@ -187,16 +187,20 @@ PrefabInstance:
       value: 1.71
       objectReference: {fileID: 0}
     - target: {fileID: -1853094968961178454, guid: 404c645dedc630d4db03d9cd9da5b87b, type: 3}
+      propertyPath: m_BackGroundColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1853094968961178454, guid: 404c645dedc630d4db03d9cd9da5b87b, type: 3}
       propertyPath: m_BackGroundColor.b
-      value: 0
+      value: 0.38431376
       objectReference: {fileID: 0}
     - target: {fileID: -1853094968961178454, guid: 404c645dedc630d4db03d9cd9da5b87b, type: 3}
       propertyPath: m_BackGroundColor.g
-      value: 0
+      value: 0.38823533
       objectReference: {fileID: 0}
     - target: {fileID: -1853094968961178454, guid: 404c645dedc630d4db03d9cd9da5b87b, type: 3}
       propertyPath: m_BackGroundColor.r
-      value: 0
+      value: 0.38431376
       objectReference: {fileID: 0}
     - target: {fileID: -1853094968961178454, guid: 404c645dedc630d4db03d9cd9da5b87b, type: 3}
       propertyPath: m_projectionMatrixMode
@@ -243,7 +247,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
