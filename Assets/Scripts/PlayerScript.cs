@@ -5,7 +5,10 @@ using UnityEngine;
 public class PlayerScript : MonoBehaviour
 {
     [SerializeField] private float movementSpeed;
-    
+
+    public bool hasUSB1;
+    public bool hasUSB2;
+    public bool hasUSB3;
 
     private Rigidbody rb;
 

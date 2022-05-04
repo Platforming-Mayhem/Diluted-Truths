@@ -18,6 +18,7 @@ public class DialogueManager : MonoBehaviour
     [Header("Choices UI")]
     [SerializeField] private GameObject[] choices;
     private TextMeshProUGUI[] choicesText;
+    [SerializeField] PlayerScript ps;
 
     private Story currentStory;
     public bool dialogueIsPlaying ;
@@ -79,6 +80,7 @@ public class DialogueManager : MonoBehaviour
     public void EnterDialogueMode(TextAsset inkJSON) 
     {
         currentStory = new Story(inkJSON.text);
+        ChangeVariables();
         dialogueIsPlaying = true;
         canvas.DialogueAppear(1.0f);
         // reset portrait, layout, and speaker
@@ -92,6 +94,7 @@ public class DialogueManager : MonoBehaviour
     private IEnumerator ExitDialogueMode() 
     {
         canvas.DialogueDisappear(1.0f);
+        RecieveVariables();
         yield return new WaitForSeconds(0.2f);
         dialogueIsPlaying = false;
         dialogueText.text = "";
@@ -115,6 +118,19 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    private void RecieveVariables()
+    {
+        ps.hasUSB1 = (bool)currentStory.variablesState["USB1"];
+        ps.hasUSB2 = (bool)currentStory.variablesState["USB2"];
+        ps.hasUSB3 = (bool)currentStory.variablesState["USB3"];
+    }
+
+    private void ChangeVariables()
+    {
+        currentStory.variablesState["USB1"] = ps.hasUSB1;
+        currentStory.variablesState["USB2"] = ps.hasUSB2;
+        currentStory.variablesState["USB3"] = ps.hasUSB3;
+    }
     private void HandleTags(List<string> currentTags)
     {
         // loop through each tag and handle it accordingly
