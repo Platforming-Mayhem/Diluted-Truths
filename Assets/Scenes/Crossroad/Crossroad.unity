@@ -304,7 +304,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1853094968961178454, guid: 404c645dedc630d4db03d9cd9da5b87b, type: 3}
       propertyPath: orthographic size
-      value: 4
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: -1853094968961178454, guid: 404c645dedc630d4db03d9cd9da5b87b, type: 3}
       propertyPath: m_BackGroundColor.a
@@ -312,15 +312,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1853094968961178454, guid: 404c645dedc630d4db03d9cd9da5b87b, type: 3}
       propertyPath: m_BackGroundColor.b
-      value: 0.38431376
+      value: 0.23137257
       objectReference: {fileID: 0}
     - target: {fileID: -1853094968961178454, guid: 404c645dedc630d4db03d9cd9da5b87b, type: 3}
       propertyPath: m_BackGroundColor.g
-      value: 0.38823533
+      value: 0.24313727
       objectReference: {fileID: 0}
     - target: {fileID: -1853094968961178454, guid: 404c645dedc630d4db03d9cd9da5b87b, type: 3}
       propertyPath: m_BackGroundColor.r
-      value: 0.38431376
+      value: 0.2627451
       objectReference: {fileID: 0}
     - target: {fileID: -1853094968961178454, guid: 404c645dedc630d4db03d9cd9da5b87b, type: 3}
       propertyPath: m_projectionMatrixMode
@@ -334,7 +334,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroad
       objectReference: {fileID: 0}
+    - target: {fileID: 1796858810134656484, guid: 404c645dedc630d4db03d9cd9da5b87b, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1845659267115267424, guid: 404c645dedc630d4db03d9cd9da5b87b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bbcf63a943ecc6745951a462a11a9a68, type: 2}
+    - target: {fileID: 2786534777698132407, guid: 404c645dedc630d4db03d9cd9da5b87b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: bbcf63a943ecc6745951a462a11a9a68, type: 2}
@@ -342,6 +350,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: bbcf63a943ecc6745951a462a11a9a68, type: 2}
+    - target: {fileID: 8658824473193787452, guid: 404c645dedc630d4db03d9cd9da5b87b, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 404c645dedc630d4db03d9cd9da5b87b, type: 3}
 --- !u!1 &1837360894 stripped
