@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5d076ac19b3d9944aa66f2efe26d780, type: 3}
+  m_Name: NewsDB
+  m_EditorClassIdentifier: 
+  allNews:
+  - {fileID: 11400000, guid: 770231a40afade0479b30a7daaf6e767, type: 2}
+  - {fileID: 11400000, guid: 53e5ea2086893e14db543fbd2ec330b0, type: 2}
+  - {fileID: 11400000, guid: adf00b1b115cc854aacf2202a6a79fbf, type: 2}
+  - {fileID: 11400000, guid: dfb8af6aafcac024f93cdda70c405870, type: 2}
+  - {fileID: 11400000, guid: b046b2d7ec84f48449d8724dccac8130, type: 2}
+  - {fileID: 11400000, guid: 332c6378091ce7549915c6621339e7f6, type: 2}
+  - {fileID: 11400000, guid: 69e0871974eeef04eb6a5f40ced8c467, type: 2}
+  - {fileID: 11400000, guid: 21044a7d6b9bd8a47bb2d0465c557a38, type: 2}
+  - {fileID: 11400000, guid: fc931afea8435364cbbdfb702f9b8d50, type: 2}
+  - {fileID: 11400000, guid: 45858c1d7ad706c46a4ed741c540a333, type: 2}
+  - {fileID: 11400000, guid: 8fbdfd39b06ebdd4c9a6dae8f7152362, type: 2}
+  - {fileID: 11400000, guid: aa26671e0cb425041988f41c7cd07409, type: 2}
