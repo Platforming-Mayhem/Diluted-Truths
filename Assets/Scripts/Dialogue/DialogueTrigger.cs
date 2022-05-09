@@ -30,6 +30,7 @@ public class DialogueTrigger : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 diag.EnterDialogueMode(ink);
+                Debug.Log("Loading Dialogue");
             }
         }
     }

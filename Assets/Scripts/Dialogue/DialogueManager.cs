@@ -80,7 +80,7 @@ public class DialogueManager : MonoBehaviour
     public void EnterDialogueMode(TextAsset inkJSON) 
     {
         currentStory = new Story(inkJSON.text);
-        ChangeVariables();
+        //ChangeVariables();
         dialogueIsPlaying = true;
         canvas.DialogueAppear(1.0f);
         // reset portrait, layout, and speaker
@@ -94,7 +94,7 @@ public class DialogueManager : MonoBehaviour
     private IEnumerator ExitDialogueMode() 
     {
         canvas.DialogueDisappear(1.0f);
-        RecieveVariables();
+        //RecieveVariables();
         yield return new WaitForSeconds(0.2f);
         dialogueIsPlaying = false;
         dialogueText.text = "";
