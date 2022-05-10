@@ -9,6 +9,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: techshopSheet
     second: {fileID: 2100000, guid: 86400224a525f8f468a615802ade0176, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: trainSheet
+    second: {fileID: 2100000, guid: 1c6db96bc65b7944bb707c2c1d947ad4, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
