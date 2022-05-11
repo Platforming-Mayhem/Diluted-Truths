@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 722.0537, g: 860.9092, b: 1235.6597, a: 1}
+  m_IndirectSpecularColor: {r: 721.30664, g: 859.1533, b: 1231.417, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -432,6 +432,14 @@ PrefabInstance:
     - target: {fileID: 3185227461137475052, guid: b9ce41cae5a061f41b1c051ad4e284b3, type: 3}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3185227461137475052, guid: b9ce41cae5a061f41b1c051ad4e284b3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3185227461137475052, guid: b9ce41cae5a061f41b1c051ad4e284b3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3185227461137475052, guid: b9ce41cae5a061f41b1c051ad4e284b3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -894,6 +902,8 @@ MonoBehaviour:
   speed: 5
   offset: {x: 0, y: 0, z: -25}
   cameraBoundary: {x: 0, y: 0, z: 0}
+  freezeX: 0
+  freezeY: 0
   clamp: 1
   clampX: 7.197128
   clampYMax: -20.68
@@ -1087,7 +1097,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7929992691926037127, guid: 9a7a7b5576b0b524795aa2f4cc465ac0, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
-      value: 1
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 7929992691926037128, guid: 9a7a7b5576b0b524795aa2f4cc465ac0, type: 3}
       propertyPath: m_Pivot.x
