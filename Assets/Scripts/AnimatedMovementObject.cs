@@ -14,9 +14,9 @@ public class AnimatedMovementObject : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine("WaitToPresentNextFrame");
         offsetAmount = 0.0f;
         originalPosition = transform.position;
+        StartCoroutine("WaitToPresentNextFrame");
     }
 
 
