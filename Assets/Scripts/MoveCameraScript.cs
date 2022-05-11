@@ -9,6 +9,8 @@ public class MoveCameraScript : MonoBehaviour
     [SerializeField] private Vector3 offset;
     [SerializeField] private Vector3 cameraBoundary;
 
+    public bool freezeX, freezeY;
+
     public bool clamp;
 
     public float clampX;
@@ -26,6 +28,14 @@ public class MoveCameraScript : MonoBehaviour
     {
         Vector3 lerpValue = Vector3.Lerp(transform.position, player.position + offset, Time.deltaTime * speed);
         lerpValue.y = transform.position.y;
+        if (freezeX)
+        {
+            lerpValue.x = transform.position.x;
+        }
+        if (freezeY)
+        {
+            lerpValue.z = transform.position.z;
+        }
         if (clamp)
         {
             lerpValue.x = Mathf.Clamp(lerpValue.x, -clampX, clampX);
