@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using Ink.Runtime;
 using UnityEngine.EventSystems;
+using Ink.UnityIntegration;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -20,6 +21,9 @@ public class DialogueManager : MonoBehaviour
     private TextMeshProUGUI[] choicesText;
     [SerializeField] PlayerScript ps;
 
+    [Header("Globals Ink File")]
+    [SerializeField] private TextAsset globalsInkFile;
+
     private Story currentStory;
     public bool dialogueIsPlaying ;
 
@@ -30,6 +34,8 @@ public class DialogueManager : MonoBehaviour
     private const string PORTRAIT_TAG = "portrait";
     private const string LAYOUT_TAG = "layout";
 
+    private DialogueVariables dialogueVariables;
+
     private void Awake() 
     {
         if (instance != null)
@@ -37,6 +43,8 @@ public class DialogueManager : MonoBehaviour
             Debug.LogWarning("Found more than one Dialogue Manager in the scene");
         }
         instance = this;
+
+        dialogueVariables = new DialogueVariables(globalsInkFile);
     }
 
     public static DialogueManager GetInstance() 
@@ -83,6 +91,8 @@ public class DialogueManager : MonoBehaviour
         //ChangeVariables();
         dialogueIsPlaying = true;
         canvas.DialogueAppear(1.0f);
+
+        dialogueVariables.StartListening(currentStory);
         // reset portrait, layout, and speaker
         displayNameText.text = "???";
         portraitAnimator.Play("default");
@@ -96,6 +106,8 @@ public class DialogueManager : MonoBehaviour
         canvas.DialogueDisappear(1.0f);
         //RecieveVariables();
         yield return new WaitForSeconds(0.2f);
+
+        dialogueVariables.StopListening(currentStory);
         dialogueIsPlaying = false;
         dialogueText.text = "";
         Debug.Log("Finished");
@@ -118,11 +130,18 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    private void RecieveVariables()
+
+    public void SetVariableState(string variableName, Ink.Runtime.Object variableValue)
     {
-        ps.hasUSB1 = (bool)currentStory.variablesState["USB1"];
-        ps.hasUSB2 = (bool)currentStory.variablesState["USB2"];
-        ps.hasUSB3 = (bool)currentStory.variablesState["USB3"];
+        if (dialogueVariables.variables.ContainsKey(variableName))
+        {
+            dialogueVariables.variables.Remove(variableName);
+            dialogueVariables.variables.Add(variableName, variableValue);
+        }
+        else
+        {
+            Debug.LogWarning("Tried to update variable that wasn't initialized by globals.ink: " + variableName);
+        }
     }
 
     private void ChangeVariables()

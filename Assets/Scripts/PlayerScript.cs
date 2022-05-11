@@ -6,9 +6,14 @@ public class PlayerScript : MonoBehaviour
 {
     [SerializeField] private float movementSpeed;
 
+
+    #region player dialogue flags
+
     public bool hasUSB1;
     public bool hasUSB2;
     public bool hasUSB3;
+
+    #endregion
 
     private Rigidbody rb;
 
