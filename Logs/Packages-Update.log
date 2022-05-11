@@ -66,3 +66,11 @@ Update Mode: updateDependencies
 
 The following packages were updated:
   com.unity.render-pipelines.high-definition from version 10.7.0 to 12.1.1
+
+=== Wed May 11 19:01:05 2022
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were updated:
+  com.unity.render-pipelines.high-definition from version 10.7.0 to 11.0.0

@@ -6,6 +6,13 @@ public class PlayerScript : MonoBehaviour
 {
     [SerializeField] private float movementSpeed;
 
+    [SerializeField] private Material player;
+
+    [SerializeField] private int frameRate = 12;
+
+    private Vector2 originOffset;
+
+    [SerializeField] private float offsetAmount;
 
     #region player dialogue flags
 
@@ -21,6 +28,10 @@ public class PlayerScript : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        offsetAmount = 0.0f;
+        originOffset = player.mainTextureOffset;
+        originOffset = new Vector2(0.0375f, originOffset.y);
+        StartCoroutine(WaitToPresentNextFrame());
     }
 
     // Update is called once per frame
@@ -29,8 +40,38 @@ public class PlayerScript : MonoBehaviour
         Move();
     }
 
+    IEnumerator WaitToPresentNextFrame()
+    {
+        for (; ; )
+        {
+            yield return new WaitForSeconds((float)(1.0f / frameRate));
+            offsetAmount += (float)(1.0f / 13.0f);
+        }
+    }
+
     private void Move()
     {
         rb.velocity = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical")) * movementSpeed;
+        if(Input.GetAxis("Horizontal") > 0.0f)
+        {
+            originOffset = new Vector2(originOffset.x, 0.294f);
+        }
+        else if (Input.GetAxis("Horizontal") < 0.0f)
+        {
+            originOffset = new Vector2(originOffset.x, 0.044f);
+        }
+        else if (Input.GetAxis("Vertical") > 0.0f)
+        {
+            originOffset = new Vector2(originOffset.x, 0.544f);
+        }
+        else if (Input.GetAxis("Vertical") < 0.0f)
+        {
+            originOffset = new Vector2(originOffset.x, 0.544f);
+        }
+        else
+        {
+            offsetAmount = 0.0f;
+        }
+        player.mainTextureOffset = originOffset + Vector2.right * offsetAmount;
     }
 }
