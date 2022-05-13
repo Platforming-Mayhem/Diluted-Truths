@@ -2338,7 +2338,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3185227461137475052, guid: b9ce41cae5a061f41b1c051ad4e284b3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3185227461137475052, guid: b9ce41cae5a061f41b1c051ad4e284b3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2371,6 +2371,10 @@ PrefabInstance:
     - target: {fileID: 3185227461137475052, guid: b9ce41cae5a061f41b1c051ad4e284b3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3185227461137475054, guid: b9ce41cae5a061f41b1c051ad4e284b3, type: 3}
+      propertyPath: movementSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3185227461137475056, guid: b9ce41cae5a061f41b1c051ad4e284b3, type: 3}
       propertyPath: m_Name
@@ -5193,7 +5197,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b59688432d8335046b197477dac907bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   sceneName: Crossroad
+  changePosition: 1
+  index: 1
 --- !u!1 &1526651005 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5394693769120690257, guid: 90547b4e37c73884abae2259a417ff92, type: 3}
@@ -8139,7 +8146,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b59688432d8335046b197477dac907bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   sceneName: Office Work
+  changePosition: 0
+  index: 0
 --- !u!65 &2063629459
 BoxCollider:
   m_ObjectHideFlags: 0

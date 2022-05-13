@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
@@ -10,7 +11,10 @@ public class PlayerScript : MonoBehaviour
 
     [SerializeField] private int frameRate = 12;
 
+    [SerializeField] private Animator anim;
+
     private Vector2 originOffset;
+
 
     [SerializeField] private float offsetAmount;
 
@@ -24,6 +28,8 @@ public class PlayerScript : MonoBehaviour
 
     private Rigidbody rb;
 
+    public Transform[] spawns;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +38,11 @@ public class PlayerScript : MonoBehaviour
         originOffset = player.mainTextureOffset;
         originOffset = new Vector2(0.0375f, originOffset.y);
         StartCoroutine(WaitToPresentNextFrame());
+        if(PlayerPrefs.GetInt("changePos") == 1)
+        {
+            transform.position = spawns[PlayerPrefs.GetInt("index")].position;
+            anim.SetTrigger("FadeIn");
+        }
     }
 
     // Update is called once per frame

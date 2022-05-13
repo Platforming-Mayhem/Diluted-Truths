@@ -72,10 +72,10 @@ MonoBehaviour:
     m_Value: {x: 1, y: 1, z: 1, w: 0}
   gamma:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 1, z: 1, w: -0.33074075}
+    m_Value: {x: 1, y: 0.99859035, z: 0.9943609, w: -0.1469172}
   gain:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 1, z: 1, w: 0.5866002}
+    m_Value: {x: 0.99108434, y: 1, z: 0.99605405, w: 0.5866002}
 --- !u!114 &-664046568621418001
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -101,7 +101,7 @@ MonoBehaviour:
     m_Value: 1
   fixedExposure:
     m_OverrideState: 1
-    m_Value: 11.760913
+    m_Value: 12.096971
   compensation:
     m_OverrideState: 0
     m_Value: 0
@@ -380,6 +380,10 @@ MonoBehaviour:
   includeSunInBaking:
     m_OverrideState: 0
     m_Value: 0
+  m_SkyVersion: 1
+  m_ObsoleteEarthPreset:
+    m_OverrideState: 0
+    m_Value: 1
   type:
     m_OverrideState: 1
     m_Value: 0
@@ -507,7 +511,3 @@ MonoBehaviour:
     m_Value: 0
     min: -1
     max: 1
-  m_SkyVersion: 1
-  m_ObsoleteEarthPreset:
-    m_OverrideState: 0
-    m_Value: 1
