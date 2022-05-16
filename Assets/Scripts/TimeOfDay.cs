@@ -14,22 +14,11 @@ public class TimeOfDay : MonoBehaviour
         
     }
 
-    bool onOrOff;
+    public bool onOrOff;
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            if (onOrOff)
-            {
-                onOrOff = false;
-            }
-            else
-            {
-                onOrOff = true;
-            }
-        }
         if (onOrOff)
         {
             day.SetActive(false);

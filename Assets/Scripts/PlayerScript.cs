@@ -30,14 +30,20 @@ public class PlayerScript : MonoBehaviour
 
     public Transform[] spawns;
 
+    public AudioClip footStep;
+
+    AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        audioSource = GetComponent<AudioSource>();
         offsetAmount = 0.0f;
         originOffset = player.mainTextureOffset;
         originOffset = new Vector2(0.0375f, originOffset.y);
         StartCoroutine(WaitToPresentNextFrame());
+        StartCoroutine(WaitToPlaySFX());
         if(PlayerPrefs.GetInt("changePos") == 1)
         {
             transform.position = spawns[PlayerPrefs.GetInt("index")].position;
@@ -51,12 +57,30 @@ public class PlayerScript : MonoBehaviour
         Move();
     }
 
+    public void PlayFootstepSFX()
+    {
+        audioSource.pitch = Random.Range(1.0f, 3.0f);
+        audioSource.PlayOneShot(footStep);
+    }
+
     IEnumerator WaitToPresentNextFrame()
     {
         for (; ; )
         {
             yield return new WaitForSeconds((float)(1.0f / frameRate));
             offsetAmount += (float)(1.0f / 13.0f);
+        }
+    }
+
+    IEnumerator WaitToPlaySFX()
+    {
+        for (; ; )
+        {
+            yield return new WaitForSeconds((float)(1.0f / frameRate * 6.0f));
+            if (rb.velocity.x != 0.0f || rb.velocity.z != 0.0f)
+            {
+                PlayFootstepSFX();
+            }
         }
     }
 
