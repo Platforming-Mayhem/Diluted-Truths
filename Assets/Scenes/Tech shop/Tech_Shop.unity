@@ -601,7 +601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdd0cfb1f61376b4caa3fe087d041a27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frameRate: 10
+  frameRate: 8
   framesPerRow: 4
   mat: {fileID: 2100000, guid: d8da57c9c4f11514d80a889c2ff8d268, type: 2}
 --- !u!65 &927026253
@@ -700,14 +700,6 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
---- !u!81 &927026266
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 927026256}
-  m_Enabled: 1
 --- !u!1 &1016019885
 GameObject:
   m_ObjectHideFlags: 0

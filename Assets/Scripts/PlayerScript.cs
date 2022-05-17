@@ -51,6 +51,11 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
+    private void FixedUpdate()
+    {
+        rb.velocity = new Vector3(Input.GetAxis("Horizontal"), rb.velocity.y / rb.mass, Input.GetAxis("Vertical")) * movementSpeed;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -77,35 +82,41 @@ public class PlayerScript : MonoBehaviour
         for (; ; )
         {
             yield return new WaitForSeconds((float)(1.0f / frameRate * 6.0f));
-            if (rb.velocity.x != 0.0f || rb.velocity.z != 0.0f)
+            if (isWalking)
             {
                 PlayFootstepSFX();
             }
         }
     }
 
+    private bool isWalking = false;
+
     private void Move()
     {
-        rb.velocity = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical")) * movementSpeed;
         if(Input.GetAxis("Horizontal") > 0.0f)
         {
             originOffset = new Vector2(originOffset.x, 0.294f);
+            isWalking = true;
         }
         else if (Input.GetAxis("Horizontal") < 0.0f)
         {
             originOffset = new Vector2(originOffset.x, 0.044f);
+            isWalking = true;
         }
         else if (Input.GetAxis("Vertical") > 0.0f)
         {
             originOffset = new Vector2(originOffset.x, 0.544f);
+            isWalking = true;
         }
         else if (Input.GetAxis("Vertical") < 0.0f)
         {
             originOffset = new Vector2(originOffset.x, 0.544f);
+            isWalking = true;
         }
         else
         {
             offsetAmount = 0.0f;
+            isWalking = false;
         }
         player.mainTextureOffset = originOffset + Vector2.right * offsetAmount;
     }
