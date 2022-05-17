@@ -34,6 +34,11 @@ public class PlayerScript : MonoBehaviour
 
     AudioSource audioSource;
 
+    private int numberOfFrames = 7;
+
+    [SerializeField]
+    private bool freezeForwardMovement;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,7 +46,7 @@ public class PlayerScript : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         offsetAmount = 0.0f;
         originOffset = player.mainTextureOffset;
-        originOffset = new Vector2(0.0375f, originOffset.y);
+        originOffset = new Vector2(0.02f, originOffset.y);
         StartCoroutine(WaitToPresentNextFrame());
         StartCoroutine(WaitToPlaySFX());
         if(PlayerPrefs.GetInt("changePos") == 1)
@@ -53,7 +58,14 @@ public class PlayerScript : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = new Vector3(Input.GetAxis("Horizontal"), rb.velocity.y / rb.mass, Input.GetAxis("Vertical")) * movementSpeed;
+        if (freezeForwardMovement)
+        {
+            rb.velocity = new Vector3(Input.GetAxis("Horizontal"), 0.0f, 0.0f) * movementSpeed + Vector3.up * rb.velocity.y;
+        }
+        else
+        {
+            rb.velocity = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical")) * movementSpeed + Vector3.up * rb.velocity.y;
+        }
     }
 
     // Update is called once per frame
@@ -73,7 +85,15 @@ public class PlayerScript : MonoBehaviour
         for (; ; )
         {
             yield return new WaitForSeconds((float)(1.0f / frameRate));
-            offsetAmount += (float)(1.0f / 13.0f);
+            if(offsetAmount == (1.0f / 8.0f) * numberOfFrames)
+            {
+                offsetAmount = 0.0f;
+                Debug.Log("Reset");
+            }
+            else
+            {
+                offsetAmount += (float)(1.0f / 8.0f);
+            }
         }
     }
 
@@ -95,22 +115,26 @@ public class PlayerScript : MonoBehaviour
     {
         if(Input.GetAxis("Horizontal") > 0.0f)
         {
-            originOffset = new Vector2(originOffset.x, 0.294f);
+            originOffset = new Vector2(originOffset.x, 0.303f);
+            numberOfFrames = 5;
             isWalking = true;
         }
         else if (Input.GetAxis("Horizontal") < 0.0f)
         {
             originOffset = new Vector2(originOffset.x, 0.044f);
+            numberOfFrames = 5;
             isWalking = true;
         }
-        else if (Input.GetAxis("Vertical") > 0.0f)
+        else if (Input.GetAxis("Vertical") > 0.0f && !freezeForwardMovement)
         {
-            originOffset = new Vector2(originOffset.x, 0.544f);
+            originOffset = new Vector2(originOffset.x, 0.56f);
+            numberOfFrames = 7;
             isWalking = true;
         }
-        else if (Input.GetAxis("Vertical") < 0.0f)
+        else if (Input.GetAxis("Vertical") < 0.0f && !freezeForwardMovement)
         {
-            originOffset = new Vector2(originOffset.x, 0.544f);
+            originOffset = new Vector2(originOffset.x, 0.784f);
+            numberOfFrames = 7;
             isWalking = true;
         }
         else
