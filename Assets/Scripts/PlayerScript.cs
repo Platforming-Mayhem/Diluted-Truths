@@ -144,4 +144,9 @@ public class PlayerScript : MonoBehaviour
         }
         player.mainTextureOffset = originOffset + Vector2.right * offsetAmount;
     }
+
+    private void OnDisable()
+    {
+        rb.velocity = Vector3.zero;
+    }
 }

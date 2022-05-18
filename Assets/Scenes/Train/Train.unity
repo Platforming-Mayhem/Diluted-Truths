@@ -278,6 +278,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 3f45c6c744263864390f59c5f4c806b0, type: 2}
+    - target: {fileID: -6788151492390477048, guid: 1bd435c3590df7e45a93a99a065d1998, type: 3}
+      propertyPath: m_RootOrder
+      value: 44
+      objectReference: {fileID: 0}
     - target: {fileID: -6390553425048673252, guid: 1bd435c3590df7e45a93a99a065d1998, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -398,6 +402,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: -328063730776284411, guid: 1bd435c3590df7e45a93a99a065d1998, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 384c29a14616ddf4dbed60edd663bc4e, type: 2}
     - target: {fileID: -241587437493983680, guid: 1bd435c3590df7e45a93a99a065d1998, type: 3}
       propertyPath: m_CastShadows
       value: 0
@@ -1961,6 +1969,7 @@ GameObject:
   - component: {fileID: 1611568388}
   - component: {fileID: 1611568394}
   - component: {fileID: 1611568395}
+  - component: {fileID: 1611568396}
   m_Layer: 0
   m_Name: Animations
   m_TagString: Untagged
@@ -2087,6 +2096,21 @@ MonoBehaviour:
   frameRate: 6
   framesPerRow: 4
   mat: {fileID: 2100000, guid: 360a2a32871b0a54b8754b89ac3948c8, type: 2}
+--- !u!114 &1611568396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611568387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdd0cfb1f61376b4caa3fe087d041a27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frameRate: 6
+  framesPerRow: 4
+  mat: {fileID: 2100000, guid: 384c29a14616ddf4dbed60edd663bc4e, type: 2}
 --- !u!1 &1612327939
 GameObject:
   m_ObjectHideFlags: 0
