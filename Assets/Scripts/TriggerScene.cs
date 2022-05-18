@@ -38,6 +38,7 @@ public class TriggerScene : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            other.GetComponent<PlayerScript>().enabled = false;
             FindObjectOfType<TriggerRedirect>().trigger = this;
             anim.SetTrigger("FadeOut");
         }

@@ -85,7 +85,7 @@ public class PlayerScript : MonoBehaviour
         for (; ; )
         {
             yield return new WaitForSeconds((float)(1.0f / frameRate));
-            if(offsetAmount == (1.0f / 8.0f) * numberOfFrames)
+            if(offsetAmount >= (1.0f / 8.0f) * numberOfFrames)
             {
                 offsetAmount = 0.0f;
                 Debug.Log("Reset");
