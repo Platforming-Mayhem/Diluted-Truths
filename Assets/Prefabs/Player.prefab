@@ -133,6 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f8431c8ccbf86e4e912f41011893384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 0}
 --- !u!1 &1865746760
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,8 +353,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d7adcd3524012b43b7df04c8429cee9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 5
+  movementSpeed: 3
   player: {fileID: 2100000, guid: d14cd8e8ef0d2cd4d9a041ec61220899, type: 2}
+  idleFrames: {fileID: 2100000, guid: 229738bd21820154bb9f6b22ab84648d, type: 2}
   frameRate: 12
   anim: {fileID: 569908838}
   offsetAmount: 0
@@ -363,6 +365,9 @@ MonoBehaviour:
   spawns:
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  footStep: {fileID: 8300000, guid: 5352960d942de4d41827c93b3ef3499c, type: 3}
+  freezeForwardMovement: 0
 --- !u!65 &919257318
 BoxCollider:
   m_ObjectHideFlags: 0

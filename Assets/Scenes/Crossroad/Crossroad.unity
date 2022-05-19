@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 720.5537, g: 857.5547, b: 1227.9946, a: 1}
+  m_IndirectSpecularColor: {r: 718.97754, g: 857.56836, b: 1231.0366, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -516,6 +516,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 569908836, guid: b9ce41cae5a061f41b1c051ad4e284b3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919257318, guid: b9ce41cae5a061f41b1c051ad4e284b3, type: 3}
       propertyPath: m_Size.z
       value: 0.31364292
@@ -536,6 +540,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.077
       objectReference: {fileID: 0}
+    - target: {fileID: 3185227459804946574, guid: b9ce41cae5a061f41b1c051ad4e284b3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 229738bd21820154bb9f6b22ab84648d, type: 2}
     - target: {fileID: 3185227461137475052, guid: b9ce41cae5a061f41b1c051ad4e284b3, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -589,18 +597,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3185227461137475054, guid: b9ce41cae5a061f41b1c051ad4e284b3, type: 3}
-      propertyPath: footStep
-      value: 
-      objectReference: {fileID: 8300000, guid: 5352960d942de4d41827c93b3ef3499c, type: 3}
-    - target: {fileID: 3185227461137475054, guid: b9ce41cae5a061f41b1c051ad4e284b3, type: 3}
-      propertyPath: movementSpeed
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3185227461137475054, guid: b9ce41cae5a061f41b1c051ad4e284b3, type: 3}
-      propertyPath: spawns.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3185227461137475054, guid: b9ce41cae5a061f41b1c051ad4e284b3, type: 3}
       propertyPath: spawns.Array.data[0]
       value: 
       objectReference: {fileID: 319675465}
@@ -612,10 +608,6 @@ PrefabInstance:
       propertyPath: spawns.Array.data[2]
       value: 
       objectReference: {fileID: 2087937841}
-    - target: {fileID: 3185227461137475054, guid: b9ce41cae5a061f41b1c051ad4e284b3, type: 3}
-      propertyPath: freezeForwardMovement
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3185227461137475056, guid: b9ce41cae5a061f41b1c051ad4e284b3, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1350,6 +1342,10 @@ PrefabInstance:
     - target: {fileID: 7929992691926037124, guid: 9a7a7b5576b0b524795aa2f4cc465ac0, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929992691926037124, guid: 9a7a7b5576b0b524795aa2f4cc465ac0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7929992691926037127, guid: 9a7a7b5576b0b524795aa2f4cc465ac0, type: 3}
       propertyPath: m_Camera

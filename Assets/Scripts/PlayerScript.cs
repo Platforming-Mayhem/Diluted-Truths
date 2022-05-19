@@ -9,6 +9,8 @@ public class PlayerScript : MonoBehaviour
 
     [SerializeField] private Material player;
 
+    [SerializeField] private Material idleFrames;
+
     [SerializeField] private int frameRate = 12;
 
     [SerializeField] private Animator anim;
@@ -39,11 +41,14 @@ public class PlayerScript : MonoBehaviour
     [SerializeField]
     private bool freezeForwardMovement;
 
+    private MeshRenderer mesh;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
+        mesh = GetComponentInChildren<MeshRenderer>();
         offsetAmount = 0.0f;
         originOffset = player.mainTextureOffset;
         originOffset = new Vector2(0.02f, originOffset.y);
@@ -54,6 +59,7 @@ public class PlayerScript : MonoBehaviour
             transform.position = spawns[PlayerPrefs.GetInt("index")].position;
             anim.SetTrigger("FadeIn");
         }
+        mesh.material = idleFrames;
     }
 
     private void FixedUpdate()
@@ -111,34 +117,66 @@ public class PlayerScript : MonoBehaviour
 
     private bool isWalking = false;
 
+    private float previousX;
+    private float previousY;
+
     private void Move()
     {
         if(Input.GetAxis("Horizontal") > 0.0f)
         {
+            mesh.material = player;
             originOffset = new Vector2(originOffset.x, 0.303f);
             numberOfFrames = 5;
             isWalking = true;
+            previousX = 1.0f;
+            previousY = 0.0f;
         }
         else if (Input.GetAxis("Horizontal") < 0.0f)
         {
+            mesh.material = player;
             originOffset = new Vector2(originOffset.x, 0.044f);
             numberOfFrames = 5;
             isWalking = true;
+            previousX = -1.0f;
+            previousY = 0.0f;
         }
         else if (Input.GetAxis("Vertical") > 0.0f && !freezeForwardMovement)
         {
+            mesh.material = player;
             originOffset = new Vector2(originOffset.x, 0.56f);
             numberOfFrames = 7;
             isWalking = true;
+            previousX = 0.0f;
+            previousY = 1.0f;
         }
         else if (Input.GetAxis("Vertical") < 0.0f && !freezeForwardMovement)
         {
+            mesh.material = player;
             originOffset = new Vector2(originOffset.x, 0.784f);
             numberOfFrames = 7;
             isWalking = true;
+            previousX = 0.0f;
+            previousY = -1.0f;
         }
         else
         {
+            if(previousX < 0.0f)
+            {
+                idleFrames.mainTextureOffset = new Vector2(0.17f, 0.04f);
+            }
+            else if(previousX > 0.0f)
+            {
+                idleFrames.mainTextureOffset = new Vector2(0.17f, 0.29f);
+            }
+            else if (previousY < 0.0f)
+            {
+                idleFrames.mainTextureOffset = new Vector2(0.17f, -0.21f);
+            }
+            else if (previousY > 0.0f)
+            {
+                idleFrames.mainTextureOffset = new Vector2(0.16f, -0.47f);
+            }
+            mesh.material = idleFrames;
             offsetAmount = 0.0f;
             isWalking = false;
         }
