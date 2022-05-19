@@ -32,6 +32,8 @@ public class PlayerScript : MonoBehaviour
 
     public Transform[] spawns;
 
+    public GameObject EGUI;
+
     public AudioClip footStep;
 
     AudioSource audioSource;
@@ -60,6 +62,7 @@ public class PlayerScript : MonoBehaviour
             anim.SetTrigger("FadeIn");
         }
         mesh.material = idleFrames;
+        EGUI.SetActive(false);
     }
 
     private void FixedUpdate()

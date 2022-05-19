@@ -38,9 +38,37 @@ public class TriggerScene : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            other.GetComponent<PlayerScript>().enabled = false;
-            FindObjectOfType<TriggerRedirect>().trigger = this;
-            anim.SetTrigger("FadeOut");
+            PlayerScript player = other.GetComponent<PlayerScript>();
+            player.EGUI.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                player.enabled = false;
+                FindObjectOfType<TriggerRedirect>().trigger = this;
+                anim.SetTrigger("FadeOut");
+            }
+        }
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            PlayerScript player = other.GetComponent<PlayerScript>();
+            player.EGUI.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                player.enabled = false;
+                FindObjectOfType<TriggerRedirect>().trigger = this;
+                anim.SetTrigger("FadeOut");
+            }
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            PlayerScript player = other.GetComponent<PlayerScript>();
+            player.EGUI.SetActive(false);
         }
     }
 }
