@@ -34,9 +34,9 @@ public class Dropable : MonoBehaviour
     bool isInBox(Image src)
     {
         Vector3[] corners = new Vector3[4];
-        src.rectTransform.GetWorldCorners(corners);
         if (mousePosition.x >= corners[0].x && mousePosition.x <= corners[2].x && mousePosition.y >= corners[0].y && mousePosition.y <= corners[2].y)
         {
+            Debug.Log("Yes");
             return true;
         }
         else

@@ -40,7 +40,7 @@ public class TriggerScene : MonoBehaviour
         {
             PlayerScript player = other.GetComponent<PlayerScript>();
             player.EGUI.SetActive(true);
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetButtonDown("Jump"))
             {
                 player.enabled = false;
                 FindObjectOfType<TriggerRedirect>().trigger = this;
@@ -54,7 +54,7 @@ public class TriggerScene : MonoBehaviour
         {
             PlayerScript player = other.GetComponent<PlayerScript>();
             player.EGUI.SetActive(true);
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetButtonDown("Jump"))
             {
                 player.enabled = false;
                 FindObjectOfType<TriggerRedirect>().trigger = this;
