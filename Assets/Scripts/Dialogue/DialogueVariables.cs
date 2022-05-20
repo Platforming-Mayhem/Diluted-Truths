@@ -7,11 +7,12 @@ using System.IO;
 public class DialogueVariables
 {
     public Dictionary<string, Ink.Runtime.Object> variables { get; private set; }
+    public Story globalVariablesStory { get; private set; }
 
     public DialogueVariables(TextAsset loadGlobalsJSON)
     {
         // create the story
-        Story globalVariablesStory = new Story(loadGlobalsJSON.text);
+        globalVariablesStory = new Story(loadGlobalsJSON.text);
 
         // initialize the dictionary
         variables = new Dictionary<string, Ink.Runtime.Object>();
@@ -21,6 +22,16 @@ public class DialogueVariables
             variables.Add(name, value);
             Debug.Log("Initialized global dialogue variable: " + name + " = " + value);
         }
+    }
+
+    public void UpdateStats()
+    {
+        int govD = (int)globalVariablesStory.variablesState["gov_distrust"];
+        int pubO = (int)globalVariablesStory.variablesState["public_opinion"];
+        int pubU = (int)globalVariablesStory.variablesState["public_unrest"];
+
+        globalVariablesStory.variablesState["highestStat"] = Mathf.Max(govD, pubO, pubU);
+        globalVariablesStory.variablesState["highestStat"] = Mathf.Min(govD, pubO, pubU);
     }
 
     public void StartListening(Story story)

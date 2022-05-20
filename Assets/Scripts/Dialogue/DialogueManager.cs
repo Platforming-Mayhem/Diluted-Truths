@@ -137,6 +137,7 @@ public class DialogueManager : MonoBehaviour
         {
             dialogueVariables.variables.Remove(variableName);
             dialogueVariables.variables.Add(variableName, variableValue);
+            dialogueVariables.UpdateStats();
         }
         else
         {
