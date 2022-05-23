@@ -42,6 +42,7 @@ public class TriggerScene : MonoBehaviour
             player.EGUI.SetActive(true);
             if (Input.GetButtonDown("Jump"))
             {
+                Debug.Log("Leave");
                 player.enabled = false;
                 FindObjectOfType<TriggerRedirect>().trigger = this;
                 anim.SetTrigger("FadeOut");
@@ -56,6 +57,7 @@ public class TriggerScene : MonoBehaviour
             player.EGUI.SetActive(true);
             if (Input.GetButtonDown("Jump"))
             {
+                Debug.Log("Leave");
                 player.enabled = false;
                 FindObjectOfType<TriggerRedirect>().trigger = this;
                 anim.SetTrigger("FadeOut");
