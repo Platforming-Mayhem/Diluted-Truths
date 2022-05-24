@@ -20,6 +20,7 @@ public class MenuScript : MonoBehaviour
     public void Begin(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
+        PlayerPrefs.DeleteAll();
         PlayerPrefs.SetInt("DayCounter", 1);
     }
 

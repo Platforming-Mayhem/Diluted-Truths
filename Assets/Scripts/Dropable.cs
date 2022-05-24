@@ -33,11 +33,8 @@ public class Dropable : MonoBehaviour
 
     bool isInBox(Bounds bounds)
     {
-        Debug.Log(mousePosition);
         Vector3 min = bounds.min;
         Vector3 max = bounds.max;
-        Debug.Log("min: " + min);
-        Debug.Log("max: " + max);
         if (mousePosition.x >= min.x && mousePosition.x <= max.x && mousePosition.y >= min.y && mousePosition.y <= max.y)
         {
             return true;
@@ -69,8 +66,7 @@ public class Dropable : MonoBehaviour
             else
             {
                 image.transform.position = Vector3.Scale(dropManager.slots[index].transform.position, Vector3.right + Vector3.up) + Vector3.forward * origin.z;
-                dropManager.slots[index].transform.SetParent(choices.transform);
-                image.transform.SetParent(dropManager.slots[index].transform);
+                image.transform.SetParent(choices.transform);
                 if (originalParent.childCount < originalChildCount - 1)
                 {
                     dropManager.previouslyDropped = gameObject;

@@ -10,6 +10,9 @@ public class AnimatedMovementObject : MonoBehaviour
     [SerializeReference]
     private int framesPerRow = 12;
 
+    [SerializeField]
+    private float offset = 22.12143f;
+
     Vector3 originalPosition;
     // Start is called before the first frame update
     void Start()
@@ -45,6 +48,6 @@ public class AnimatedMovementObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(originalPosition.x - (offsetAmount * 22.12143f), transform.position.y, transform.position.z);
+        transform.position = new Vector3(originalPosition.x - (offsetAmount * offset), transform.position.y, transform.position.z);
     }
 }

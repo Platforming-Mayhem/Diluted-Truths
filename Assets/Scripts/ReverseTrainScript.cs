@@ -26,7 +26,9 @@ public class ReverseTrainScript : MonoBehaviour
             {
                 materials[i].sharedMaterial.color =  colors[i];
             }
+            player.UpdateDay();
             trigger.sceneName = "Day";
+            PlayerPrefs.SetInt("Teleprompt", 0);
             trigger.index = 0;
         }
         else if(PlayerPrefs.GetInt("changePos") == 1 && PlayerPrefs.GetInt("index") == 0)
@@ -34,14 +36,12 @@ public class ReverseTrainScript : MonoBehaviour
             train.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
             foreach(Renderer ren in materials)
             {
-                ren.material.color = Color.white;
+                ren.sharedMaterial.color = Color.white;
             }
             foreach (GameObject b in hideCharacters)
             {
                 b.SetActive(true);
             }
-            player.UpdateDay();
-            PlayerPrefs.SetInt("Teleprompt", 0);
             /*foreach (MeshRenderer mat in materials)
             {
                 mat.material.SetColor("_Color", Color.white);
@@ -51,7 +51,6 @@ public class ReverseTrainScript : MonoBehaviour
         }
         else
         {
-            PlayerPrefs.SetInt("Teleprompt", 0);
             foreach (Renderer ren in materials)
             {
                 ren.sharedMaterial.color = Color.white;

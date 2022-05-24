@@ -73,12 +73,14 @@ public class DragAndDropManager : MonoBehaviour
             else
             {
                 Debug.Log("Can't submit");
+                audioSource.PlayOneShot(noSubmit);
                 return false;
             }
         }
         catch
         {
             Debug.Log("Error: Can't submit");
+            audioSource.PlayOneShot(noSubmit);
             return false;
         }
     }
@@ -102,13 +104,10 @@ public class DragAndDropManager : MonoBehaviour
                 info.information.Add(text.text);
             }
             PlayerPrefs.SetInt("index", 1);
+            PlayerPrefs.SetInt("Teleprompt", 1);
             PlayerPrefs.SetInt("changePos", 1);
             audioSource.PlayOneShot(submitWorked);
             StartCoroutine(LoadNextLevel(sceneName));
-        }
-        else
-        {
-            audioSource.PlayOneShot(noSubmit);
         }
     }
 
