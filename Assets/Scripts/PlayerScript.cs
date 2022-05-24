@@ -173,7 +173,7 @@ public class PlayerScript : MonoBehaviour
         {
             if(previousX < 0.0f)
             {
-                idleFrames.mainTextureOffset = new Vector2(0.17f, 0.04f);
+                idleFrames.mainTextureOffset = new Vector2(0.17f, 0.038f);
             }
             else if(previousX > 0.0f)
             {

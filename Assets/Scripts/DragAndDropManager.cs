@@ -83,6 +83,8 @@ public class DragAndDropManager : MonoBehaviour
                 TMP_Text text = child.GetComponentInChildren<TMP_Text>();
                 info.information.Add(text.text);
             }
+            PlayerPrefs.SetInt("index", 1);
+            PlayerPrefs.SetInt("changePos", 1);
             SceneManager.LoadScene(sceneName);
         }
     }

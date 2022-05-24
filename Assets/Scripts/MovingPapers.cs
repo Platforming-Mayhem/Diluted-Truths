@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MovingPapers : MonoBehaviour
 {
+    public float force = 100.0f;
     Rigidbody rb;
     Collider col;
 
@@ -38,7 +39,7 @@ public class MovingPapers : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            rb.AddForce(Vector3.Scale(transform.position - other.transform.position, Vector3.one - Vector3.up) * 5.0f, ForceMode.Impulse);
+            rb.AddForce(Vector3.Scale(transform.position - other.transform.position, Vector3.one - Vector3.up) * force, ForceMode.Impulse);
             col.isTrigger = false;
             rb.useGravity = true;
             StartCoroutine("Wait");
