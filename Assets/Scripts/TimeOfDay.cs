@@ -11,7 +11,14 @@ public class TimeOfDay : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if(PlayerPrefs.GetInt("Teleprompt") == 1)
+        {
+            onOrOff = true;
+        }
+        else
+        {
+            onOrOff = false;
+        }
     }
 
     public bool onOrOff;

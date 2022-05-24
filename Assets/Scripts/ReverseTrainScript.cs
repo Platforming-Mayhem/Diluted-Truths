@@ -28,6 +28,7 @@ public class ReverseTrainScript : MonoBehaviour
             }
             player.UpdateDay();
             trigger.sceneName = "Day";
+            PlayerPrefs.SetInt("time", 0);
             PlayerPrefs.SetInt("Teleprompt", 0);
             trigger.index = 0;
         }
