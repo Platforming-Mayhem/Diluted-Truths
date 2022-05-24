@@ -15,7 +15,8 @@ public class Dropable : MonoBehaviour
 
     private Vector3 origin;
 
-    private Image image;
+    [SerializeField]
+    private MeshRenderer image;
 
     public Transform originalParent;
 
@@ -24,19 +25,21 @@ public class Dropable : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        origin = transform.position;
+        origin = image.transform.position;
         dropManager = FindObjectOfType<DragAndDropManager>();
-        image = GetComponent<Image>();
-        originalParent = transform.parent;
+        originalParent = image.transform.parent;
         originalChildCount = originalParent.childCount;
     }
 
-    bool isInBox(Image src)
+    bool isInBox(Bounds bounds)
     {
-        Vector3[] corners = new Vector3[4];
-        if (mousePosition.x >= corners[0].x && mousePosition.x <= corners[2].x && mousePosition.y >= corners[0].y && mousePosition.y <= corners[2].y)
+        Debug.Log(mousePosition);
+        Vector3 min = bounds.min;
+        Vector3 max = bounds.max;
+        Debug.Log("min: " + min);
+        Debug.Log("max: " + max);
+        if (mousePosition.x >= min.x && mousePosition.x <= max.x && mousePosition.y >= min.y && mousePosition.y <= max.y)
         {
-            Debug.Log("Yes");
             return true;
         }
         else
@@ -55,18 +58,19 @@ public class Dropable : MonoBehaviour
         {
             if(index == -1)
             {
-                transform.position = Vector3.Lerp(transform.position, origin, Time.deltaTime * 5.0f);
+                image.transform.position = Vector3.Lerp(image.transform.position, origin, Time.deltaTime * 5.0f);
                 dropManager.previouslyDropped = null;
                 if((transform.position - origin).magnitude <= 1.0f)
                 {
-                    transform.SetParent(originalParent);
-                    transform.position = origin;
+                    image.transform.SetParent(originalParent);
+                    image.transform.position = origin;
                 }
             }
             else
             {
-                transform.position = dropManager.slots[index].transform.position;
-                transform.SetParent(choices.transform);
+                image.transform.position = Vector3.Scale(dropManager.slots[index].transform.position, Vector3.right + Vector3.up) + Vector3.forward * origin.z;
+                dropManager.slots[index].transform.SetParent(choices.transform);
+                image.transform.SetParent(dropManager.slots[index].transform);
                 if (originalParent.childCount < originalChildCount - 1)
                 {
                     dropManager.previouslyDropped = gameObject;
@@ -76,12 +80,12 @@ public class Dropable : MonoBehaviour
         }
         else
         {
-            transform.position = (Vector3)mousePosition;
-            transform.SetParent(originalParent.parent);
+            image.transform.position = (Vector3)mousePosition + Vector3.forward * origin.z;
+            image.transform.SetParent(originalParent.parent);
         }
         if (dropManager.previouslyDropped == null)
         {
-            if (isInBox(image) && Input.GetMouseButtonDown(0) && !dropManager.isSelected)
+            if (isInBox(image.bounds) && Input.GetMouseButtonDown(0) && !dropManager.isSelected)
             {
                 dropManager.isSelected = true;
                 selected = true;
@@ -92,13 +96,13 @@ public class Dropable : MonoBehaviour
                 {
                     for (int i = 0; i < dropManager.slots.Length; i++)
                     {
-                        Image temp = dropManager.slots[i].GetComponent<Image>();
+                        Bounds temp = dropManager.slots[i].GetComponent<MeshRenderer>().bounds;
                         if (isInBox(temp) && dropManager.slots[i].transform.childCount == 0)
                         {
                             index = i;
                             break;
                         }
-                        else if (!isInBox(temp))
+                        else
                         {
                             index = -1;
                         }
