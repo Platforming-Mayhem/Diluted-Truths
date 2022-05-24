@@ -45,7 +45,7 @@ public class PlayerScript : MonoBehaviour
 
     private MeshRenderer mesh;
 
-    private int dayCounter = 0;
+    private int dayCounter = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -83,6 +83,12 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
         Move();
+    }
+
+    public void UpdateDay()
+    {
+        dayCounter++;
+        PlayerPrefs.SetInt("DayCounter", dayCounter);
     }
 
     public void PlayFootstepSFX()

@@ -6,13 +6,15 @@ public class ReverseTrainScript : MonoBehaviour
 {
     public GameObject train;
     public GameObject[] hideCharacters;
-    public Material[] materials;
+    public Renderer[] materials;
     public Color[] colors;
+    PlayerScript player;
     TriggerScene trigger;
     // Start is called before the first frame update
     void Start()
     {
         trigger = FindObjectOfType<TriggerScene>();
+        player = FindObjectOfType<PlayerScript>();
         if (PlayerPrefs.GetInt("changePos") == 1 && PlayerPrefs.GetInt("index") == 1)
         {
             train.transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
@@ -20,10 +22,9 @@ public class ReverseTrainScript : MonoBehaviour
             {
                 a.SetActive(false);
             }
-            for (int i = 0; i < materials.Length - 1; i++)
+            for (int i = 0; i < materials.Length; i++)
             {
-                materials[i].color = colors[i];
-                Debug.Log("Working");
+                materials[i].sharedMaterial.color =  colors[i];
             }
             trigger.sceneName = "Train";
             trigger.index = 0;
@@ -31,16 +32,28 @@ public class ReverseTrainScript : MonoBehaviour
         else if(PlayerPrefs.GetInt("changePos") == 1 && PlayerPrefs.GetInt("index") == 0)
         {
             train.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+            foreach(Renderer ren in materials)
+            {
+                ren.material.color = Color.white;
+            }
             foreach (GameObject b in hideCharacters)
             {
                 b.SetActive(true);
             }
-            foreach (Material mat in materials)
+            player.UpdateDay();
+            /*foreach (MeshRenderer mat in materials)
             {
-                mat.color = new Color(1.0f, 1.0f, 1.0f);
+                mat.material.SetColor("_Color", Color.white);
                 Debug.Log("Working");
-            }
+            }*/
             trigger.sceneName = "Crossroad";
+        }
+        else
+        {
+            foreach (Renderer ren in materials)
+            {
+                ren.sharedMaterial.color = Color.white;
+            }
         }
         PlayerPrefs.SetInt("changePos", 0);
     }
