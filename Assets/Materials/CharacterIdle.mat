@@ -46,7 +46,7 @@ Material:
     - _BaseColorMap:
         m_Texture: {fileID: 2800000, guid: 1a0319893cdbc3b44b6ec342e8e90712, type: 3}
         m_Scale: {x: 0.3, y: 0.15}
-        m_Offset: {x: 0.17, y: 0.29}
+        m_Offset: {x: 0.17, y: 0.038}
     - _BentNormalMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
