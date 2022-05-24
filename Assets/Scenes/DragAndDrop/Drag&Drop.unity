@@ -2829,11 +2829,24 @@ MonoBehaviour:
   image: {fileID: 859001436}
   originalParent: {fileID: 0}
   originalChildCount: 0
+--- !u!1 &859001443 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 65702495048144492, guid: c67a8708c6539eb4ba1e6aa49d6c483f, type: 3}
+  m_PrefabInstance: {fileID: 859001416}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &859001444 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1515970823485773089, guid: c67a8708c6539eb4ba1e6aa49d6c483f, type: 3}
   m_PrefabInstance: {fileID: 859001416}
   m_PrefabAsset: {fileID: 0}
+--- !u!81 &859001445
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859001443}
+  m_Enabled: 1
 --- !u!4 &859001446 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -2184392359745616282, guid: c67a8708c6539eb4ba1e6aa49d6c483f, type: 3}
@@ -4364,6 +4377,7 @@ GameObject:
   - component: {fileID: 1540108323}
   - component: {fileID: 1540108322}
   - component: {fileID: 1540108326}
+  - component: {fileID: 1540108327}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -4480,8 +4494,109 @@ MonoBehaviour:
   - {fileID: 859001419}
   - {fileID: 859001418}
   info: {fileID: 11400000, guid: 36e63a7de09da734b82f442e6e5a531c, type: 2}
+  submitWorked: {fileID: 8300000, guid: 9f759351d9c0d5742bee7e178738efa6, type: 3}
+  noSubmit: {fileID: 8300000, guid: 2c432e8b24ef9f145bc6465796161abc, type: 3}
+  expandSFX: {fileID: 8300000, guid: a0031cdbb448a7644a2198c8d15edb71, type: 3}
+  pinSFX: {fileID: 8300000, guid: 42d8f00a24ded3440850563bce632f17, type: 3}
+  audioSource: {fileID: 0}
   previouslyDropped: {fileID: 0}
   isSelected: 0
+--- !u!82 &1540108327
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540108321}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1555919463
 GameObject:
   m_ObjectHideFlags: 0

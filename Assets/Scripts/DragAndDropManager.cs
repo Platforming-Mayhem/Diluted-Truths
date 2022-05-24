@@ -14,6 +14,17 @@ public class DragAndDropManager : MonoBehaviour
 
     public NewsReportInfo info;
 
+    public AudioClip submitWorked;
+
+    public AudioClip noSubmit;
+
+    public AudioClip expandSFX;
+
+    public AudioClip pinSFX;
+
+    [HideInInspector]
+    public AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +34,7 @@ public class DragAndDropManager : MonoBehaviour
         {
             a.SetActive(false);
         }
+        audioSource = GetComponent<AudioSource>();
     }
 
     public GameObject previouslyDropped;
@@ -71,6 +83,12 @@ public class DragAndDropManager : MonoBehaviour
         }
     }
 
+    IEnumerator LoadNextLevel(string sceneName)
+    {
+        yield return new WaitForSeconds(0.47f);
+        SceneManager.LoadScene(sceneName);
+    }
+
     public void SubmitButton(string sceneName)
     {
         bool canSubmit = CheckScript();
@@ -85,7 +103,12 @@ public class DragAndDropManager : MonoBehaviour
             }
             PlayerPrefs.SetInt("index", 1);
             PlayerPrefs.SetInt("changePos", 1);
-            SceneManager.LoadScene(sceneName);
+            audioSource.PlayOneShot(submitWorked);
+            StartCoroutine(LoadNextLevel(sceneName));
+        }
+        else
+        {
+            audioSource.PlayOneShot(noSubmit);
         }
     }
 
@@ -95,6 +118,7 @@ public class DragAndDropManager : MonoBehaviour
         {
             a.SetActive(false);
         }
+        audioSource.PlayOneShot(expandSFX);
         expandedObjects[index].SetActive(true);
     }
 }

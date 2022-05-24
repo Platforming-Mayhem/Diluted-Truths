@@ -5,6 +5,8 @@ using UnityEngine;
 public class MovingPapers : MonoBehaviour
 {
     public float force = 100.0f;
+    public AudioClip paperRussle;
+    private AudioSource paper;
     Rigidbody rb;
     Collider col;
 
@@ -16,6 +18,7 @@ public class MovingPapers : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         col = GetComponent<Collider>();
         active = false;
+        paper = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -40,6 +43,8 @@ public class MovingPapers : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             rb.AddForce(Vector3.Scale(transform.position - other.transform.position, Vector3.one - Vector3.up) * force, ForceMode.Impulse);
+            paper.pitch = Random.Range(1.0f, 3.0f);
+            paper.PlayOneShot(paperRussle);
             col.isTrigger = false;
             rb.useGravity = true;
             StartCoroutine("Wait");

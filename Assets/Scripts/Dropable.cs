@@ -100,6 +100,7 @@ public class Dropable : MonoBehaviour
                         if (isInBox(temp) && dropManager.slots[i].transform.childCount == 0)
                         {
                             index = i;
+                            dropManager.audioSource.PlayOneShot(dropManager.pinSFX);
                             break;
                         }
                         else
