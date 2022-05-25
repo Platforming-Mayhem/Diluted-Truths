@@ -26,6 +26,7 @@ public class ReverseTrainScript : MonoBehaviour
             {
                 materials[i].sharedMaterial.color =  colors[i];
             }
+            PlayerPrefs.SetInt("USB1", 0);
             player.UpdateDay();
             trigger.sceneName = "Day";
             PlayerPrefs.SetInt("time", 0);

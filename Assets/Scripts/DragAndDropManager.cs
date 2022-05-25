@@ -117,7 +117,7 @@ public class DragAndDropManager : MonoBehaviour
         {
             Dropable[] choices = GameObject.Find("Choices").GetComponentsInChildren<Dropable>();
 
-            FindObjectOfType<Database>().CalculateBarChanges(choices);
+            //FindObjectOfType<Database>().CalculateBarChanges(choices);
         }
     }
 

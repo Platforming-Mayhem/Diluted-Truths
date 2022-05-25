@@ -27,6 +27,7 @@ public class MenuScript : MonoBehaviour
         SceneManager.LoadScene(sceneName);
         PlayerPrefs.DeleteAll();
         PlayerPrefs.SetInt("DayCounter", 1);
+        PlayerPrefs.SetInt("USB1", 0);
     }
 
     public void Quit()

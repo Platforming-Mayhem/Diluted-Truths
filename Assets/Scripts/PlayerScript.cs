@@ -65,6 +65,14 @@ public class PlayerScript : MonoBehaviour
         }
         mesh.material = idleFrames;
         EGUI.SetActive(false);
+        if(PlayerPrefs.GetInt("USB1") == 0)
+        {
+            hasUSB1 = false;
+        }
+        else if(PlayerPrefs.GetInt("USB1") == 1)
+        {
+            hasUSB1 = true;
+        }
     }
 
     private void FixedUpdate()
