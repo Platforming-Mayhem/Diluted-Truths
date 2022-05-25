@@ -12,8 +12,7 @@ public class News : ScriptableObject
     public int ID;
     public int minDays;
     public string category;
-    public string[] reportingOptions = new string[3];
-    //public int[] effectStr = new int[3];
+    public int[] effectStr = new int[3];
     public string source;
     //public bool[] barsAffected = new bool[3];
 

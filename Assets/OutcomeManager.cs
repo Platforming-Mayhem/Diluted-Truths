@@ -80,7 +80,12 @@ public class OutcomeManager : MonoBehaviour
         foreach (GameObject button in buttonsCategory1)
         {
             newsPiece = db.GetSpecifiedNews(days, "War");
-            TextMeshProUGUI title = button.transform.Find("titleText").gameObject.GetComponent<TextMeshProUGUI>();
+
+            GameObject currentButton = button.transform.Find("titleText").gameObject;
+
+            TextMeshProUGUI title = currentButton.GetComponent<TextMeshProUGUI>();
+
+            currentButton.transform.parent.parent.GetComponent<Dropable>().ID = newsPiece.ID;
 
             if (!title)
             {
@@ -98,8 +103,11 @@ public class OutcomeManager : MonoBehaviour
         foreach (GameObject button in buttonsCategory2)
         {
             newsPiece = db.GetSpecifiedNews(days, "Refugees");
-            TextMeshProUGUI title = button.transform.Find("titleText").gameObject.GetComponent<TextMeshProUGUI>();
+            GameObject currentButton = button.transform.Find("titleText").gameObject;
 
+            TextMeshProUGUI title = currentButton.GetComponent<TextMeshProUGUI>();
+
+            currentButton.transform.parent.parent.GetComponent<Dropable>().ID = newsPiece.ID;
             if (!title)
             {
                 Debug.Log("Broken Buttons.");
@@ -115,8 +123,11 @@ public class OutcomeManager : MonoBehaviour
         foreach (GameObject button in buttonsCategory3)
         {
             newsPiece = db.GetSpecifiedNews(days, unqiueCate);
-            TextMeshProUGUI title = button.transform.Find("titleText").gameObject.GetComponent<TextMeshProUGUI>();
+            GameObject currentButton = button.transform.Find("titleText").gameObject;
 
+            TextMeshProUGUI title = currentButton.GetComponent<TextMeshProUGUI>();
+
+            currentButton.transform.parent.parent.GetComponent<Dropable>().ID = newsPiece.ID;
             if (!title)
             {
                 Debug.Log("Broken Buttons.");

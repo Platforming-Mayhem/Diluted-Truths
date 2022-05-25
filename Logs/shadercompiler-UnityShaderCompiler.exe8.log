@@ -1,0 +1,30 @@
+Base path: 'C:/Program Files/Unity/Hub/Editor/2020.3.23f1/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2020.3.23f1/Editor/Data/PlaybackEngines'
+Cmd: initializeCompiler
+
+Cmd: initializeCompiler
+
+Cmd: compileComputeKernel
+  insize=33284 file=C:/Users/cawosanya2021/Documents/GitHub/3DPixelArtTest/Library/PackageCache/com.unity.render-pipelines.high-definition@10.7.0/Runtime/RenderPipeline/Raytracing/Shaders/Shadows/RaytracingShadow.compute kernel=RaytracingAreaShadowNewSample cachingPP=1 ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202039> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 ok=1 outsize=22579
+
+Cmd: compileComputeKernel
+  insize=33284 file=C:/Users/cawosanya2021/Documents/GitHub/3DPixelArtTest/Library/PackageCache/com.unity.render-pipelines.high-definition@10.7.0/Runtime/RenderPipeline/Raytracing/Shaders/Shadows/RaytracingShadow.compute kernel=OutputShadowTexture cachingPP=1 ppOnly=0 stripLineD=0 buildPlatform=19 km=<OUTPUT_SHADOW_TEXTURE=OutputShadowTexture>,<UNITY_VERSION=202039> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 ok=1 outsize=1056
+
+Cmd: compileComputeKernel
+  insize=9515 file=C:/Users/cawosanya2021/Documents/GitHub/3DPixelArtTest/Library/PackageCache/com.unity.render-pipelines.high-definition@10.7.0/Runtime/RenderPipeline/Raytracing/Shaders/Denoising/ReflectionDenoiser.compute kernel=BilateralFilterH cachingPP=1 ppOnly=0 stripLineD=0 buildPlatform=19 km=<BILATERAL_FILTER=BilateralFilterH>,<UNITY_VERSION=202039> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 ok=1 outsize=5897
+
+Cmd: compileComputeKernel
+  insize=6333 file=C:/Users/cawosanya2021/Documents/GitHub/3DPixelArtTest/Library/PackageCache/com.unity.render-pipelines.high-definition@10.7.0/Runtime/RenderPipeline/Raytracing/Shaders/Denoising/DiffuseShadowDenoiser.compute kernel=BilateralFilterHSingleSphere cachingPP=1 ppOnly=0 stripLineD=0 buildPlatform=19 km=<BILATERAL_FILTER=BilateralFilterHSingleSphere>,<SINGLE_CHANNEL=1>,<UNITY_VERSION=202039> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 ok=1 outsize=6725
+
+Cmd: compileComputeKernel
+  insize=3611 file=C:/Users/cawosanya2021/Documents/GitHub/3DPixelArtTest/Library/PackageCache/com.unity.render-pipelines.high-definition@10.7.0/Runtime/RenderPipeline/Raytracing/Shaders/Common/RayBinning.compute kernel=RayBinningHalf cachingPP=1 ppOnly=0 stripLineD=0 buildPlatform=19 km=<RAY_BINNING=RayBinningHalf>,<HALF_RESOLUTION=1>,<UNITY_VERSION=202039> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 ok=1 outsize=2581
+
+Cmd: compileComputeKernel
+  insize=4757 file=C:/Users/cawosanya2021/Documents/GitHub/3DPixelArtTest/Library/PackageCache/com.unity.render-pipelines.high-definition@10.7.0/Runtime/RenderPipeline/Raytracing/Shaders/SubSurface/RayTracingSubSurface.compute kernel=ClearTexture cachingPP=1 ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=202039> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 ok=1 outsize=418
+
+Cmd: compileComputeKernel
+  insize=14438 file=C:/Users/cawosanya2021/Documents/GitHub/3DPixelArtTest/Library/PackageCache/com.unity.render-pipelines.high-definition@10.7.0/Runtime/RenderPipeline/Raytracing/Shaders/Denoising/TemporalFilter.compute kernel=CopyHistorySingle cachingPP=1 ppOnly=0 stripLineD=0 buildPlatform=19 km=<COPY_HISTORY=CopyHistorySingle>,<SINGLE_CHANNEL=1>,<UNITY_VERSION=202039> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 ok=1 outsize=686
+
+Cmd: compileComputeKernel
+  insize=8882 file=C:/Users/cawosanya2021/Documents/GitHub/3DPixelArtTest/Library/PackageCache/com.unity.render-pipelines.high-definition@10.7.0/Runtime/RenderPipeline/Raytracing/Shaders/RaytracingReflectionFilter.compute kernel=ReflectionIntegrationUpscaleHalfRes cachingPP=1 ppOnly=0 stripLineD=0 buildPlatform=19 km=<REFLECTION_INTEGRATION_UPSCALE=ReflectionIntegrationUpscaleHalfRes>,<HALF_RESOLUTION=1>,<UNITY_VERSION=202039> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 ok=1 outsize=6847
+
+Cmd: shutdown

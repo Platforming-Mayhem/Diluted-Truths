@@ -50,4 +50,9 @@ public class BarManager : MonoBehaviour
         }
         //barsGUI[index].transform.localScale = new Vector3(1.0f, bars[index].ReadAmount() / 100.0f, 1.0f);
     }
+
+    public int CheckAmountFromBar(int index)
+    {
+        return bars[index].ReadAmount();
+    }
 }

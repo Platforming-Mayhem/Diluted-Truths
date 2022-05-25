@@ -93,22 +93,31 @@ public class DragAndDropManager : MonoBehaviour
 
     public void SubmitButton(string sceneName)
     {
+        /*bool canSubmit = CheckScript();
+         if (canSubmit)
+         {
+
+             GameObject choices = FindObjectOfType<Dropable>();
+             foreach(Transform child in choices.transform)
+             {
+                 TMP_Text text = child.GetComponentInChildren<TMP_Text>();
+                 CalculateBarChanges()
+                 info.information.Add(text.text);
+                 // send each title to DB for calculationd
+             }
+             PlayerPrefs.SetInt("index", 1);
+             PlayerPrefs.SetInt("Teleprompt", 1);
+             PlayerPrefs.SetInt("changePos", 1);
+             audioSource.PlayOneShot(submitWorked);
+             StartCoroutine(LoadNextLevel(sceneName));
+         }*/
+
         bool canSubmit = CheckScript();
         if (canSubmit)
         {
-            
-            GameObject choices = FindObjectOfType<Dropable>().choices;
-            foreach(Transform child in choices.transform)
-            {
-                TMP_Text text = child.GetComponentInChildren<TMP_Text>();
-                info.information.Add(text.text);
-                // send each title to DB for calculationd
-            }
-            PlayerPrefs.SetInt("index", 1);
-            PlayerPrefs.SetInt("Teleprompt", 1);
-            PlayerPrefs.SetInt("changePos", 1);
-            audioSource.PlayOneShot(submitWorked);
-            StartCoroutine(LoadNextLevel(sceneName));
+            Dropable[] choices = GameObject.Find("Choices").GetComponentsInChildren<Dropable>();
+
+            FindObjectOfType<Database>().CalculateBarChanges(choices);
         }
     }
 

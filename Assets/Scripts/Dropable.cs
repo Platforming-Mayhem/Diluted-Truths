@@ -13,6 +13,8 @@ public class Dropable : MonoBehaviour
 
     private bool selected;
 
+    public int ID;
+
     private Vector3 origin;
 
     [SerializeField]
