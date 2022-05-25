@@ -44,11 +44,12 @@ public class PlayerScript : MonoBehaviour
 
     private MeshRenderer mesh;
 
-    public int dayCounter = 1;
+    public int dayCounter;
 
     // Start is called before the first frame update
     void Start()
     {
+        dayCounter = PlayerPrefs.GetInt("DayCounter");
         rb = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
         mesh = GetComponentInChildren<MeshRenderer>();
