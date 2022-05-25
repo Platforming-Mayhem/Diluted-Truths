@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 171585349c71b5041afda2c636ecc4b6, type: 3}
+  m_Name: Civilian Casualty Catastrophe
+  m_EditorClassIdentifier: 
+  title: Civilian Casualty Catastrophe
+  blurb: "What\u2019s going on? There\u2019s been a reported 5000 civilian deaths
+    these past 2 months, a ridiculous 20/80 split between all reported combatant
+    deaths. Drone strikes are a key player in these absolutely abhorrent acts, often
+    striking the civilian population in the guise of striking \u201Ckey targets\u201D.
+    With the war seeing no sign of resolution, how much higher will that number go?"
+  icon: {fileID: 0}
+  ID: 3
+  minDays: 2
+  category: War
+  reportingOptions:
+  - 
+  - 
+  - 
+  source: Main

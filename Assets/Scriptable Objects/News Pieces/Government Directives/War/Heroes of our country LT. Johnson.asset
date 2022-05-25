@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 171585349c71b5041afda2c636ecc4b6, type: 3}
+  m_Name: Heroes of our country LT. Johnson
+  m_EditorClassIdentifier: 
+  title: 'Heroes of our country: LT. Johnson'
+  blurb: "LT. Johnson. An icon of our country that unfortunately isn\u2019t recognised
+    by many. The recently retired army LT. has done everything in his power to serve
+    this country and he has a flaming passion. Commanding the youth of our country
+    while sustaining them is no small feat in modern times. LT. Johnson has been
+    in nearly every war from the last 20 years alone making him a quadruple tour
+    serviceman. Look up to him and I\u2019m sure you\u2019ll go to the right places."
+  icon: {fileID: 0}
+  ID: 1
+  minDays: 1
+  category: War
+  reportingOptions:
+  - 
+  - 
+  - 
+  source: Main

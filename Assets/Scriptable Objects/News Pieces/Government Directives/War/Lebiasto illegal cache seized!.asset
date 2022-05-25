@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 171585349c71b5041afda2c636ecc4b6, type: 3}
+  m_Name: Lebiasto illegal cache seized!
+  m_EditorClassIdentifier: 
+  title: Lebiasto illegal cache seized!
+  blurb: Our glorious soldiers out in the frontline have managed to finally find
+    an illegal cache filled with all sorts of prohibited weapons ranging from chemical
+    weapons to flamethrowers and hollow points. This seems to be a major turning
+    point currently, with talks of the Sergu Alliance joining the war effort as an
+    investigative as well as possibly military power.
+  icon: {fileID: 0}
+  ID: 4
+  minDays: 2
+  category: War
+  reportingOptions:
+  - 
+  - 
+  - 
+  source: Main

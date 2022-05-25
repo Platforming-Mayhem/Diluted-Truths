@@ -7,34 +7,126 @@ using TMPro;
 
 public class OutcomeManager : MonoBehaviour
 {
-    public InfoSource currentIS;
-    [SerializeField] InfoSource[] allIS;
-    [SerializeField] GameObject[] categories;
+    [SerializeField] private GameObject[] categories;
     [SerializeField] Database db;
-    private CanvasGroup newsCG;
-    public int days;
-    public string selectedCategory;
+    [SerializeField] private int days;
+    [SerializeField] private string unqiueCate;
+    [SerializeField] private GameObject[] buttonsCategory1;
+    [SerializeField] private GameObject[] buttonsCategory2;
+    [SerializeField] private GameObject[] buttonsCategory3;
+    [SerializeField] private News newsPiece;
 
-    // Start is called before the first frame update
-    [SerializeField] News newsPiece;
-    [SerializeField] GameObject[] buttons;
 
-
-    public void setupUI()
+    void Start()
     {
+        switch(days)
+        {
+            case 1:
+                unqiueCate = "Economy";
+                break;
+            case 2:
+                unqiueCate = "Healthcare";
+                break;
+            case 3:
+                unqiueCate = "Entertainment";
+                break;
+        }
+
+
         int i = 0;
         foreach(GameObject category in categories)
         {
             TextMeshProUGUI title = category.transform.Find("Title").gameObject.GetComponent<TextMeshProUGUI>();
-
-            title.text = currentIS.categories[i];
+            switch(i)
+            {
+                case 0:
+                    title.text = "War";
+                    break;
+                case 1:
+                    title.text = "Refugees";
+                    break;
+                case 2:
+                    switch(days)
+                    {
+                        case 1:
+                            title.text = "Economy";
+                            break;
+                        case 2:
+                            title.text = "Healthcare";
+                            break;
+                        case 3:
+                            title.text = "Entertainment";
+                            break;
+                        default:
+                            Debug.Log("Days not up to 3.");
+                            title.text = "Broken!";
+                            break;
+                    }
+                    break;
+                default:
+                    Debug.Log("Abnormal I counter.");
+                    break;
+            }
             i += 1;
-            Debug.Log("Incrementing");
-            Debug.Log(i);
         }
-        SetButtons();
+
+        SetButtons1();
+        SetButtons2();
+        SetButtons3();
     }
 
+    public void SetButtons1()
+    {
+        foreach (GameObject button in buttonsCategory1)
+        {
+            newsPiece = db.GetSpecifiedNews(days, "War");
+            TextMeshProUGUI title = button.transform.Find("titleText").gameObject.GetComponent<TextMeshProUGUI>();
+
+            if (!title)
+            {
+                Debug.Log("Broken Buttons.");
+                return;
+            }
+            
+            title.text = newsPiece.title;
+        }
+
+    }
+
+    public void SetButtons2()
+    {
+        foreach (GameObject button in buttonsCategory2)
+        {
+            newsPiece = db.GetSpecifiedNews(days, "Refugees");
+            TextMeshProUGUI title = button.transform.Find("titleText").gameObject.GetComponent<TextMeshProUGUI>();
+
+            if (!title)
+            {
+                Debug.Log("Broken Buttons.");
+                return;
+            }
+            title.text = newsPiece.title;
+        }
+
+    }
+
+    public void SetButtons3()
+    {
+        foreach (GameObject button in buttonsCategory3)
+        {
+            newsPiece = db.GetSpecifiedNews(days, unqiueCate);
+            TextMeshProUGUI title = button.transform.Find("titleText").gameObject.GetComponent<TextMeshProUGUI>();
+
+            if (!title)
+            {
+                Debug.Log("Broken Buttons.");
+                return;
+            }
+            title.text = newsPiece.title;
+        }
+
+    }
+     /*
     public void sendBack()
     {
         SceneManager.LoadScene("Office");
@@ -107,7 +199,7 @@ public class OutcomeManager : MonoBehaviour
         SetButtons();
     }
     #endregion
-
+     */
     private void Update()
     {
           

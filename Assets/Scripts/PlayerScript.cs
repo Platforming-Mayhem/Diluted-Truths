@@ -16,8 +16,7 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] private Animator anim;
 
     private Vector2 originOffset;
-
-
+    
     [SerializeField] private float offsetAmount;
 
     #region player dialogue flags

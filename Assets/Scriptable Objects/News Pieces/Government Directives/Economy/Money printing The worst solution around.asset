@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 171585349c71b5041afda2c636ecc4b6, type: 3}
+  m_Name: Money printing The worst solution around
+  m_EditorClassIdentifier: 
+  title: Money printing? The worst solution around?
+  blurb: 'Damn. No really, just damn. The solution the minds of this wonderful country
+    come up with to cover our declining economy? Money printing. Not just a tiny
+    bit. Not a large amount. But apparently, prices have nearly shot up 250%. What
+    kind of ridiculous times are we living in to have people with these ideas? You
+    tell me. '
+  icon: {fileID: 0}
+  ID: 24
+  minDays: 1
+  category: Economy
+  reportingOptions:
+  - 
+  - 
+  - 
+  source: Main

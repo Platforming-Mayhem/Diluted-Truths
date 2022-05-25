@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 65515539}
   - component: {fileID: 65515538}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: titleText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -207,8 +207,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 11.5
-  m_fontSizeBase: 11.5
+  m_fontSize: 5
+  m_fontSizeBase: 5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -270,7 +270,7 @@ GameObject:
   - component: {fileID: 88235983}
   - component: {fileID: 88235982}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: News7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -622,7 +622,7 @@ GameObject:
   - component: {fileID: 243088932}
   - component: {fileID: 243088931}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: titleText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -783,7 +783,7 @@ GameObject:
   - component: {fileID: 357024646}
   - component: {fileID: 357024645}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: titleText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -855,8 +855,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 9.56
-  m_fontSizeBase: 9.56
+  m_fontSize: 7
+  m_fontSizeBase: 7
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -917,7 +917,7 @@ GameObject:
   - component: {fileID: 392504771}
   - component: {fileID: 392504770}
   m_Layer: 11
-  m_Name: Text (TMP)
+  m_Name: titleText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1091,7 +1091,7 @@ GameObject:
   - component: {fileID: 433940756}
   - component: {fileID: 433940755}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1213,6 +1213,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 433940753}
   m_CullTransparentMesh: 1
+--- !u!1 &469219567
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 469219569}
+  - component: {fileID: 469219568}
+  m_Layer: 0
+  m_Name: Database
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &469219568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469219567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74dee6f76f67c624ca1f377fb9d5e232, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newsDB: {fileID: 11400000, guid: ad55a64068bc01d46af785d9de76116e, type: 2}
+--- !u!4 &469219569
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469219567}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 747.1401, y: 776.63, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &475876141
 GameObject:
   m_ObjectHideFlags: 0
@@ -1225,7 +1269,7 @@ GameObject:
   - component: {fileID: 475876144}
   - component: {fileID: 475876143}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: titleText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1297,8 +1341,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 11.5
-  m_fontSizeBase: 11.5
+  m_fontSize: 5
+  m_fontSizeBase: 5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1492,7 +1536,7 @@ GameObject:
   - component: {fileID: 513868458}
   - component: {fileID: 513868457}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: titleText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1626,7 +1670,7 @@ GameObject:
   - component: {fileID: 525297722}
   - component: {fileID: 525297721}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1761,7 +1805,7 @@ GameObject:
   - component: {fileID: 668547092}
   - component: {fileID: 668547091}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: News5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1955,7 +1999,7 @@ GameObject:
   - component: {fileID: 689215397}
   - component: {fileID: 689215396}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: News6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2054,7 +2098,7 @@ GameObject:
   - component: {fileID: 805207185}
   - component: {fileID: 805207184}
   m_Layer: 11
-  m_Name: Text (TMP)
+  m_Name: titleText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2283,7 +2327,7 @@ GameObject:
   - component: {fileID: 849553324}
   - component: {fileID: 849553323}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: News8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2530,6 +2574,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 8dc0e9f86b3b7bc47a03d417364c8cce, type: 2}
     - target: {fileID: -702993931373825114, guid: c67a8708c6539eb4ba1e6aa49d6c483f, type: 3}
+      propertyPath: m_Name
+      value: Category1
+      objectReference: {fileID: 0}
+    - target: {fileID: -702993931373825114, guid: c67a8708c6539eb4ba1e6aa49d6c483f, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -2590,6 +2638,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 8dc0e9f86b3b7bc47a03d417364c8cce, type: 2}
     - target: {fileID: 3973693904950482783, guid: c67a8708c6539eb4ba1e6aa49d6c483f, type: 3}
+      propertyPath: m_Name
+      value: Category3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3973693904950482783, guid: c67a8708c6539eb4ba1e6aa49d6c483f, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -2617,6 +2669,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8dc0e9f86b3b7bc47a03d417364c8cce, type: 2}
+    - target: {fileID: 7467508718976976430, guid: c67a8708c6539eb4ba1e6aa49d6c483f, type: 3}
+      propertyPath: m_Name
+      value: Category2
+      objectReference: {fileID: 0}
     - target: {fileID: 7467508718976976430, guid: c67a8708c6539eb4ba1e6aa49d6c483f, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -3018,7 +3074,7 @@ GameObject:
   - component: {fileID: 957669193}
   - component: {fileID: 957669192}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: News4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3117,7 +3173,7 @@ GameObject:
   - component: {fileID: 1096300520}
   - component: {fileID: 1096300519}
   m_Layer: 11
-  m_Name: Text (TMP)
+  m_Name: titleText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3507,7 +3563,7 @@ GameObject:
   - component: {fileID: 1276478216}
   - component: {fileID: 1276478215}
   m_Layer: 11
-  m_Name: Text (TMP)
+  m_Name: titleText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3736,7 +3792,7 @@ GameObject:
   - component: {fileID: 1348018066}
   - component: {fileID: 1348018065}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: News3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3835,7 +3891,7 @@ GameObject:
   - component: {fileID: 1366213356}
   - component: {fileID: 1366213355}
   m_Layer: 11
-  m_Name: Text (TMP)
+  m_Name: titleText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3969,7 +4025,7 @@ GameObject:
   - component: {fileID: 1389669022}
   - component: {fileID: 1389669021}
   m_Layer: 11
-  m_Name: Text (TMP)
+  m_Name: titleText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4103,7 +4159,7 @@ GameObject:
   - component: {fileID: 1462505204}
   - component: {fileID: 1462505203}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4237,7 +4293,7 @@ GameObject:
   - component: {fileID: 1531609103}
   - component: {fileID: 1531609102}
   m_Layer: 11
-  m_Name: Text (TMP)
+  m_Name: titleText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4378,6 +4434,7 @@ GameObject:
   - component: {fileID: 1540108322}
   - component: {fileID: 1540108326}
   - component: {fileID: 1540108327}
+  - component: {fileID: 1540108328}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -4597,6 +4654,38 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1540108328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540108321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73fde589b1a6cc5448c3b14804aff10b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  categories:
+  - {fileID: 922713627}
+  - {fileID: 508065604}
+  - {fileID: 1665895919}
+  db: {fileID: 469219568}
+  days: 2
+  unqiueCate: 
+  buttonsCategory1:
+  - {fileID: 1794225894}
+  - {fileID: 1753798770}
+  - {fileID: 1348018063}
+  buttonsCategory2:
+  - {fileID: 957669190}
+  - {fileID: 668547089}
+  - {fileID: 689215394}
+  buttonsCategory3:
+  - {fileID: 88235980}
+  - {fileID: 849553321}
+  - {fileID: 1611012564}
+  newsPiece: {fileID: 0}
 --- !u!1 &1555919463
 GameObject:
   m_ObjectHideFlags: 0
@@ -4731,7 +4820,7 @@ GameObject:
   - component: {fileID: 1611012567}
   - component: {fileID: 1611012566}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: News9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5152,7 +5241,7 @@ GameObject:
   - component: {fileID: 1753798773}
   - component: {fileID: 1753798772}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: News2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5252,7 +5341,7 @@ GameObject:
   - component: {fileID: 1794225897}
   - component: {fileID: 1794225896}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: News1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5614,7 +5703,7 @@ GameObject:
   - component: {fileID: 1809607287}
   - component: {fileID: 1809607286}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: titleText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5945,7 +6034,7 @@ GameObject:
   - component: {fileID: 1907887932}
   - component: {fileID: 1907887931}
   m_Layer: 11
-  m_Name: Text (TMP)
+  m_Name: titleText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6079,7 +6168,7 @@ GameObject:
   - component: {fileID: 1919697711}
   - component: {fileID: 1919697710}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: titleText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6213,7 +6302,7 @@ GameObject:
   - component: {fileID: 1929109943}
   - component: {fileID: 1929109942}
   m_Layer: 11
-  m_Name: Text (TMP)
+  m_Name: titleText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6385,7 +6474,7 @@ GameObject:
   - component: {fileID: 2050874376}
   - component: {fileID: 2050874375}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: titleText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6519,7 +6608,7 @@ GameObject:
   - component: {fileID: 2142011944}
   - component: {fileID: 2142011943}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: titleText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6591,8 +6680,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 11.5
-  m_fontSizeBase: 11.5
+  m_fontSize: 5
+  m_fontSizeBase: 5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

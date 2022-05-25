@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 171585349c71b5041afda2c636ecc4b6, type: 3}
+  m_Name: Scuffle in a bar over nationality
+  m_EditorClassIdentifier: 
+  title: Scuffle in a bar over nationality??
+  blurb: It seems an asylum seeker, Reina, alongside a local resident, Dilan, have
+    gotten into a heated argument, unfortunately leading to Reina being hospitalised.
+    This started due to Reina begging for money whilst waiting for a response from
+    the government on her refugee status application. From there Dilan publicly shamed
+    and mocked her to the point that different sources claim how it started but what
+    we can confirm is that it ended with a brawl.
+  icon: {fileID: 0}
+  ID: 13
+  minDays: 2
+  category: Refugees
+  reportingOptions:
+  - 
+  - 
+  - 
+  source: Main

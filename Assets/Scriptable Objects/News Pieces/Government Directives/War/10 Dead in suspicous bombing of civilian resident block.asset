@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 171585349c71b5041afda2c636ecc4b6, type: 3}
+  m_Name: 10 Dead in suspicous bombing of civilian resident block
+  m_EditorClassIdentifier: 
+  title: 10 Dead in suspicous bombing of civilian resident block
+  blurb: "With the outcry reaching even us here in the ever dense metal jungles of
+    Dency. 10 civilians who\u2019ve tried to the live their lives in peace, as peaceful
+    as it gets during these dangerous time, have had their time cut short due to
+    a shrapnel bomb hitting a resident block. According to multiple experts, there
+    should have been no reason to hit anywhere close to the block with there being
+    no form of military base in the area. With the people of Lebiasto in traumatic
+    shock once more, we went to ask the Minister for War on their opinion on the
+    matter. We haven\u2019t had a response back since. "
+  icon: {fileID: 0}
+  ID: 7
+  minDays: 3
+  category: War
+  reportingOptions:
+  - 
+  - 
+  - 
+  source: Main

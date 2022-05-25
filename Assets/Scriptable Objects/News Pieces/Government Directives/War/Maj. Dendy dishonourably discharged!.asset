@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 171585349c71b5041afda2c636ecc4b6, type: 3}
+  m_Name: Maj. Dendy dishonourably discharged!
+  m_EditorClassIdentifier: 
+  title: Maj. Dendy dishonourably discharged?!
+  blurb: 'Just last night, we got a tip off with a LT. allegedly claiming, the Maj.
+    for the Special Division was dishonourably discharged after a Court Martial had
+    just finished. Furthermore to this out of this world allegation, they said that
+    it was due to the following offences: Bribery, Nepotism as well as Negligence.
+    The court had no issues with performance as well as conduct however, all these
+    high profile cases of corruption seem to be piling up on the government. What
+    else can there possibly be?'
+  icon: {fileID: 0}
+  ID: 5
+  minDays: 2
+  category: War
+  reportingOptions:
+  - 
+  - 
+  - 
+  source: Main

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 171585349c71b5041afda2c636ecc4b6, type: 3}
+  m_Name: Energy pulsates round the country for 30% less!
+  m_EditorClassIdentifier: 
+  title: Energy pulsates round the country for 30% less!
+  blurb: "Sorry for the miniature ad, but what a time to be alive. The magicians
+    in power have somehow reduced energy prices AGAIN. Please, enlighten me on how
+    this country isn\u2019t great? With most of the country already having to worry
+    about wages, a 30% reduction in energy prices isn\u2019t something to just smile
+    for, this is something to scream about. I for one, will be beaming heading home
+    knowing I\u2019ll get to be saving a good amount of money."
+  icon: {fileID: 0}
+  ID: 25
+  minDays: 1
+  category: Economy
+  reportingOptions:
+  - 
+  - 
+  - 
+  source: Main

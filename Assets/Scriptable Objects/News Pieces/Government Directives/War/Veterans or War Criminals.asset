@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 171585349c71b5041afda2c636ecc4b6, type: 3}
+  m_Name: Veterans or War Criminals
+  m_EditorClassIdentifier: 
+  title: Veterans or War Criminals?
+  blurb: Many this year will be returning to the frontline hailed as heroes. As the
+    foundation of our society. But what do you truly know? Our sources tell us a
+    ridiculous amount of veterans, possibly even 60% of them, could be tried for
+    war crimes. What do our soldiers truly get up to on the frontlines?
+  icon: {fileID: 0}
+  ID: 0
+  minDays: 1
+  category: War
+  reportingOptions:
+  - 
+  - 
+  - 
+  source: Main

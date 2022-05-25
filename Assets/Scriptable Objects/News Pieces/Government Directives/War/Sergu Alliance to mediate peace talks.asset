@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 171585349c71b5041afda2c636ecc4b6, type: 3}
+  m_Name: Sergu Alliance to mediate peace talks
+  m_EditorClassIdentifier: 
+  title: Sergu Alliance to mediate peace talks
+  blurb: The spokesman for the Sergu Alliance has stated that peace talks between
+    Lebiasto and Dency are to start in the next coming week, with the Sergu Alliance
+    acting as a mediator. This comes as a shock to many experts and civilians alike,
+    as there's been no sign of the Dency front slowing down nor the Lebiasto Defensive
+    faltering from their duties. Many claim these will come to nothing and only justify
+    further war efforts. Whilst a small few, claim to hope for a meaningful resolution
+    to this senseless conflict.
+  icon: {fileID: 0}
+  ID: 8
+  minDays: 3
+  category: War
+  reportingOptions:
+  - 
+  - 
+  - 
+  source: Main
