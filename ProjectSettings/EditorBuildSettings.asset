@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/BigBoot.unity
+    guid: 9f6456a25d45e2947878d1e66a7922a7
+  - enabled: 1
     path: Assets/Scenes/Menu/Menu.unity
     guid: fd4f8cf7a5cf8ea48a119669f520b0ea
   - enabled: 1
@@ -26,7 +29,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DragAndDrop/Drag&Drop.unity
     guid: 867a9ca2dac2b2f40ad8f6d561c23a4d
-  - enabled: 1
-    path: Assets/Scenes/Cutscenes/Cutscene01.unity
-    guid: c9473d1105040e24c948d0369aebd6ed
   m_configObjects: {}
