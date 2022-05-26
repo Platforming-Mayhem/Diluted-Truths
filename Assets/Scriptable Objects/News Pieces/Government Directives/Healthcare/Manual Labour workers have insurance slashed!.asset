@@ -21,8 +21,5 @@ MonoBehaviour:
   ID: 18
   minDays: 2
   category: Healthcare
-  reportingOptions:
-  - 
-  - 
-  - 
+  effectStr: 010000000100000001000000
   source: Main

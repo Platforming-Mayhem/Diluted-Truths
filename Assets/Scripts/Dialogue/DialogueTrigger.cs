@@ -27,7 +27,7 @@ public class DialogueTrigger : MonoBehaviour
     {
         if(playerInRange && !diag.dialogueIsPlaying)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.F))
             {
                 diag.EnterDialogueMode(ink);
                 Debug.Log("Loading Dialogue");

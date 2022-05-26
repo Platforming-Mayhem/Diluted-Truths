@@ -23,8 +23,5 @@ MonoBehaviour:
   ID: 13
   minDays: 2
   category: Refugees
-  reportingOptions:
-  - 
-  - 
-  - 
+  effectStr: 020000000400000001000000
   source: Main

@@ -23,8 +23,5 @@ MonoBehaviour:
   ID: 25
   minDays: 1
   category: Economy
-  reportingOptions:
-  - 
-  - 
-  - 
+  effectStr: feffffff0000000002000000
   source: Main

@@ -4,7 +4,12 @@ using UnityEngine;
 using TMPro;
 using Ink.Runtime;
 using UnityEngine.EventSystems;
+<<<<<<< Updated upstream
 //using Ink.UnityIntegration;
+=======
+using UnityEngine.SceneManagement;
+// using Ink.UnityIntegration;
+>>>>>>> Stashed changes
 
 public class DialogueManager : MonoBehaviour
 {
@@ -19,12 +24,12 @@ public class DialogueManager : MonoBehaviour
     [Header("Choices UI")]
     [SerializeField] private GameObject[] choices;
     private TextMeshProUGUI[] choicesText;
-    [SerializeField] PlayerScript ps;
+    //[SerializeField] PlayerScript ps;
 
     [Header("Globals Ink File")]
-    [SerializeField] private TextAsset globalsInkFile;
+    // [SerializeField] private TextAsset globalsInkFile;
 
-    private Story currentStory;
+    [SerializeField] private Story currentStory;
     public bool dialogueIsPlaying ;
 
     protected static DialogueManager instance;
@@ -44,7 +49,7 @@ public class DialogueManager : MonoBehaviour
         }
         instance = this;
 
-        dialogueVariables = new DialogueVariables(globalsInkFile);
+        // dialogueVariables = new DialogueVariables(globalsInkFile);
     }
 
     public static DialogueManager GetInstance() 
@@ -79,8 +84,9 @@ public class DialogueManager : MonoBehaviour
 
         // handle continuing to the next line in the dialogue when submit is pressed
         // NOTE: The 'currentStory.currentChoiecs.Count == 0' part was to fix a bug after the Youtube video was made
-        if (currentStory.currentChoices.Count == 0 && Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.F))
         {
+            Debug.Log("Continuing");
             ContinueStory();
         }
     }
@@ -92,11 +98,11 @@ public class DialogueManager : MonoBehaviour
         dialogueIsPlaying = true;
         canvas.DialogueAppear(1.0f);
 
-        dialogueVariables.StartListening(currentStory);
+        //dialogueVariables.StartListening(currentStory);
         // reset portrait, layout, and speaker
-        displayNameText.text = "???";
-        portraitAnimator.Play("default");
-        layoutAnimator.Play("right");
+        //displayNameText.text = "???";
+        //portraitAnimator.Play("default");
+        //layoutAnimator.Play("right");
 
         ContinueStory();
     }
@@ -106,10 +112,15 @@ public class DialogueManager : MonoBehaviour
         canvas.DialogueDisappear(1.0f);
         //RecieveVariables();
         yield return new WaitForSeconds(0.2f);
-
-        dialogueVariables.StopListening(currentStory);
+        //dialogueVariables.StopListening(currentStory);
         dialogueIsPlaying = false;
         dialogueText.text = "";
+        if(SceneManager.GetActiveScene().name == "Tutorial")
+        {
+            SceneManager.LoadScene("Day");
+        }
+
+
         Debug.Log("Finished");
     }
 
@@ -122,7 +133,7 @@ public class DialogueManager : MonoBehaviour
             // display choices, if any, for this dialogue line
             DisplayChoices();
             // handle tags
-            HandleTags(currentStory.currentTags);
+            //HandleTags(currentStory.currentTags);
         }
         else 
         {
@@ -143,13 +154,6 @@ public class DialogueManager : MonoBehaviour
         {
             Debug.LogWarning("Tried to update variable that wasn't initialized by globals.ink: " + variableName);
         }
-    }
-
-    private void ChangeVariables()
-    {
-        currentStory.variablesState["USB1"] = ps.hasUSB1;
-        currentStory.variablesState["USB2"] = ps.hasUSB2;
-        currentStory.variablesState["USB3"] = ps.hasUSB3;
     }
     private void HandleTags(List<string> currentTags)
     {

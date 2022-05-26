@@ -9,6 +9,7 @@ public class Database : MonoBehaviour
     List<int> bannedIDs = new List<int>();
     public DialogueManager diagM;
     public BarManager barM;
+    private DialogueVariables dialogueVariables;
     
 
     //gets news source based on the inputted source and current days alongside the selected categoryu
@@ -45,17 +46,22 @@ public class Database : MonoBehaviour
             {
                 if(drop.ID == newsP.ID)
                 {
+                    Debug.Log("Found a match.");
                     barM.AddAmountToBar(0, newsP.effectStr[0]);
                     barM.AddAmountToBar(1, newsP.effectStr[1]);
                     barM.AddAmountToBar(2, newsP.effectStr[2]);
 
                     int govD = barM.CheckAmountFromBar(0);
-                    int pubD = barM.CheckAmountFromBar(1);
+                    int pubU = barM.CheckAmountFromBar(1);
                     int pubO = barM.CheckAmountFromBar(2);
 
                     Ink.Runtime.Object obj1 = new Ink.Runtime.IntValue(govD);
-                    Ink.Runtime.Object obj2 = new Ink.Runtime.IntValue(pubD);
+                    Ink.Runtime.Object obj2 = new Ink.Runtime.IntValue(pubU);
                     Ink.Runtime.Object obj3 = new Ink.Runtime.IntValue(pubO);
+
+                    diagM.SetVariableState("gov_distrust", obj1);
+                    diagM.SetVariableState("public_unrest", obj2);
+                    diagM.SetVariableState("public_opinion", obj3);
                 }
             }
         }

@@ -23,8 +23,5 @@ MonoBehaviour:
   ID: 1
   minDays: 1
   category: War
-  reportingOptions:
-  - 
-  - 
-  - 
+  effectStr: fefffffffeffffff00000000
   source: Main

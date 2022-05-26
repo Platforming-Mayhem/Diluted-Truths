@@ -18,8 +18,5 @@ MonoBehaviour:
   ID: 21
   minDays: 3
   category: Entertainment
-  reportingOptions:
-  - 
-  - 
-  - 
+  effectStr: 00000000feffffff01000000
   source: Main

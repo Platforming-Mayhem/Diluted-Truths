@@ -22,5 +22,5 @@ MonoBehaviour:
   ID: 24
   minDays: 1
   category: Economy
-  effectStr: 000000000000000000000000
+  effectStr: 010000000200000000000000
   source: Main

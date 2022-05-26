@@ -6,10 +6,12 @@ public class ReverseTrainScript : MonoBehaviour
 {
     public GameObject train;
     public GameObject[] hideCharacters;
+    public GameObject[] showCharacters;
     public Renderer[] materials;
     public Color[] colors;
     PlayerScript player;
     TriggerScene trigger;
+    public DialogueTrigger[] diagT = new DialogueTrigger[3];
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,10 @@ public class ReverseTrainScript : MonoBehaviour
             foreach(GameObject a in hideCharacters)
             {
                 a.SetActive(false);
+            }
+            foreach(GameObject c in showCharacters)
+            {
+                c.SetActive(true);
             }
             for (int i = 0; i < materials.Length; i++)
             {
@@ -44,6 +50,10 @@ public class ReverseTrainScript : MonoBehaviour
             {
                 b.SetActive(true);
             }
+            foreach(GameObject d in showCharacters)
+            {
+                d.SetActive(false);
+            }
             /*foreach (MeshRenderer mat in materials)
             {
                 mat.material.SetColor("_Color", Color.white);
@@ -53,6 +63,14 @@ public class ReverseTrainScript : MonoBehaviour
         }
         else
         {
+            foreach (GameObject b in hideCharacters)
+            {
+                b.SetActive(true);
+            }
+            foreach(GameObject d in showCharacters)
+            {
+                d.SetActive(false);
+            }
             foreach (Renderer ren in materials)
             {
                 ren.sharedMaterial.color = Color.white;

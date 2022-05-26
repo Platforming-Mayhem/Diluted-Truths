@@ -93,15 +93,14 @@ public class DragAndDropManager : MonoBehaviour
 
     public void SubmitButton(string sceneName)
     {
-        /*bool canSubmit = CheckScript();
+        bool canSubmit = CheckScript();
          if (canSubmit)
          {
 
-             GameObject choices = FindObjectOfType<Dropable>();
+             Dropable choices = FindObjectOfType<Dropable>();
              foreach(Transform child in choices.transform)
              {
                  TMP_Text text = child.GetComponentInChildren<TMP_Text>();
-                 CalculateBarChanges()
                  info.information.Add(text.text);
                  // send each title to DB for calculationd
              }
@@ -110,8 +109,8 @@ public class DragAndDropManager : MonoBehaviour
              PlayerPrefs.SetInt("changePos", 1);
              audioSource.PlayOneShot(submitWorked);
              StartCoroutine(LoadNextLevel(sceneName));
-         }*/
-
+         }
+         /*
         bool canSubmit = CheckScript();
         if (canSubmit)
         {
@@ -119,6 +118,7 @@ public class DragAndDropManager : MonoBehaviour
 
             //FindObjectOfType<Database>().CalculateBarChanges(choices);
         }
+        */
     }
 
     public void Expand(int index)
