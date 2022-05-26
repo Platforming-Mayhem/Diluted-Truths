@@ -45,6 +45,7 @@ public class TriggerScene : MonoBehaviour
                 Debug.Log("Leave");
                 player.enabled = false;
                 FindObjectOfType<TriggerRedirect>().trigger = this;
+                PlayerPrefs.SetInt("index", index);
                 anim.SetTrigger("FadeOut");
             }
         }
@@ -60,6 +61,7 @@ public class TriggerScene : MonoBehaviour
                 Debug.Log("Leave");
                 player.enabled = false;
                 FindObjectOfType<TriggerRedirect>().trigger = this;
+                PlayerPrefs.SetInt("index", index);
                 anim.SetTrigger("FadeOut");
             }
         }

@@ -4,21 +4,22 @@ using UnityEngine;
 
 public class HasUSB : MonoBehaviour
 {
-    public TriggerScene trig;
+    public BoxCollider trig;
+    PlayerScript player;
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = FindObjectOfType<PlayerScript>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(PlayerPrefs.GetInt("USB1") == 0)
+        if(!player.hasUSB1)
         {
             trig.enabled = false;
         }
-        else if (PlayerPrefs.GetInt("USB1") == 1)
+        else
         {
             trig.enabled = true;
         }

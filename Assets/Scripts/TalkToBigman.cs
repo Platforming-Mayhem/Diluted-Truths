@@ -9,8 +9,8 @@ public class TalkToBigman : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             PlayerScript player = other.GetComponent<PlayerScript>();
-            player.EGUI.SetActive(true);
-            if (Input.GetButtonDown("Jump"))
+            player.FGUI.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.F))
             {
                 PlayerPrefs.SetInt("USB1", 1);
             }
@@ -21,8 +21,8 @@ public class TalkToBigman : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             PlayerScript player = other.GetComponent<PlayerScript>();
-            player.EGUI.SetActive(true);
-            if (Input.GetButtonDown("Jump"))
+            player.FGUI.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.F))
             {
                 PlayerPrefs.SetInt("USB1", 1);
             }
@@ -34,8 +34,7 @@ public class TalkToBigman : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             PlayerScript player = other.GetComponent<PlayerScript>();
-            player.EGUI.SetActive(false);
-            PlayerPrefs.SetInt("USB1", 1);
+            player.FGUI.SetActive(false);
         }
     }
 }

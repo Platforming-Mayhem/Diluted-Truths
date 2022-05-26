@@ -33,6 +33,8 @@ public class PlayerScript : MonoBehaviour
 
     public GameObject EGUI;
 
+    public GameObject FGUI;
+
     public AudioClip footStep;
 
     AudioSource audioSource;
@@ -62,17 +64,11 @@ public class PlayerScript : MonoBehaviour
         {
             transform.position = spawns[PlayerPrefs.GetInt("index")].position;
             anim.SetTrigger("FadeIn");
+            Debug.Log("Cahgne pos");
         }
         mesh.material = idleFrames;
         EGUI.SetActive(false);
-        if(PlayerPrefs.GetInt("USB1") == 0)
-        {
-            hasUSB1 = false;
-        }
-        else if(PlayerPrefs.GetInt("USB1") == 1)
-        {
-            hasUSB1 = true;
-        }
+        FGUI.SetActive(false);
     }
 
     private void FixedUpdate()
@@ -91,6 +87,14 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
         Move();
+        if (PlayerPrefs.GetInt("USB1") == 0)
+        {
+            hasUSB1 = false;
+        }
+        else if (PlayerPrefs.GetInt("USB1") == 1)
+        {
+            hasUSB1 = true;
+        }
     }
 
     public void UpdateDay()
@@ -113,7 +117,6 @@ public class PlayerScript : MonoBehaviour
             if(offsetAmount >= (1.0f / 8.0f) * numberOfFrames)
             {
                 offsetAmount = 0.0f;
-                Debug.Log("Reset");
             }
             else
             {

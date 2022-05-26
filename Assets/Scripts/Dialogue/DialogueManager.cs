@@ -4,12 +4,7 @@ using UnityEngine;
 using TMPro;
 using Ink.Runtime;
 using UnityEngine.EventSystems;
-<<<<<<< Updated upstream
-//using Ink.UnityIntegration;
-=======
 using UnityEngine.SceneManagement;
-// using Ink.UnityIntegration;
->>>>>>> Stashed changes
 
 public class DialogueManager : MonoBehaviour
 {
