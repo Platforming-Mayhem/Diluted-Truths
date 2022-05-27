@@ -13,20 +13,13 @@ INCLUDE ..\globalvar.ink
 }
 
 === Distrust_Highest ===
-Hmm. A 1/3? For what? For them to put into their own bank accounts? 
-Maybe they need it for bribes again. It’s been happening for years and people just act as if they’re using it for real reasons. 
-I just can’t understand why nobody speaks out. 
-A third. I can’t get that number out of my head for how much they’ve already taken from refugees here.
+LT. Johnson? I hear he’s the leader of a squad that burned down towns alone. He decided to abduct civilians and ransom them off for money. If anything, he's the last person in this world to be a “symbol” for this country. The only thing he fits is the description of a mercenary with frozen blood.
 -> END
 
 === PublicOp_Highest ===
-Well deserved! Selling drugs, theft, murder and such. 
-That’s what their money gets invested into. I’ll agree for the slightest minority of them that do contribute to this country, it’ll hurt but in the long run this is easily the best option. 
-Teach them how we do things around here.
+Crazy….. LT. Johnson. What a guy. Nearly 20 years of straight back to back service, that’s unprecedented. We need more youngsters to be like this truly I say. The people who serve this country aren’t treated with respect at all, it’s nice to see them being recognised for once outside an obituary.
 -> END
 
 === PublicUnrest_Highest ===
-Surely not. There’s no possible way in hell. 
-Take is all they can do. But if I decide to take back, I’m labelled a terrorist, a criminal, a danger to society? 
-All this hate, it's something that will plague not only my life but my kids and their kids. The day this cycle ends will be the day I can finally cry but for now, I have work to do.
+LT. Johnson. Another target or even a hero. it seems like. Last 20 years? Doing nothing but oppressing and killing? What a wasted life. Nothing but war and death seems to have met this mind. No wonder people seem to simultaneously want this man dead or put in the country’s hall of fame. One of the most polarising figures to date it seems.
 -> END

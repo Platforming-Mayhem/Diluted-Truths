@@ -9,10 +9,12 @@ public class DialogueTrigger : MonoBehaviour
 
     [Header("Ink JSON")]
     [SerializeField] private TextAsset ink;
+    PlayerScript player;
 
     private void Awake()
     {
         playerInRange = false;
+        player = FindObjectOfType<PlayerScript>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -27,6 +29,7 @@ public class DialogueTrigger : MonoBehaviour
     {
         if(playerInRange && !diag.dialogueIsPlaying)
         {
+            player.FGUI.SetActive(true);
             if (Input.GetKeyDown(KeyCode.F))
             {
                 diag.EnterDialogueMode(ink);
@@ -39,6 +42,7 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            player.FGUI.SetActive(false);
             playerInRange = false;
         }
     }

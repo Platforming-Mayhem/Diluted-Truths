@@ -76,7 +76,7 @@ public class ReverseTrainScript : MonoBehaviour
                 ren.sharedMaterial.color = Color.white;
             }
         }
-        PlayerPrefs.SetInt("changePos", 0);
+        //PlayerPrefs.SetInt("changePos", 0);
     }
 
     // Update is called once per frame

@@ -64,6 +64,7 @@ public class PlayerScript : MonoBehaviour
         {
             transform.position = spawns[PlayerPrefs.GetInt("index")].position;
             anim.SetTrigger("FadeIn");
+            Debug.Log(PlayerPrefs.GetInt("index"));
             Debug.Log("Cahgne pos");
         }
         mesh.material = idleFrames;
