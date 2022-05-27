@@ -148,7 +148,7 @@ public class PlayerScript : MonoBehaviour
         if(Input.GetAxis("Horizontal") > 0.0f)
         {
             mesh.material = player;
-            originOffset = new Vector2(originOffset.x, 0.303f);
+            originOffset = new Vector2(originOffset.x, 0.302f);
             numberOfFrames = 5;
             isWalking = true;
             previousX = 1.0f;
@@ -185,11 +185,11 @@ public class PlayerScript : MonoBehaviour
         {
             if(previousX < 0.0f)
             {
-                idleFrames.mainTextureOffset = new Vector2(0.17f, 0.038f);
+                idleFrames.mainTextureOffset = new Vector2(0.17f, 0.0358f);
             }
             else if(previousX > 0.0f)
             {
-                idleFrames.mainTextureOffset = new Vector2(0.17f, 0.29f);
+                idleFrames.mainTextureOffset = new Vector2(0.17f, 0.288f);
             }
             else if (previousY < 0.0f)
             {
