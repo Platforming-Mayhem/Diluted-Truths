@@ -1,4 +1,4 @@
-INCLUDE globalvar.ink
+INCLUDE globals.ink
 
 { 
     - public_opinion <= 2: -> public_opinion_low 

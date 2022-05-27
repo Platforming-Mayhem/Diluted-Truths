@@ -1,4 +1,4 @@
-INCLUDE globalvar.ink
+INCLUDE globals.ink
 
 { 
     - gov_distrust <= 2: -> gov_distrust_low 

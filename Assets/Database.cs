@@ -7,13 +7,13 @@ public class Database : MonoBehaviour
     public NewsDatabase newsDB;
     [SerializeField]
     List<int> bannedIDs = new List<int>();
-    public DialogueManager diagM;
+    public LiteDialogueManager diagM;
     public BarManager barM;
     private DialogueVariables dialogueVariables;
 
     private void Awake()
     {
-        diagM = FindObjectOfType<DialogueManager>();
+        diagM = FindObjectOfType<LiteDialogueManager>();
         barM = FindObjectOfType<BarManager>();
     }
     //gets news source based on the inputted source and current days alongside the selected categoryu
@@ -36,9 +36,6 @@ public class Database : MonoBehaviour
         }
         int indexToSelect = Random.Range(0, potentialNews.Count);
         bannedIDs.Add(potentialNews[indexToSelect].ID);
-        foreach( int x in bannedIDs){
-            Debug.Log(x.ToString());
-        }
         return(potentialNews[indexToSelect]);
     }
 

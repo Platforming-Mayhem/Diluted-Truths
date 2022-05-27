@@ -1,4 +1,4 @@
-INCLUDE ..\globalvar.ink
+INCLUDE ..\globals.ink
 
 {gov_distrust > public_unrest:
   {gov_distrust> public_opinion: This is written if yourVariable is true}

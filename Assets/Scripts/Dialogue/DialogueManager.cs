@@ -20,7 +20,7 @@ public class DialogueManager : MonoBehaviour
     private TextMeshProUGUI[] choicesText;
 
     [Header("Globals Ink File")]
-    [SerializeField] private TextAsset globalsInkFile;
+    [SerializeField] private TextAsset globalsvar;
     [SerializeField] private Story currentStory;
     public bool dialogueIsPlaying ;
 
@@ -30,7 +30,7 @@ public class DialogueManager : MonoBehaviour
     private const string SPEAKER_TAG = "speaker";
     private const string LAYOUT_TAG = "layout";
 
-    private DialogueVariables dialogueVariables;
+    [SerializeField] public DialogueVariables dialogueVariables;
 
     private void Awake() 
     {
@@ -44,11 +44,14 @@ public class DialogueManager : MonoBehaviour
         dialoguePanel = GameObject.Find("DialogueBox");
         dialogueText = GameObject.Find("diagText").GetComponent<TextMeshProUGUI>();
         displayNameText = GameObject.Find("DisplayNameText").GetComponent<TextMeshProUGUI>();
-        canvas = GameObject.Find("Canvas").GetComponent<CanvasManagement>();
+        canvas = FindObjectOfType<CanvasManagement>();
         choices[0] = GameObject.Find("Choice0");
         choices[1] = GameObject.Find("Choice1");
         choices[2] = GameObject.Find("Choice2");
-        dialogueVariables = new DialogueVariables(globalsInkFile);
+
+
+        dialogueVariables = new DialogueVariables(globalsvar);
+        Debug.Log(dialogueVariables);
     }
 
     public static DialogueManager GetInstance() 
@@ -138,11 +141,13 @@ public class DialogueManager : MonoBehaviour
 
     public void SetVariableState(string variableName, Ink.Runtime.Object variableValue)
     {
+        Debug.Log(variableName);
+        Debug.Log(variableValue);
+        Debug.Log(dialogueVariables);
         if (dialogueVariables.variables.ContainsKey(variableName))
         {
             dialogueVariables.variables.Remove(variableName);
             dialogueVariables.variables.Add(variableName, variableValue);
-            dialogueVariables.UpdateStats();
         }
         else
         {

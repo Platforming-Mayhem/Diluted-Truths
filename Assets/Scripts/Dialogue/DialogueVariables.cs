@@ -1,18 +1,24 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Ink.Runtime;
-using System.IO;
 
 public class DialogueVariables
 {
     public Dictionary<string, Ink.Runtime.Object> variables { get; private set; }
-    public Story globalVariablesStory { get; private set; }
+
+    private Story globalVariablesStory;
+    private const string saveVariablesKey = "INK_VARIABLES";
 
     public DialogueVariables(TextAsset loadGlobalsJSON)
     {
         // create the story
         globalVariablesStory = new Story(loadGlobalsJSON.text);
+        // if we have saved data, load it
+        if (PlayerPrefs.HasKey(saveVariablesKey))
+        {
+            string jsonState = PlayerPrefs.GetString(saveVariablesKey);
+            globalVariablesStory.state.LoadJson(jsonState);
+        }
 
         // initialize the dictionary
         variables = new Dictionary<string, Ink.Runtime.Object>();
@@ -24,14 +30,16 @@ public class DialogueVariables
         }
     }
 
-    public void UpdateStats()
+    public void SaveVariables()
     {
-        int govD = (int)globalVariablesStory.variablesState["gov_distrust"];
-        int pubO = (int)globalVariablesStory.variablesState["public_opinion"];
-        int pubU = (int)globalVariablesStory.variablesState["public_unrest"];
-
-        globalVariablesStory.variablesState["highestStat"] = Mathf.Max(govD, pubO, pubU);
-        globalVariablesStory.variablesState["highestStat"] = Mathf.Min(govD, pubO, pubU);
+        if (globalVariablesStory != null)
+        {
+            // Load the current state of all of our variables to the globals story
+            VariablesToStory(globalVariablesStory);
+            // NOTE: eventually, you'd want to replace this with an actual save/load method
+            // rather than using PlayerPrefs.
+            PlayerPrefs.SetString(saveVariablesKey, globalVariablesStory.state.ToJson());
+        }
     }
 
     public void StartListening(Story story)
