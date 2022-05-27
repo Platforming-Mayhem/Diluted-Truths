@@ -97,13 +97,8 @@ public class DragAndDropManager : MonoBehaviour
          if (canSubmit)
          {
 
-             Dropable choices = FindObjectOfType<Dropable>();
-             foreach(Transform child in choices.transform)
-             {
-                 TMP_Text text = child.GetComponentInChildren<TMP_Text>();
-                 info.information.Add(text.text);
-                 // send each title to DB for calculationd
-             }
+             Dropable[] choices = GameObject.Find("Choices").GetComponentsInChildren<Dropable>();
+             FindObjectOfType<Database>().CalculateBarChanges(choices);
              PlayerPrefs.SetInt("index", 1);
              PlayerPrefs.SetInt("Teleprompt", 1);
              PlayerPrefs.SetInt("changePos", 1);

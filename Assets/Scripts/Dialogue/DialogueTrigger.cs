@@ -14,6 +14,7 @@ public class DialogueTrigger : MonoBehaviour
     private void Awake()
     {
         playerInRange = false;
+        diag = FindObjectOfType<DialogueManager>();
         player = FindObjectOfType<PlayerScript>();
     }
 

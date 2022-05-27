@@ -13,17 +13,14 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private TextMeshProUGUI displayNameText;
-    [SerializeField] private Animator portraitAnimator;
-    private Animator layoutAnimator;
+    // private Animator layoutAnimator;
 
     [Header("Choices UI")]
     [SerializeField] private GameObject[] choices;
     private TextMeshProUGUI[] choicesText;
-    //[SerializeField] PlayerScript ps;
 
     [Header("Globals Ink File")]
-    // [SerializeField] private TextAsset globalsInkFile;
-
+    [SerializeField] private TextAsset globalsInkFile;
     [SerializeField] private Story currentStory;
     public bool dialogueIsPlaying ;
 
@@ -31,7 +28,6 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] CanvasManagement canvas;
 
     private const string SPEAKER_TAG = "speaker";
-    private const string PORTRAIT_TAG = "portrait";
     private const string LAYOUT_TAG = "layout";
 
     private DialogueVariables dialogueVariables;
@@ -44,7 +40,15 @@ public class DialogueManager : MonoBehaviour
         }
         instance = this;
 
-        // dialogueVariables = new DialogueVariables(globalsInkFile);
+
+        dialoguePanel = GameObject.Find("DialogueBox");
+        dialogueText = GameObject.Find("diagText").GetComponent<TextMeshProUGUI>();
+        displayNameText = GameObject.Find("DisplayNameText").GetComponent<TextMeshProUGUI>();
+        canvas = GameObject.Find("Canvas").GetComponent<CanvasManagement>();
+        choices[0] = GameObject.Find("Choice0");
+        choices[1] = GameObject.Find("Choice1");
+        choices[2] = GameObject.Find("Choice2");
+        dialogueVariables = new DialogueVariables(globalsInkFile);
     }
 
     public static DialogueManager GetInstance() 
@@ -55,9 +59,6 @@ public class DialogueManager : MonoBehaviour
     private void Start() 
     {
         dialogueIsPlaying = false;
-
-        // get the layout animator
-        layoutAnimator = dialoguePanel.GetComponent<Animator>();
 
         // get all of the choices text 
         choicesText = new TextMeshProUGUI[choices.Length];
@@ -79,7 +80,7 @@ public class DialogueManager : MonoBehaviour
 
         // handle continuing to the next line in the dialogue when submit is pressed
         // NOTE: The 'currentStory.currentChoiecs.Count == 0' part was to fix a bug after the Youtube video was made
-        if (Input.GetKeyDown(KeyCode.F))
+        if (currentStory.currentChoices.Count == 0 && Input.GetKeyDown(KeyCode.F))
         {
             Debug.Log("Continuing");
             ContinueStory();
@@ -89,15 +90,14 @@ public class DialogueManager : MonoBehaviour
     public void EnterDialogueMode(TextAsset inkJSON) 
     {
         currentStory = new Story(inkJSON.text);
-        //ChangeVariables();
         dialogueIsPlaying = true;
         canvas.DialogueAppear(1.0f);
 
-        //dialogueVariables.StartListening(currentStory);
+        dialogueVariables.StartListening(currentStory);
         // reset portrait, layout, and speaker
-        //displayNameText.text = "???";
-        //portraitAnimator.Play("default");
-        //layoutAnimator.Play("right");
+        displayNameText.text = "???";
+        SpriteRenderer renderer = dialoguePanel.GetComponent<SpriteRenderer>();
+        renderer.flipX = false;
 
         ContinueStory();
     }
@@ -105,9 +105,8 @@ public class DialogueManager : MonoBehaviour
     private IEnumerator ExitDialogueMode() 
     {
         canvas.DialogueDisappear(1.0f);
-        //RecieveVariables();
         yield return new WaitForSeconds(0.2f);
-        //dialogueVariables.StopListening(currentStory);
+        dialogueVariables.StopListening(currentStory);
         dialogueIsPlaying = false;
         dialogueText.text = "";
         if(SceneManager.GetActiveScene().name == "Tutorial")
@@ -128,7 +127,7 @@ public class DialogueManager : MonoBehaviour
             // display choices, if any, for this dialogue line
             DisplayChoices();
             // handle tags
-            //HandleTags(currentStory.currentTags);
+            HandleTags(currentStory.currentTags);
         }
         else 
         {
@@ -170,11 +169,16 @@ public class DialogueManager : MonoBehaviour
                 case SPEAKER_TAG:
                     displayNameText.text = tagValue;
                     break;
-                case PORTRAIT_TAG:
-                    portraitAnimator.Play(tagValue);
-                    break;
                 case LAYOUT_TAG:
-                    layoutAnimator.Play(tagValue);
+                    if(tagValue == "left")
+                    {
+                        SpriteRenderer spriteRenderer = dialoguePanel.GetComponent<SpriteRenderer>();
+                        spriteRenderer.flipX = true;
+                    } else if(tagValue == "right")
+                    {
+                        SpriteRenderer spriteRenderer = dialoguePanel.GetComponent<SpriteRenderer>();
+                        spriteRenderer.flipX = false;
+                    }
                     break;
                 default:
                     Debug.LogWarning("Tag came in but is not currently being handled: " + tag);

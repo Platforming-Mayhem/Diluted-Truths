@@ -10,8 +10,12 @@ public class Database : MonoBehaviour
     public DialogueManager diagM;
     public BarManager barM;
     private DialogueVariables dialogueVariables;
-    
 
+    private void Awake()
+    {
+        diagM = FindObjectOfType<DialogueManager>();
+        barM = FindObjectOfType<BarManager>();
+    }
     //gets news source based on the inputted source and current days alongside the selected categoryu
     public News GetSpecifiedNews(int days, string category)
     {
@@ -51,9 +55,9 @@ public class Database : MonoBehaviour
                     barM.AddAmountToBar(1, newsP.effectStr[1]);
                     barM.AddAmountToBar(2, newsP.effectStr[2]);
 
-                    int govD = barM.CheckAmountFromBar(0);
-                    int pubU = barM.CheckAmountFromBar(1);
-                    int pubO = barM.CheckAmountFromBar(2);
+                    int govD = PlayerPrefs.GetInt("Bar1");
+                    int pubU = PlayerPrefs.GetInt("Bar2");
+                    int pubO = PlayerPrefs.GetInt("Bar3");
 
                     Ink.Runtime.Object obj1 = new Ink.Runtime.IntValue(govD);
                     Ink.Runtime.Object obj2 = new Ink.Runtime.IntValue(pubU);
