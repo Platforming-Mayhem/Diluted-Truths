@@ -103,7 +103,7 @@ public class DragAndDropManager : MonoBehaviour
              PlayerPrefs.SetInt("Teleprompt", 1);
              PlayerPrefs.SetInt("changePos", 1);
              audioSource.PlayOneShot(submitWorked);
-             //StartCoroutine(LoadNextLevel(sceneName));
+             StartCoroutine(LoadNextLevel(sceneName));
          }
          /*
         bool canSubmit = CheckScript();

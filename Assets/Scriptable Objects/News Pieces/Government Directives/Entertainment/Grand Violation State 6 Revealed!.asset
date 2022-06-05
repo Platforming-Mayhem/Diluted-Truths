@@ -20,3 +20,4 @@ MonoBehaviour:
   category: Entertainment
   effectStr: 00000000feffffff01000000
   source: Main
+  relatedDiag: {fileID: 4900000, guid: 837297274de30b149b62f6f90f304e07, type: 3}

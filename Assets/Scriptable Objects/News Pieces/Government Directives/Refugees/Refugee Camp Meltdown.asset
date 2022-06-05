@@ -20,3 +20,4 @@ MonoBehaviour:
   category: Refugees
   effectStr: 030000000200000000000000
   source: Main
+  relatedDiag: {fileID: 4900000, guid: 4d2c9cfa871d5a74ab6f9604b39b39de, type: 3}

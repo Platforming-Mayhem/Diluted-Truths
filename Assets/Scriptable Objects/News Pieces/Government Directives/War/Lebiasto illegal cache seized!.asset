@@ -24,3 +24,4 @@ MonoBehaviour:
   category: War
   effectStr: fdffffffffffffff00000000
   source: Main
+  relatedDiag: {fileID: 4900000, guid: 8bceb20dab693e743bc17c17ef501c01, type: 3}

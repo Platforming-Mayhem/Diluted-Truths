@@ -13,7 +13,6 @@ public class LiteDialogueManager : MonoBehaviour
     void Start()
     {
         dialogueVariables = new DialogueVariables(globalsvar);
-        Debug.Log(dialogueVariables);
     }
     public void SetVariableState(string variableName, Ink.Runtime.Object variableValue)
     {

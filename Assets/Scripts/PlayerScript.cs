@@ -51,7 +51,7 @@ public class PlayerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        dayCounter = PlayerPrefs.GetInt("DayCounter");
+        dayCounter = 1;
         rb = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
         mesh = GetComponentInChildren<MeshRenderer>();
@@ -71,6 +71,11 @@ public class PlayerScript : MonoBehaviour
         EGUI.SetActive(false);
         FGUI.SetActive(false);
     }
+
+    private void Awake(){
+        Debug.Log(dayCounter);
+    }
+
 
     private void FixedUpdate()
     {

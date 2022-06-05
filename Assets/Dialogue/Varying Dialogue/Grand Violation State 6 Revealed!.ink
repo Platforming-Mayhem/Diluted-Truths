@@ -1,0 +1,1 @@
+GVS6 is finally out! I can't wait to get home and mess about with the lads. It's been a while since I've been able to just play something pure fun with people. Especially during these times, it's all the more important.

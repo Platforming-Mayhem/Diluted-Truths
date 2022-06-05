@@ -11,12 +11,14 @@ public class ReverseTrainScript : MonoBehaviour
     public GameObject[] showD3;
     public Renderer[] materials;
     public Color[] colors;
-    PlayerScript player;
+    [SerializeField]PlayerScript player;
     TriggerScene trigger;
     public DialogueTrigger[] diagT = new DialogueTrigger[3];
+    public NPCManager npcM;
     // Start is called before the first frame update
     void Start()
     {
+        npcM = FindObjectOfType<NPCManager>();
         trigger = FindObjectOfType<TriggerScene>();
         player = FindObjectOfType<PlayerScript>();
         if (PlayerPrefs.GetInt("changePos") == 1 && PlayerPrefs.GetInt("index") == 1)
@@ -24,25 +26,31 @@ public class ReverseTrainScript : MonoBehaviour
             train.transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
 
 
-
+            Debug.Log(player.dayCounter);
             switch(player.dayCounter){
                 case 1:
                     foreach(GameObject c in showD1)
                     {
+                        Debug.Log("D1 NPCs");
                         c.SetActive(true);
                     }
                     break;
                 case 2:
                     foreach(GameObject c in showD2)
                     {
+                        Debug.Log("D2 NPCs");
                         c.SetActive(true);
                     }
                     break;
                 case 3:
                     foreach(GameObject c in showD3)
                     {
+                        Debug.Log("D3 NPCs");
                         c.SetActive(true);
                     }
+                    break;
+                default:
+                    Debug.Log("Something Broke");
                     break;
             }
 
@@ -62,6 +70,7 @@ public class ReverseTrainScript : MonoBehaviour
             {
                 materials[i].sharedMaterial.color =  colors[i];
             }
+            npcM.SetDialogue();
             PlayerPrefs.SetInt("USB1", 0);
             player.UpdateDay();
             trigger.sceneName = "Day";

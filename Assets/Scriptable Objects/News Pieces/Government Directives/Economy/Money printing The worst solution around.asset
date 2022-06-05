@@ -24,3 +24,4 @@ MonoBehaviour:
   category: Economy
   effectStr: 010000000200000000000000
   source: Main
+  relatedDiag: {fileID: 4900000, guid: ac00d746744fc19478ca1be5ea85759e, type: 3}

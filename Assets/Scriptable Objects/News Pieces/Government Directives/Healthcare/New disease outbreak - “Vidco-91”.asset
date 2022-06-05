@@ -25,3 +25,4 @@ MonoBehaviour:
   category: Healthcare
   effectStr: ffffffff0100000002000000
   source: Main
+  relatedDiag: {fileID: 4900000, guid: 009db9acefc8c71418cf578e8dd748ed, type: 3}
