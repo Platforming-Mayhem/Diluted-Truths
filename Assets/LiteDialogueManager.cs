@@ -19,11 +19,11 @@ public class LiteDialogueManager : MonoBehaviour
     {
         Debug.Log(variableName);
         Debug.Log(variableValue);
-        Debug.Log(dialogueVariables);
         if (dialogueVariables.variables.ContainsKey(variableName))
         {
             dialogueVariables.variables.Remove(variableName);
             dialogueVariables.variables.Add(variableName, variableValue);
+            dialogueVariables.SaveVariables();
         }
         else
         {

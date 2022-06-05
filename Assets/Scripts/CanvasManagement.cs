@@ -9,7 +9,7 @@ public class CanvasManagement : MonoBehaviour
 
     private void Awake()
     {
-        DialogueBox = GameObject.Find("DialogueBox");
+        DialogueBox = GameObject.Find("Dialogue");
     }
     public void DialogueAppear(float timeToAppear)
     {

@@ -1248,6 +1248,7 @@ MonoBehaviour:
   bannedIDs: 
   diagM: {fileID: 0}
   barM: {fileID: 0}
+  npcM: {fileID: 0}
 --- !u!4 &469219569
 Transform:
   m_ObjectHideFlags: 0
@@ -1823,16 +1824,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 650552225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d94b14e46867bc45bb8176fcf747bac, type: 3}
+  m_Script: {fileID: 11500000, guid: 6016b32adbb2a0c48aa26ee957f0d818, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialoguePanel: {fileID: 0}
-  dialogueText: {fileID: 0}
-  displayNameText: {fileID: 0}
-  choices: []
   globalsvar: {fileID: 4900000, guid: fe8e07277affb7a4b800383a114d00a6, type: 3}
-  dialogueIsPlaying: 0
-  canvas: {fileID: 0}
 --- !u!4 &650552227
 Transform:
   m_ObjectHideFlags: 0
@@ -3267,6 +3262,54 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1011486869
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1011486871}
+  - component: {fileID: 1011486870}
+  m_Layer: 0
+  m_Name: NPCManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1011486870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1011486869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef22744115914a243bd9223c04c3aeec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diag1: {fileID: 0}
+  diag2: {fileID: 0}
+  diag3: {fileID: 0}
+  RTS: {fileID: 0}
+  ps: {fileID: 0}
+--- !u!4 &1011486871
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1011486869}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1096300517
 GameObject:
   m_ObjectHideFlags: 0

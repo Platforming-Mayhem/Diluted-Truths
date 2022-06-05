@@ -13,20 +13,19 @@ INCLUDE ..\globals.ink
 }
 
 === Distrust_Highest ===
-Hmm. A 1/3? For what? For them to put into their own bank accounts? 
-Maybe they need it for bribes again. It’s been happening for years and people just act as if they’re using it for real reasons. 
-I just can’t understand why nobody speaks out. 
-A third. I can’t get that number out of my head for how much they’ve already taken from refugees here.
+All of them wouldn’t last in any modern military. Youth go in, just to be moulded by the old guard like clay. 
+For even 10 reals, you can just about slip away with anything mild. They aren’t trained in conventional warfare but most of them don’t seem to care. 
+It’s as if all they know is torture and yet that costs us also.
 -> END
 
 === PublicOp_Highest ===
-Well deserved! Selling drugs, theft, murder and such. 
-That’s what their money gets invested into. I’ll agree for the slightest minority of them that do contribute to this country, it’ll hurt but in the long run this is easily the best option. 
-Teach them how we do things around here.
+No….. surely not. 60%? War criminals? You’re telling me that my uncle who just came back could have…. Never. But, they don’t get their facts wrong about this company. 
+This is all too much to take in. What kind of things just go on the frontlines? 
+Now that I think about it, Uncle doesn't have any serious physical scars... but looking into his eyes… I feel as if he’s seen things now…. Done things…. 
+No man should ever in their lifetime.
 -> END
 
 === PublicUnrest_Highest ===
-Surely not. There’s no possible way in hell. 
-Take is all they can do. But if I decide to take back, I’m labelled a terrorist, a criminal, a danger to society? 
-All this hate, it's something that will plague not only my life but my kids and their kids. The day this cycle ends will be the day I can finally cry but for now, I have work to do.
+Get rid of them. All of them. Scum of the earth for the way they treat human life. 
+All for what? A couple of badges and a bump to their paycheck. It’s inhumane the way they think in fact.
 -> END

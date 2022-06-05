@@ -6,7 +6,9 @@ public class ReverseTrainScript : MonoBehaviour
 {
     public GameObject train;
     public GameObject[] hideCharacters;
-    public GameObject[] showCharacters;
+    public GameObject[] showD1;
+    public GameObject[] showD2;
+    public GameObject[] showD3;
     public Renderer[] materials;
     public Color[] colors;
     PlayerScript player;
@@ -20,14 +22,42 @@ public class ReverseTrainScript : MonoBehaviour
         if (PlayerPrefs.GetInt("changePos") == 1 && PlayerPrefs.GetInt("index") == 1)
         {
             train.transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
+
+
+
+            switch(player.dayCounter){
+                case 1:
+                    foreach(GameObject c in showD1)
+                    {
+                        c.SetActive(true);
+                    }
+                    break;
+                case 2:
+                    foreach(GameObject c in showD2)
+                    {
+                        c.SetActive(true);
+                    }
+                    break;
+                case 3:
+                    foreach(GameObject c in showD3)
+                    {
+                        c.SetActive(true);
+                    }
+                    break;
+            }
+
             foreach(GameObject a in hideCharacters)
             {
                 a.SetActive(false);
             }
-            foreach(GameObject c in showCharacters)
-            {
-                c.SetActive(true);
-            }
+            //foreach(GameObject c in showCharacters)
+            //{
+                //c.SetActive(true);
+            //}
+
+
+
+
             for (int i = 0; i < materials.Length; i++)
             {
                 materials[i].sharedMaterial.color =  colors[i];
@@ -50,11 +80,33 @@ public class ReverseTrainScript : MonoBehaviour
             {
                 b.SetActive(true);
             }
+            switch(player.dayCounter){
+                case 1:
+                    foreach(GameObject c in showD1)
+                    {
+                        c.SetActive(false);
+                    }
+                    break;
+                case 2:
+                    foreach(GameObject c in showD2)
+                    {
+                        c.SetActive(false);
+                    }
+                    break;
+                case 3:
+                    foreach(GameObject c in showD3)
+                    {
+                        c.SetActive(false);
+                    }
+                    break;
+            }
+            /*
             foreach(GameObject d in showCharacters)
             {
                 d.SetActive(false);
             }
-            /*foreach (MeshRenderer mat in materials)
+            
+            foreach (MeshRenderer mat in materials)
             {
                 mat.material.SetColor("_Color", Color.white);
                 Debug.Log("Working");
@@ -67,10 +119,32 @@ public class ReverseTrainScript : MonoBehaviour
             {
                 b.SetActive(true);
             }
+            switch(player.dayCounter){
+                case 1:
+                    foreach(GameObject c in showD1)
+                    {
+                        c.SetActive(false);
+                    }
+                    break;
+                case 2:
+                    foreach(GameObject c in showD2)
+                    {
+                        c.SetActive(false);
+                    }
+                    break;
+                case 3:
+                    foreach(GameObject c in showD3)
+                    {
+                        c.SetActive(false);
+                    }
+                    break;
+            }
+            /*
             foreach(GameObject d in showCharacters)
             {
                 d.SetActive(false);
             }
+            */
             foreach (Renderer ren in materials)
             {
                 ren.sharedMaterial.color = Color.white;

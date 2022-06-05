@@ -95,12 +95,11 @@ public class DialogueManager : MonoBehaviour
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         canvas.DialogueAppear(1.0f);
+        Debug.Log("Appearing");
 
         dialogueVariables.StartListening(currentStory);
         // reset portrait, layout, and speaker
         displayNameText.text = "???";
-        SpriteRenderer renderer = dialoguePanel.GetComponent<SpriteRenderer>();
-        renderer.flipX = false;
 
         ContinueStory();
     }

@@ -28,5 +28,6 @@ Teach them how we do things around here.
 === PublicUnrest_Highest ===
 Surely not. There’s no possible way in hell. 
 Take is all they can do. But if I decide to take back, I’m labelled a terrorist, a criminal, a danger to society? 
-All this hate, it's something that will plague not only my life but my kids and their kids. The day this cycle ends will be the day I can finally cry but for now, I have work to do.
+All this hate, it's something that will plague not only my life but my kids and their kids. 
+The day this cycle ends will be the day I can finally cry but for now, I have work to do
 -> END

@@ -18,6 +18,9 @@ public class DialogueTrigger : MonoBehaviour
         player = FindObjectOfType<PlayerScript>();
     }
 
+    public void SetInky(TextAsset inky){
+        ink = inky;
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
@@ -30,12 +33,15 @@ public class DialogueTrigger : MonoBehaviour
     {
         if(playerInRange && !diag.dialogueIsPlaying)
         {
-            player.FGUI.SetActive(true);
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                diag.EnterDialogueMode(ink);
-                Debug.Log("Loading Dialogue");
+            if(ink){
+                player.FGUI.SetActive(true);
+                if (Input.GetKeyDown(KeyCode.F))
+                {
+                    diag.EnterDialogueMode(ink);
+                    Debug.Log("Loading Dialogue");
+                }
             }
+            
         }
     }
 

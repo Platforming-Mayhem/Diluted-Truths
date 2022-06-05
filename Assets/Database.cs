@@ -9,12 +9,14 @@ public class Database : MonoBehaviour
     List<int> bannedIDs = new List<int>();
     public LiteDialogueManager diagM;
     public BarManager barM;
+    public NPCManager npcM;
     private DialogueVariables dialogueVariables;
 
     private void Awake()
     {
         diagM = FindObjectOfType<LiteDialogueManager>();
         barM = FindObjectOfType<BarManager>();
+        npcM = FindObjectOfType<NPCManager>();
     }
     //gets news source based on the inputted source and current days alongside the selected categoryu
     public News GetSpecifiedNews(int days, string category)
@@ -39,6 +41,7 @@ public class Database : MonoBehaviour
         return(potentialNews[indexToSelect]);
     }
 
+    int i = 0;
     public void CalculateBarChanges(Dropable[] dropList)
     {
         foreach(News newsP in newsDB.allNews)
@@ -52,17 +55,39 @@ public class Database : MonoBehaviour
                     barM.AddAmountToBar(1, newsP.effectStr[1]);
                     barM.AddAmountToBar(2, newsP.effectStr[2]);
 
-                    int govD = PlayerPrefs.GetInt("Bar1");
-                    int pubU = PlayerPrefs.GetInt("Bar2");
-                    int pubO = PlayerPrefs.GetInt("Bar3");
+                    int govD = barM.CheckAmountFromBar(0);
+                    int pubU = barM.CheckAmountFromBar(1);
+                    int pubO = barM.CheckAmountFromBar(2);
 
                     Ink.Runtime.Object obj1 = new Ink.Runtime.IntValue(govD);
                     Ink.Runtime.Object obj2 = new Ink.Runtime.IntValue(pubU);
                     Ink.Runtime.Object obj3 = new Ink.Runtime.IntValue(pubO);
+                    //Debug.Log("Government Distrust Values");
+                    //Debug.Log(newsP.effectStr[0]);
+                    //Debug.Log(govD);
+                    //Debug.Log(obj1);
+                    //Debug.Log(barM.CheckAmountFromBar(0));
 
                     diagM.SetVariableState("gov_distrust", obj1);
                     diagM.SetVariableState("public_unrest", obj2);
                     diagM.SetVariableState("public_opinion", obj3);
+
+                    i += 1;
+
+                    switch(i){
+                        case 1:
+                            npcM.diag1 = newsP.relatedDiag;
+                            break;
+                        case 2:
+                            npcM.diag2 = newsP.relatedDiag;
+                            break;
+                        case 3:
+                            npcM.diag3 = newsP.relatedDiag;
+                            break;
+                        default:
+                            Debug.Log("Outside of 3");
+                            break;
+                    }
                 }
             }
         }

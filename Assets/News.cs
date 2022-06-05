@@ -14,6 +14,7 @@ public class News : ScriptableObject
     public string category;
     public int[] effectStr = new int[3];
     public string source;
+    public TextAsset relatedDiag;
     //public bool[] barsAffected = new bool[3];
 
     public void optionSelected(int num)
