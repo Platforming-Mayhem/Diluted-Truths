@@ -26,7 +26,7 @@ public class ReverseTrainScript : MonoBehaviour
             train.transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
 
 
-            Debug.Log(player.dayCounter);
+            Debug.Log("D:" + player.dayCounter);
             switch(player.dayCounter){
                 case 1:
                     foreach(GameObject c in showD1)
