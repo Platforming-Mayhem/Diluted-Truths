@@ -11,7 +11,7 @@ public class ShowDayNumber : MonoBehaviour
     {
         int dayCounter = PlayerPrefs.GetInt("DayCounter");
         text.text = "Day "+ dayCounter.ToString();
-        if(dayCounter >= 3)
+        if(dayCounter >= 4)
         {
             FindObjectOfType<TimedChangeScene>().sceneName = "EndScene";
         }

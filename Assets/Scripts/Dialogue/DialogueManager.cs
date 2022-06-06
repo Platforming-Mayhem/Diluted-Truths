@@ -84,6 +84,10 @@ public class DialogueManager : MonoBehaviour
         {
             Debug.Log("Continuing");
             ContinueStory();
+            if(SceneManager.GetActiveScene().name == "Train")
+            {
+                Debug.Log(dialogueText);
+            }
         }
     }
 
@@ -124,6 +128,7 @@ public class DialogueManager : MonoBehaviour
         {
             // set text for the current dialogue line
             dialogueText.text = currentStory.Continue();
+            Debug.Log(dialogueText);
             // display choices, if any, for this dialogue line
             DisplayChoices();
             // handle tags

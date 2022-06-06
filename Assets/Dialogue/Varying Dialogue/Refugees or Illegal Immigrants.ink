@@ -12,6 +12,8 @@ INCLUDE ..\globals.ink
   {public_unrest>public_opinion: ->PublicUnrest_Highest}
 }
 
+Testing2
+
 === Distrust_Highest ===
 Wow. 
 They really have the audacity to lie so blatantly?

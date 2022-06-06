@@ -1,1 +1,2 @@
-The problem isn't the apology... it's what he did in the first place. He sees someone suffering and decides to record it because it'll make a "good" video for views. He's clearly lost all forms of respect he had for others and himself.
+The problem isn't the apology... it's what he did in the first place. 
+He sees someone suffering and decides to record it because it'll make a "good" video for views. He's clearly lost all forms of respect he had for others and himself.

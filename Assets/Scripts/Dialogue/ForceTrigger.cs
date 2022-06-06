@@ -17,7 +17,7 @@ public class ForceTrigger : MonoBehaviour
         yield return new WaitForSeconds(3);
         diag = FindObjectOfType<DialogueManager>();
         diag.EnterDialogueMode(ink);
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(10);
         Debug.Log("Quitting");
         Application.Quit();
     }

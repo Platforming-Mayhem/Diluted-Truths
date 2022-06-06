@@ -12,6 +12,8 @@ INCLUDE ..\globals.ink
   {public_unrest>public_opinion: -> PublicUnrest_Highest}
 }
 
+
+
 === Distrust_Highest ===
 They’ve gone this far? I know for a fact that nothing even signalling anything like this has been reported or even mentioned by anyone, but with the dying embers of this war all of sudden an illegal storage is found? This is atrocious the lengths they’ll go to.
 -> END
@@ -24,3 +26,4 @@ Wow. This is amazing. Think of all the damage that could have been done not just
 Illegal weaponry. It's insane to think just how this war can go. The fact that either government is potentially thinking about the use of things such as chemical warfare on it's own is already disgusting enough. 
 I pray for the day in which the future generations will learn that war brings nothing good to this world.
 -> END
+

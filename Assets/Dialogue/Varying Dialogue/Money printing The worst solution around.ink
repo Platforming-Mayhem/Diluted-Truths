@@ -12,6 +12,8 @@ INCLUDE ..\globals.ink
   {public_unrest>public_opinion: -> PublicUnrest_Highest}
 }
 
+Testing3
+
 === Distrust_Highest ===
 Did any of them even take economics let alone pass history in secondary school? Something this basic not being taken into consideration….. How? 
 I’ve come to expect all sorts of things from the people I elected but this? This is just a low blow at this point.
