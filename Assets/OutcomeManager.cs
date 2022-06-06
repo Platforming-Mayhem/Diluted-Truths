@@ -15,11 +15,14 @@ public class OutcomeManager : MonoBehaviour
     [SerializeField] private GameObject[] buttonsCategory2;
     [SerializeField] private GameObject[] buttonsCategory3;
     [SerializeField] private News newsPiece;
+    [SerializeField] private PlayerScript ps;
+
 
 
     void Start()
     {
-        switch(days)
+        days = PlayerPrefs.GetInt("DayCounter");
+        switch (days)
         {
             case 1:
                 unqiueCate = "Economy";

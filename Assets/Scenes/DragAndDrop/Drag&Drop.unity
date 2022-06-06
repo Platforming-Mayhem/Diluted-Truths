@@ -3296,6 +3296,7 @@ MonoBehaviour:
   diag3: {fileID: 0}
   RTS: {fileID: 0}
   ps: {fileID: 0}
+  i: 0
 --- !u!4 &1011486871
 Transform:
   m_ObjectHideFlags: 0
@@ -4838,6 +4839,7 @@ MonoBehaviour:
   - {fileID: 849553321}
   - {fileID: 1611012564}
   newsPiece: {fileID: 0}
+  ps: {fileID: 0}
 --- !u!1 &1555919463
 GameObject:
   m_ObjectHideFlags: 0

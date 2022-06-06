@@ -1,15 +1,15 @@
 INCLUDE ..\globals.ink
 
 {gov_distrust > public_unrest:
-  {gov_distrust> public_opinion: This is written if yourVariable is true}
+  {gov_distrust> public_opinion: ->Distrust_Highest}
 }
 
 {public_opinion > gov_distrust:
-  {public_opinion>public_unrest: testing}
+  {public_opinion>public_unrest: ->PublicOp_Highest}
 }
 
 {public_unrest > gov_distrust:
-  {public_unrest>public_opinion: This is written if yourVariable is true}
+  {public_unrest>public_opinion: ->PublicUnrest_Highest}
 }
 
 === Distrust_Highest ===
