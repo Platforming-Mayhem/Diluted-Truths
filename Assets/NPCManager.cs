@@ -120,5 +120,6 @@ public class NPCManager : MonoBehaviour
         }
 
         i = 0;
+        Destroy(this.gameObject);
     }
 }

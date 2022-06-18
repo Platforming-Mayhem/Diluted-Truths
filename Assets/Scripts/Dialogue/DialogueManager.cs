@@ -12,7 +12,6 @@ public class DialogueManager : MonoBehaviour
     [Header("Dialogue UI")]
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI dialogueText;
-    [SerializeField] private TextMeshProUGUI displayNameText;
     // private Animator layoutAnimator;
 
     [Header("Choices UI")]
@@ -27,7 +26,6 @@ public class DialogueManager : MonoBehaviour
     protected static DialogueManager instance;
     [SerializeField] CanvasManagement canvas;
 
-    private const string SPEAKER_TAG = "speaker";
     private const string LAYOUT_TAG = "layout";
 
     [SerializeField] public DialogueVariables dialogueVariables;
@@ -43,7 +41,6 @@ public class DialogueManager : MonoBehaviour
 
         dialoguePanel = GameObject.Find("DialogueBox");
         dialogueText = GameObject.Find("diagText").GetComponent<TextMeshProUGUI>();
-        displayNameText = GameObject.Find("DisplayNameText").GetComponent<TextMeshProUGUI>();
         canvas = FindObjectOfType<CanvasManagement>();
         choices[0] = GameObject.Find("Choice0");
         choices[1] = GameObject.Find("Choice1");
@@ -87,6 +84,10 @@ public class DialogueManager : MonoBehaviour
         {
             Debug.Log("Continuing");
             ContinueStory();
+            if(SceneManager.GetActiveScene().name == "Train")
+            {
+                Debug.Log(dialogueText);
+            }
         }
     }
 
@@ -97,9 +98,10 @@ public class DialogueManager : MonoBehaviour
         canvas.DialogueAppear(1.0f);
         Debug.Log("Appearing");
 
+        Debug.Log(currentStory);
+
         dialogueVariables.StartListening(currentStory);
         // reset portrait, layout, and speaker
-        displayNameText.text = "???";
 
         ContinueStory();
     }
@@ -126,6 +128,7 @@ public class DialogueManager : MonoBehaviour
         {
             // set text for the current dialogue line
             dialogueText.text = currentStory.Continue();
+            Debug.Log(dialogueText);
             // display choices, if any, for this dialogue line
             DisplayChoices();
             // handle tags
@@ -170,9 +173,6 @@ public class DialogueManager : MonoBehaviour
             // handle the tag
             switch (tagKey) 
             {
-                case SPEAKER_TAG:
-                    displayNameText.text = tagValue;
-                    break;
                 case LAYOUT_TAG:
                     if(tagValue == "left")
                     {

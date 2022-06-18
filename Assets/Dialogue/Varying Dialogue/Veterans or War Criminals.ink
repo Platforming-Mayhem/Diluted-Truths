@@ -12,6 +12,8 @@ INCLUDE ..\globals.ink
   {public_unrest>public_opinion: -> PublicUnrest_Highest}
 }
 
+Testing1
+
 === Distrust_Highest ===
 All of them wouldn’t last in any modern military. Youth go in, just to be moulded by the old guard like clay. 
 For even 10 reals, you can just about slip away with anything mild. They aren’t trained in conventional warfare but most of them don’t seem to care. 

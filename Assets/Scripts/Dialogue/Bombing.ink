@@ -1,0 +1,1 @@
+What's going on? There's explosions outside everywhere! The block just over there looks levelled entirely.. I got to get out of here ASAP.

@@ -9,7 +9,12 @@ public class ShowDayNumber : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        text.text = "Day "+ PlayerPrefs.GetInt("DayCounter").ToString();
+        int dayCounter = PlayerPrefs.GetInt("DayCounter");
+        text.text = "Day "+ dayCounter.ToString();
+        if(dayCounter >= 4)
+        {
+            FindObjectOfType<TimedChangeScene>().sceneName = "EndScene";
+        }
     }
 
     // Update is called once per frame
