@@ -31,6 +31,7 @@ public class Dropable : MonoBehaviour
         dropManager = FindObjectOfType<DragAndDropManager>();
         originalParent = image.transform.parent;
         originalChildCount = originalParent.childCount;
+        //Event.current.mousePosition
     }
 
     bool isInBox(Bounds bounds)
@@ -54,7 +55,7 @@ public class Dropable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) + new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f) * Time.deltaTime;
+        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         //mousePosition += new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         if (!selected)
         {
