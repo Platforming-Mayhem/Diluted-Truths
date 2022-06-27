@@ -14,5 +14,6 @@ It’s as if the entire world can see what’s happening but we continue to shru
 -> END
 
 === PublicOp_Highest ===
-It’ll be great to see Lebiasto, under better leadership. For years, they’ve always been out to portray us as evil under their agenda but with this, we’ll finally be united once more.
+It’ll be great to see Lebiasto, under better leadership. 
+For years, they’ve always been out to portray us as evil under their agenda but with this, we’ll finally be united once more.
 -> END

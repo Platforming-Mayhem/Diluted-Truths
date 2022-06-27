@@ -14,5 +14,6 @@ It’s not that we’re not hopeful, it’s just that it’s a cold hard fact.
 -> END
 
 === PublicOp_Highest ===
-I actually feel like some form of genuine happiness when it comes to this war, for the first time ever. This will be an amazing chance to end things peacefully and stop both sides suffering needlessly.
+I actually feel like some form of genuine happiness when it comes to this war, for the first time ever. 
+This will be an amazing chance to end things peacefully and stop both sides suffering needlessly.
 -> END

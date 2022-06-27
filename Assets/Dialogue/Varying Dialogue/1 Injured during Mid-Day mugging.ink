@@ -23,5 +23,6 @@ People will just always find a reason to hate one another I suppose.
 -> END
 
 === PublicUnrest_Highest ===
-These immigrants, all of them. They’ve caused us how much trouble? This is just one of the reported incidents. I heard from my friend just the other day about how one ‘em tried piping up to him about how he laughed at his face about needing donations. Smacked him he should have.
+These immigrants, all of them. They’ve caused us how much trouble? This is just one of the reported incidents. 
+I heard from my friend just the other day about how one ‘em tried piping up to him about how he laughed at his face about needing donations. Smacked him he should have.
 -> END

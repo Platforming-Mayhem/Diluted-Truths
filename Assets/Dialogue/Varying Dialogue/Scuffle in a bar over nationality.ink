@@ -13,7 +13,8 @@ INCLUDE ..\globals.ink
 }
 
 === Distrust_Highest ===
-With all this pro-refugee movement recently, it’s no surprise that tensions have increased to be honest. But to go this far… publicly humiliating someone just because of what? Where their from? It’s disgusting…
+With all this pro-refugee movement recently, it’s no surprise that tensions have increased to be honest. 
+But to go this far… publicly humiliating someone just because of what? Where their from? It’s disgusting…
 -> END
 
 === PublicOp_Highest ===
@@ -22,5 +23,6 @@ People will just always find a reason to hate one another I suppose.
 -> END
 
 === PublicUnrest_Highest ===
-With all this pro-refugee this and no refugee that, it’s no surprise that tensions have increased to be honest. But to go this far… publicly humiliating someone just because of what? Where their from? This is exactly why these riots and protests are happening nearly every other week.
+With all this pro-refugee this and no refugee that, it’s no surprise that tensions have increased to be honest. But to go this far… publicly humiliating someone just because of what? 
+Where their from? This is exactly why these riots and protests are happening nearly every other week.
 -> END

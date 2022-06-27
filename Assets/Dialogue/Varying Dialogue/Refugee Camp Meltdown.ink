@@ -14,5 +14,6 @@ What kind of enjoyment do these sickos get? Even if they were to get caught it�
 -> END
 
 === PublicOp_Highest ===
-How did security slip up and let some weirdo anywhere close to a refugee camp? It’s a complete disgrace that this happened. I hope anyone affected is getting the help they need.
+How did security slip up and let some weirdo anywhere close to a refugee camp? It’s a complete disgrace that this happened. 
+I hope anyone affected is getting the help they need.
 -> END

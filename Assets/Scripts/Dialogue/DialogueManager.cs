@@ -106,11 +106,11 @@ public class DialogueManager : MonoBehaviour
         canvas.DialogueAppear(1.0f);
         Debug.Log("Appearing");
 
-        Debug.Log(currentStory);
+        Debug.Log(inkJSON.text);
 
         dialogueVariables.StartListening(currentStory);
         // reset portrait, layout, and speaker
-
+        
         ContinueStory();
     }
 
