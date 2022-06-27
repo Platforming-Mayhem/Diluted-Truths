@@ -72,6 +72,11 @@ public class DialogueManager : MonoBehaviour
 
     private void Update() 
     {
+        if (Input.GetButtonDown("Jump"))
+            Debug.Log("HI");
+
+
+
         // return right away if dialogue isn't playing
         if (!dialogueIsPlaying) 
         {
@@ -80,15 +85,18 @@ public class DialogueManager : MonoBehaviour
 
         // handle continuing to the next line in the dialogue when submit is pressed
         // NOTE: The 'currentStory.currentChoiecs.Count == 0' part was to fix a bug after the Youtube video was made
-        if (currentStory.currentChoices.Count == 0 && Input.GetKeyDown(KeyCode.F))
+        if (currentStory.currentChoices.Count == 0)
         {
-            Debug.Log("Continuing");
-            ContinueStory();
-            if(SceneManager.GetActiveScene().name == "Train")
+            if(Input.GetKeyDown(KeyCode.F) || Input.GetButtonDown("Jump"))
             {
-                Debug.Log(dialogueText);
+                Debug.Log("Continuing");
+                ContinueStory();
+                if (SceneManager.GetActiveScene().name == "Train")
+                {
+                    Debug.Log(dialogueText);
+                }
             }
-        }
+        }    
     }
 
     public void EnterDialogueMode(TextAsset inkJSON) 

@@ -1,0 +1,33 @@
+{
+    "name": "Player Controls",
+    "maps": [
+        {
+            "name": "Gameplay",
+            "id": "f403c1d1-bf26-4f5d-b469-48de028f5afb",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "89f03860-14b2-4bc7-81e5-dd04091b3066",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "1863c3f2-acff-48b4-a3f5-ec2512d012ed",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

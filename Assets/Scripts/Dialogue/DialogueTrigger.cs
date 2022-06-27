@@ -35,7 +35,7 @@ public class DialogueTrigger : MonoBehaviour
         {
             if(ink){
                 player.FGUI.SetActive(true);
-                if (Input.GetKeyDown(KeyCode.F))
+                if (Input.GetKeyDown(KeyCode.F) || Input.GetButtonDown("F"))
                 {
                     diag.EnterDialogueMode(ink);
                     Debug.Log("Loading Dialogue");

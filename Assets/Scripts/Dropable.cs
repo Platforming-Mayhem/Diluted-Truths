@@ -47,12 +47,15 @@ public class Dropable : MonoBehaviour
         }
     }
 
-    Vector2 mousePosition;
+    public GameObject cursor;
+
+    public Vector2 mousePosition;
 
     // Update is called once per frame
     void Update()
     {
-        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) + new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f) * Time.deltaTime;
+        //mousePosition += new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         if (!selected)
         {
             if(index == -1)

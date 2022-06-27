@@ -10,7 +10,7 @@ public class TalkToBigman : MonoBehaviour
         {
             PlayerScript player = other.GetComponent<PlayerScript>();
             player.FGUI.SetActive(true);
-            if (Input.GetKeyDown(KeyCode.F))
+            if (Input.GetKeyDown(KeyCode.F) || Input.GetButtonDown("F"))
             {
                 PlayerPrefs.SetInt("USB1", 1);
             }
@@ -22,7 +22,7 @@ public class TalkToBigman : MonoBehaviour
         {
             PlayerScript player = other.GetComponent<PlayerScript>();
             player.FGUI.SetActive(true);
-            if (Input.GetKeyDown(KeyCode.F))
+            if (Input.GetKeyDown(KeyCode.F) || Input.GetButtonDown("F"))
             {
                 PlayerPrefs.SetInt("USB1", 1);
             }
