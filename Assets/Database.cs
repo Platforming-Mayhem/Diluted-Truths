@@ -51,7 +51,7 @@ public class Database : MonoBehaviour
                 if(drop.ID == newsP.ID)
                 {
                     Debug.Log("Found a match.");
-                    barM.AddAmountToBar(0, newsP.effectStr[0]);
+                    barM.AddAmountToBar(0, newsP.effectStr[0] + 1);
                     barM.AddAmountToBar(1, newsP.effectStr[1]);
                     barM.AddAmountToBar(2, newsP.effectStr[2]);
 
@@ -59,6 +59,9 @@ public class Database : MonoBehaviour
                     int pubU = barM.CheckAmountFromBar(1);
                     int pubO = barM.CheckAmountFromBar(2);
 
+                    Debug.Log(govD);
+                    Debug.Log(pubU);
+                    Debug.Log(pubO);
                     Ink.Runtime.Object obj1 = new Ink.Runtime.IntValue(govD);
                     Ink.Runtime.Object obj2 = new Ink.Runtime.IntValue(pubU);
                     Ink.Runtime.Object obj3 = new Ink.Runtime.IntValue(pubO);
