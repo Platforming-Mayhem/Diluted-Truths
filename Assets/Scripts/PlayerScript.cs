@@ -69,6 +69,7 @@ public class PlayerScript : MonoBehaviour
         mesh.material = idleFrames;
         EGUI.SetActive(false);
         FGUI.SetActive(false);
+        Cursor.visible = false;
     }
 
     private void Awake(){
