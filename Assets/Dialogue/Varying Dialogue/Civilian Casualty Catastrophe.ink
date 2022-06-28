@@ -12,6 +12,8 @@ INCLUDE ..\globals.ink
   {public_unrest>public_opinion: -> PublicUnrest_Highest}
 }
 
+-> Distrust_Highest
+
 === Distrust_Highest ===
 I can already feel we’re a major contributor to those deaths. It’s always just terrible feelings from our side of the war. 
 The same civilians we seem to pride ourselves in taking in from refuge are the same that we seem to be massacring with no discretion.

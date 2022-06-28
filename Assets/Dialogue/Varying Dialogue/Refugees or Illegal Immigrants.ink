@@ -12,7 +12,7 @@ INCLUDE ..\globals.ink
   {public_unrest>public_opinion: ->PublicUnrest_Highest}
 }
 
-Testing2
+-> Distrust_Highest
 
 === Distrust_Highest ===
 Wow. 

@@ -12,6 +12,8 @@ INCLUDE ..\globals.ink
   {public_unrest>public_opinion: -> PublicUnrest_Highest}
 }
 
+-> Distrust_Highest
+
 === Distrust_Highest ===
 LT. Johnson? I hear he’s the leader of a squad that burned down towns alone. He decided to abduct civilians and ransom them off for money. 
 If anything, he's the last person in this world to be a “symbol” for this country. The only thing he fits is the description of a mercenary with frozen blood.

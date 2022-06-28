@@ -9,9 +9,10 @@ INCLUDE ..\globals.ink
 }
 
 {public_unrest > gov_distrust:
-    test
   {public_unrest > public_opinion: ->PublicUnrest_Highest}
 }
+
+-> Distrust_Highest
 === Distrust_Highest ===
 Corruption is paid by the poor they said. 
 The people in power just don’t seem to care at all, as long as the profits keep going up as people’s lives seem to flatline. 

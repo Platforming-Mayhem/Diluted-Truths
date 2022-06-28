@@ -12,6 +12,8 @@ INCLUDE ..\globals.ink
   {public_unrest>public_opinion: -> PublicUnrest_Highest}
 }
 
+-> Distrust_Highest
+
 === Distrust_Highest ===
 The government silently assassinating our Agriculture industry. Wow.
 I know somehow because people didn't switch to the all new industrial way they're gonna find a way to force them.

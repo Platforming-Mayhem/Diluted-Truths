@@ -12,6 +12,8 @@ INCLUDE ..\globals.ink
   {public_unrest>public_opinion: -> PublicUnrest_Highest}
 }
 
+-> Distrust_Highest
+
 === Distrust_Highest ===
 This could be an advertisement column for the government. Really, it's amazing that they managed to suck up to the government this much to the point of which even the editor can tell he’s going to receive hell for this, especially during times like these. 
 It’s a shame how money corrupts us, I guess. Nothing to be done about agencies like these.

@@ -12,6 +12,8 @@ INCLUDE ..\globals.ink
   {public_unrest>public_opinion: -> PublicUnrest_Highest}
 }
 
+-> Distrust_Highest
+
 === Distrust_Highest ===
 This is ridiculous….. U-21’s. This can’t be true. 
 Even for this country, 50’000? They're still just kid’s at that point. How many parents have truly sent their pride and joy to a grinder? 

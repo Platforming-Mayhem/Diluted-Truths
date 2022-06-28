@@ -12,6 +12,8 @@ INCLUDE ..\globals.ink
   {public_unrest>public_opinion: -> PublicUnrest_Highest}
 }
 
+-> Distrust_Highest
+
 === Distrust_Highest ===
 Everything’s being exposed from this war. Companies, the military, even the government. It seems at this point even if we do win the war, it’ll be for naught. 
 If the riots don’t start now, they’ll surely start after.

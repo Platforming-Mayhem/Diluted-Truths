@@ -12,7 +12,7 @@ INCLUDE ..\globals.ink
   {public_unrest>public_opinion: -> PublicUnrest_Highest}
 }
 
-
+-> Distrust_Highest
 
 === Distrust_Highest ===
 They’ve gone this far? I know for a fact that nothing even signalling anything like this has been reported or even mentioned by anyone, but with the dying embers of this war all of sudden an illegal storage is found? 

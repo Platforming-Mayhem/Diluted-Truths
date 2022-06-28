@@ -12,6 +12,8 @@ INCLUDE ..\globals.ink
   {public_unrest>public_opinion: -> PublicUnrest_Highest}
 }
 
+-> Distrust_Highest
+
 === Distrust_Highest ===
 With all this pro-refugee movement recently, it’s no surprise that tensions have increased to be honest. 
 But to go this far… publicly humiliating someone just because of what? Where their from? It’s disgusting…

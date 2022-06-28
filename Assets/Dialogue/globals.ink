@@ -1,3 +1,3 @@
-VAR public_unrest = 4
-VAR gov_distrust = 3
-VAR public_opinion = 2
+VAR public_unrest = 1
+VAR gov_distrust = 1
+VAR public_opinion = 1

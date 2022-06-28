@@ -12,6 +12,8 @@ INCLUDE ..\globals.ink
   {public_unrest>public_opinion: -> PublicUnrest_Highest}
 }
 
+-> Distrust_Highest
+
 === Distrust_Highest ===
 Finally, they’ve decided to actually get some good done in the country. Refugees are just supposed to magically survive on a day’s worth of pay for weeks at a time? 
 Smart move, that should’ve been made earlier.

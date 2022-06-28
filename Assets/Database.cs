@@ -51,7 +51,7 @@ public class Database : MonoBehaviour
                 if(drop.ID == newsP.ID)
                 {
                     Debug.Log("Found a match.");
-                    barM.AddAmountToBar(0, newsP.effectStr[0] + 1);
+                    barM.AddAmountToBar(0, newsP.effectStr[0]);
                     barM.AddAmountToBar(1, newsP.effectStr[1]);
                     barM.AddAmountToBar(2, newsP.effectStr[2]);
 

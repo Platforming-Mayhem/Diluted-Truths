@@ -12,6 +12,10 @@ INCLUDE ..\globals.ink
   {public_unrest>public_opinion: -> PublicUnrest_Highest}
 }
 
+-> Distrust_Highest
+
+
+
 === Distrust_Highest ===
 The government sit behind their desks while we all destroy each other. It saddens me to think that my neighbour had to move country after all of this started.
 They sit up in their offices without a care in the world as hate spreads rapidly. It's a crime that we even allowed them into office.

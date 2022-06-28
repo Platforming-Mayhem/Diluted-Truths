@@ -12,6 +12,8 @@ INCLUDE ..\globals.ink
   {public_unrest>public_opinion: -> PublicUnrest_Highest}
 }
 
+-> Distrust_Highest
+
 === Distrust_Highest ===
 Hmm. A 1/3? For what? For them to put into their own bank accounts? 
 Maybe they need it for bribes again. It’s been happening for years and people just act as if they’re using it for real reasons. 
